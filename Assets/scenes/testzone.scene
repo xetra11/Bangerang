@@ -132,7 +132,7 @@
       "__guid": "e61662e2-d952-41a0-946d-5ea0600407e5",
       "__version": 2,
       "Flags": 0,
-      "Name": "Player Controller",
+      "Name": "Player",
       "Position": "-475.1455,64.28885,68.24129",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
@@ -460,6 +460,82 @@
           "Children": []
         }
       ]
+    },
+    {
+      "__guid": "19f95a1c-9f4e-4ddb-a41c-e0d42365ebcc",
+      "__version": 2,
+      "__Prefab": "models/greedy.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "f42bda53-c0ba-4c48-9b5f-7caf71020e2b"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+            },
+            "PreviousElement": {
+              "Type": "Component",
+              "IdValue": "4a3c266c-8584-4e4d-adb7-ff5214384a73"
+            },
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "f42bda53-c0ba-4c48-9b5f-7caf71020e2b",
+              "__enabled": true,
+              "Flags": 0,
+              "Center": "0,0,0",
+              "ColliderFlags": 0,
+              "Elasticity": null,
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "RollingResistance": null,
+              "Scale": "50.43999,50,50",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            }
+          }
+        ],
+        "RemovedObjects": [
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "590b3ac4-8708-4abd-90ea-68e123206b0d"
+            }
+          }
+        ],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+            },
+            "Property": "Position",
+            "Value": "-47.87012,71.34459,89.00006"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "26a2c13b-80f9-4e83-a9de-90878dfbb545": "19f95a1c-9f4e-4ddb-a41c-e0d42365ebcc",
+        "1072d239-05f1-4518-b669-3f7edcd84225": "ed291d5a-a738-44a3-9bc9-6de51ebf8ddb",
+        "4a3c266c-8584-4e4d-adb7-ff5214384a73": "e624f622-2074-4845-a845-0060a6755ac5",
+        "590b3ac4-8708-4abd-90ea-68e123206b0d": "9085058c-0943-420d-9e22-72be6e514fcc"
+      }
     }
   ],
   "SceneProperties": {
@@ -481,11 +557,6 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
-      "Sandbox.Clutter.ClutterGridSystem": {
-        "Storage": {
-          "$blob": "6374c0b6-5657-46f3-83b2-c917d1a21441"
-        }
-      },
       "Sandbox.MovieMaker.MovieRecorderSystem": {
         "DisableClientRecording": false
       }
