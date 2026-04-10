@@ -133,7 +133,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Player Controller",
-      "Position": "-109.1889,136.3416,68.24101",
+      "Position": "-475.1455,64.28885,68.24129",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "",
@@ -483,7 +483,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "b02ddbfb-0f9e-4f97-9002-95aff2b477cf"
+          "$blob": "6374c0b6-5657-46f3-83b2-c917d1a21441"
         }
       },
       "Sandbox.MovieMaker.MovieRecorderSystem": {
