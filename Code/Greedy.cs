@@ -1,4 +1,5 @@
 using Sandbox;
+using Sandbox.Diagnostics;
 
 public sealed class Greedy : Component, Component.ITriggerListener
 {
@@ -10,7 +11,8 @@ public sealed class Greedy : Component, Component.ITriggerListener
 
 	public void OnTriggerEnter( Collider other )
 	{
-		Log.Info( $"Entered trigger with: {other.GameObject.Name}" );
+		Component player = other.GameObject.GetComponentInParent<Player>();
+		if (!player.IsValid) return;
 		DestroyGameObject();
 	}
 

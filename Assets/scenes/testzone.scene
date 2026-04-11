@@ -320,6 +320,18 @@
           "RemoveUnownedItems": true,
           "Source": "OwnerConnection",
           "WorkshopItems": []
+        },
+        {
+          "__type": "Player",
+          "__guid": "0d48e696-9721-427e-bb78-e434b150b4e5",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
         }
       ],
       "Children": [
@@ -328,7 +340,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Body",
-          "Position": "0,0,0",
+          "Position": "351.0851,44.9234,0.00005340576",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
