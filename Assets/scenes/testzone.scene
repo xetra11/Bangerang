@@ -47,7 +47,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Map",
-      "Position": "0,0,0",
+      "Position": "0,0,-64.10215",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "",
@@ -571,6 +571,11 @@
     "GameObjectSystems": {
       "Sandbox.MovieMaker.MovieRecorderSystem": {
         "DisableClientRecording": false
+      },
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "a162e169-5582-4e58-a5fd-fe7b6d017266"
+        }
       }
     }
   },
