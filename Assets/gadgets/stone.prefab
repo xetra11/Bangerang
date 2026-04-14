@@ -1,0 +1,41 @@
+{
+  "RootObject": {
+    "__guid": "851b98dc-f968-4cda-9040-7b538cbd8f0f",
+    "__version": 2,
+    "Flags": 0,
+    "Name": "stone",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkFlags": 0,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [
+      {
+        "__type": "Gadget",
+        "__guid": "cb8a57d9-b164-4fe7-9c7e-91746af45542",
+        "__enabled": true,
+        "Flags": 0,
+        "name": "Stone",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null
+      }
+    ],
+    "Children": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}

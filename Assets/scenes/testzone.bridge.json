@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "savedAt": "2026-04-13T16:12:11.0344581Z",
+  "objects": {
+    "b_905b3c89": {
+      "name": "Cube.003",
+      "vertexCount": 8,
+      "faceCount": 6,
+      "position": {
+        "x": 1527.6138,
+        "y": -560,
+        "z": 0
+      },
+      "rotation": {
+        "pitch": -0,
+        "yaw": 0,
+        "roll": 0
+      }
+    },
+    "b_868f5121": {
+      "name": "Cube.004",
+      "vertexCount": 8,
+      "faceCount": 6,
+      "position": {
+        "x": 1335.6138,
+        "y": -1056,
+        "z": 0
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -90,
+        "roll": 0
+      }
+    },
+    "b_890254fb": {
+      "name": "Cube.005",
+      "vertexCount": 8,
+      "faceCount": 6,
+      "position": {
+        "x": 1079.6138,
+        "y": -176,
+        "z": 0
+      },
+      "rotation": {
+        "pitch": -0,
+        "yaw": 0,
+        "roll": 0
+      }
+    },
+    "b_4cefb930": {
+      "name": "Cube.001",
+      "vertexCount": 8,
+      "faceCount": 6,
+      "position": {
+        "x": 295.61377,
+        "y": -176,
+        "z": 0
+      },
+      "rotation": {
+        "pitch": -0,
+        "yaw": 0,
+        "roll": 0
+      }
+    },
+    "b_e506f54d": {
+      "name": "Cube.002",
+      "vertexCount": 8,
+      "faceCount": 6,
+      "position": {
+        "x": 791.6138,
+        "y": -1153.7229,
+        "z": 0
+      },
+      "rotation": {
+        "pitch": -0,
+        "yaw": 0,
+        "roll": 0
+      }
+    },
+    "b_14ccd1a9": {
+      "name": "Cube.006",
+      "vertexCount": 8,
+      "faceCount": 6,
+      "position": {
+        "x": 295.6137,
+        "y": -677.7793,
+        "z": 0
+      },
+      "rotation": {
+        "pitch": -0,
+        "yaw": 0,
+        "roll": 0
+      }
+    },
+    "b_1e687f55": {
+      "name": "stone_projectile",
+      "vertexCount": 26,
+      "faceCount": 24,
+      "position": {
+        "x": 518.6872,
+        "y": -117.07561,
+        "z": 39.20778
+      },
+      "rotation": {
+        "pitch": -0,
+        "yaw": 0,
+        "roll": 0
+      }
+    }
+  }
+}
