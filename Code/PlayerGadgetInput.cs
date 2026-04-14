@@ -8,7 +8,7 @@ public sealed class PlayerGadgetInput : Component
 
 	protected override void OnUpdate()
 	{
-		if ( Input.Down( "attack1" ) )
+		if ( Input.Released( "attack1" ) )
 		{
 			SelectedGadget.Fire();
 		}

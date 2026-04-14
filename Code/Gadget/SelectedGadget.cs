@@ -2,12 +2,12 @@ namespace Sandbox.Gadget;
 
 public class SelectedGadget : Component
 {
-	[Property] public global::Gadget Gadget { get; set; }
+	[Property] public GameObject GadgetPrefab { get; set; }
 
 	[Button]
 	public void Fire()
 	{
-		Gadget.UseGadget( GameObject.Root.WorldPosition );
+		GadgetPrefab.GetComponent<global::Gadget>().UseGadget( GameObject.Root.WorldPosition );
 	}
 
 	protected override void OnUpdate()
