@@ -1,15 +1,23 @@
 namespace Sandbox.Gadget;
 
-public class Projectile: Component
+public class Projectile : Component
 {
 	[Property] public float ThrowSpeed { get; set; } = 1000f;
 	[Property] public float Gravity { get; set; } = 800f;
-
+	private Vector3 _direction;
 	private Vector3 _velocity;
+
+	public Vector3 Direction
+	{
+		set
+		{
+			_direction = value;
+		}
+	}
 
 	protected override void OnStart()
 	{
-		_velocity = WorldRotation.Forward * ThrowSpeed;
+		_velocity = _direction * ThrowSpeed;
 	}
 
 	protected override void OnUpdate()

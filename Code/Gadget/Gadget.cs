@@ -10,6 +10,7 @@ public sealed class Gadget : Component
 	public void UseGadget( Vector3 playerLocation )
 	{
 		var projectileInstance = ProjectilePrefab.Clone( playerLocation );
+		projectileInstance.GetComponent<Projectile>().Direction = Vector3.Backward;
 		Log.Info( $"Spawned projectile at {playerLocation}" );
 	}
 
