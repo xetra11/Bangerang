@@ -1,89 +1,14 @@
 {
   "version": 1,
-  "savedAt": "2026-04-13T16:12:11.0344581Z",
+  "savedAt": "2026-04-25T21:35:27.6037339Z",
   "objects": {
-    "b_905b3c89": {
-      "name": "Cube.003",
-      "vertexCount": 8,
-      "faceCount": 6,
-      "position": {
-        "x": 1527.6138,
-        "y": -560,
-        "z": 0
-      },
-      "rotation": {
-        "pitch": -0,
-        "yaw": 0,
-        "roll": 0
-      }
-    },
-    "b_868f5121": {
-      "name": "Cube.004",
-      "vertexCount": 8,
-      "faceCount": 6,
-      "position": {
-        "x": 1335.6138,
-        "y": -1056,
-        "z": 0
-      },
-      "rotation": {
-        "pitch": 0,
-        "yaw": -90,
-        "roll": 0
-      }
-    },
-    "b_890254fb": {
-      "name": "Cube.005",
-      "vertexCount": 8,
-      "faceCount": 6,
-      "position": {
-        "x": 1079.6138,
-        "y": -176,
-        "z": 0
-      },
-      "rotation": {
-        "pitch": -0,
-        "yaw": 0,
-        "roll": 0
-      }
-    },
-    "b_4cefb930": {
-      "name": "Cube.001",
-      "vertexCount": 8,
-      "faceCount": 6,
-      "position": {
-        "x": 295.61377,
-        "y": -176,
-        "z": 0
-      },
-      "rotation": {
-        "pitch": -0,
-        "yaw": 0,
-        "roll": 0
-      }
-    },
-    "b_e506f54d": {
-      "name": "Cube.002",
-      "vertexCount": 8,
-      "faceCount": 6,
-      "position": {
-        "x": 791.6138,
-        "y": -1153.7229,
-        "z": 0
-      },
-      "rotation": {
-        "pitch": -0,
-        "yaw": 0,
-        "roll": 0
-      }
-    },
-    "b_14ccd1a9": {
-      "name": "Cube.006",
+    "b_8ce49f98": {
+      "name": "Platform_Default",
       "vertexCount": 8,
       "faceCount": 6,
       "position": {
         "x": 295.6137,
-        "y": -677.7793,
+        "y": -176,
         "z": 0
       },
       "rotation": {
@@ -92,19 +17,169 @@
         "roll": 0
       }
     },
-    "b_1e687f55": {
-      "name": "stone_projectile",
-      "vertexCount": 26,
-      "faceCount": 24,
+    "b_08d199bd": {
+      "name": "Platform_Default.001",
+      "vertexCount": 8,
+      "faceCount": 6,
       "position": {
-        "x": 518.6872,
-        "y": -117.07561,
-        "z": 39.20778
+        "x": 986,
+        "y": -178,
+        "z": 0
       },
       "rotation": {
         "pitch": -0,
         "yaw": 0,
         "roll": 0
+      }
+    },
+    "b_ee171278": {
+      "name": "Platform_Default.002",
+      "vertexCount": 8,
+      "faceCount": 6,
+      "position": {
+        "x": 1732.4583,
+        "y": -413.17093,
+        "z": 0
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -60.846325,
+        "roll": 0
+      }
+    },
+    "b_70b97c3c": {
+      "name": "Platform_Default.003",
+      "vertexCount": 8,
+      "faceCount": 6,
+      "position": {
+        "x": 1872.56,
+        "y": -1071.1492,
+        "z": 0
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -151.4768,
+        "roll": 0
+      }
+    },
+    "b_3dae537d": {
+      "name": "Platform_Default.004",
+      "vertexCount": 8,
+      "faceCount": 6,
+      "position": {
+        "x": 1672.3845,
+        "y": -4224.9375,
+        "z": 0
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -90.27539,
+        "roll": 0
+      }
+    },
+    "b_49634869": {
+      "name": "Platform_Default.005",
+      "vertexCount": 8,
+      "faceCount": 6,
+      "position": {
+        "x": 2120.9666,
+        "y": -4234.7603,
+        "z": 0
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -90.27539,
+        "roll": 0
+      }
+    },
+    "b_1527123d": {
+      "name": "Platform_Disk",
+      "vertexCount": 18,
+      "faceCount": 16,
+      "position": {
+        "x": 2549.7234,
+        "y": -4319.059,
+        "z": 0
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -90.27539,
+        "roll": 0
+      }
+    },
+    "b_6f0100b6": {
+      "name": "Platform_Disk.001",
+      "vertexCount": 18,
+      "faceCount": 16,
+      "position": {
+        "x": 3485.0337,
+        "y": -5686.825,
+        "z": 0
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -90.27539,
+        "roll": 0
+      }
+    },
+    "b_72c34482": {
+      "name": "Platform_Final",
+      "vertexCount": 18,
+      "faceCount": 16,
+      "position": {
+        "x": 70.04849,
+        "y": -5681.4194,
+        "z": 146.99773
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -90.27539,
+        "roll": 0
+      }
+    },
+    "b_c84476d1": {
+      "name": "Platform_Island",
+      "vertexCount": 100,
+      "faceCount": 98,
+      "position": {
+        "x": 1060.3971,
+        "y": -1511.8921,
+        "z": 0
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -89.19586,
+        "roll": 0
+      }
+    },
+    "b_39ba1dc8": {
+      "name": "Platform_Snake",
+      "vertexCount": 192,
+      "faceCount": 168,
+      "position": {
+        "x": 3221.7268,
+        "y": -4498.7666,
+        "z": 1.9073486E-06
+      },
+      "rotation": {
+        "pitch": -0,
+        "yaw": 0,
+        "roll": 0
+      }
+    },
+    "b_ce2fda12": {
+      "name": "Platform_Tripledash",
+      "vertexCount": 86,
+      "faceCount": 84,
+      "position": {
+        "x": 2860.8096,
+        "y": -5718.6055,
+        "z": 0
+      },
+      "rotation": {
+        "pitch": -0,
+        "yaw": 179.61266,
+        "roll": -0
       }
     }
   }
