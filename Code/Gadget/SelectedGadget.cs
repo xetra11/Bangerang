@@ -7,7 +7,8 @@ public class SelectedGadget : Component
 	[Button]
 	public void Fire()
 	{
-		GadgetPrefab.GetComponent<global::Gadget>().UseGadget( GameObject.Root.WorldPosition );
+		var mainCamera = GameObject.Root.GetComponent<Player>().GetMainCamera();
+		GadgetPrefab.GetComponent<global::Gadget>().UseGadget( mainCamera.WorldPosition, mainCamera.WorldRotation.Forward);
 	}
 
 	protected override void OnUpdate()
