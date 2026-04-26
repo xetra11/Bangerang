@@ -3,9 +3,8 @@ root = true
 
 # C# files
 [*.{cs,razor}]
-indent_style = tab
-indent_size = 4
-tab_size = 4
+indent_style = space
+indent_size = 2
 
 # New line preferences
 end_of_line = crlf

@@ -6,7 +6,7 @@
     "Name": "greedy",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
-    "Scale": "0.1000001,0.5,0.5",
+    "Scale": "0.100000098,0.5,0.5",
     "Tags": "",
     "Enabled": true,
     "NetworkMode": 2,
@@ -47,6 +47,7 @@
         "__guid": "4a3c266c-8584-4e4d-adb7-ff5214384a73",
         "__enabled": true,
         "Flags": 0,
+        "CoinSound": "sfx/coin.sound",
         "GreedValue": 0,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
@@ -99,15 +100,16 @@
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
         "IncludedBodies": "",
+        "DeferGeneration": false,
         "CustomBounds": false
       }
     },
     "__variables": []
   },
   "ResourceVersion": 2,
-  "ShowInMenu": false,
-  "MenuPath": null,
-  "MenuIcon": null,
+  "ShowInMenu": true,
+  "MenuPath": "Bangerang",
+  "MenuIcon": "attach_money",
   "DontBreakAsTemplate": false,
   "__references": [],
   "__version": 2
