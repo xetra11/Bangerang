@@ -91,601 +91,6 @@
       "Children": []
     },
     {
-      "__guid": "4f4609da-32eb-4edd-b238-67d3895b8944",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "Greedies",
-      "Position": "340.90271,-172.082993,64",
-      "Rotation": "0,0,0,1",
-      "Scale": "0.100000098,0.5,0.5",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [],
-      "Children": [
-        {
-          "__guid": "19f95a1c-9f4e-4ddb-a41c-e0d42365ebcc",
-          "__version": 2,
-          "__Prefab": "models/greedy.prefab",
-          "__PrefabInstancePatch": {
-            "AddedObjects": [],
-            "RemovedObjects": [],
-            "PropertyOverrides": [
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
-              }
-            ],
-            "MovedObjects": []
-          },
-          "__PrefabIdToInstanceId": {
-            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "19f95a1c-9f4e-4ddb-a41c-e0d42365ebcc",
-            "1072d239-05f1-4518-b669-3f7edcd84225": "ed291d5a-a738-44a3-9bc9-6de51ebf8ddb",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "e624f622-2074-4845-a845-0060a6755ac5",
-            "590b3ac4-8708-4abd-90ea-68e123206b0d": "9085058c-0943-420d-9e22-72be6e514fcc"
-          }
-        },
-        {
-          "__guid": "b620a403-1db5-4098-bb05-4dbfd893cb7a",
-          "__version": 2,
-          "__Prefab": "models/greedy.prefab",
-          "__PrefabInstancePatch": {
-            "AddedObjects": [],
-            "RemovedObjects": [],
-            "PropertyOverrides": [
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Name",
-                "Value": "greedy (1)"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Position",
-                "Value": "14598.959,-901.983887,18.4124451"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Rotation",
-                "Value": "0,0,-0.499999613,0.866025567"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
-              }
-            ],
-            "MovedObjects": []
-          },
-          "__PrefabIdToInstanceId": {
-            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "b620a403-1db5-4098-bb05-4dbfd893cb7a",
-            "1072d239-05f1-4518-b669-3f7edcd84225": "7993779c-ff0f-4c93-86fc-84c44b8cdd75",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "05725232-fd70-430c-b918-296c48d49c39",
-            "590b3ac4-8708-4abd-90ea-68e123206b0d": "5bb1d115-07f0-4d34-be7b-36e2a81eb168"
-          }
-        },
-        {
-          "__guid": "63d92e7d-837c-4b47-95a5-925fa729877e",
-          "__version": 2,
-          "__Prefab": "models/greedy.prefab",
-          "__PrefabInstancePatch": {
-            "AddedObjects": [],
-            "RemovedObjects": [],
-            "PropertyOverrides": [
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Name",
-                "Value": "greedy (2)"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Position",
-                "Value": "13158.959,-403.159515,18.4129181"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Rotation",
-                "Value": "0,0,-0.500000417,0.866025329"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
-              }
-            ],
-            "MovedObjects": []
-          },
-          "__PrefabIdToInstanceId": {
-            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "63d92e7d-837c-4b47-95a5-925fa729877e",
-            "1072d239-05f1-4518-b669-3f7edcd84225": "9d04e214-29a7-4c06-a434-55d1d8424f19",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "3b9d7b54-3311-4657-924d-cdc74fddfbe6",
-            "590b3ac4-8708-4abd-90ea-68e123206b0d": "6bb900d6-1334-4cee-bc00-c712e1b67fee"
-          }
-        },
-        {
-          "__guid": "0564d3d5-2d11-46fa-8aa1-0683281d7ef9",
-          "__version": 2,
-          "__Prefab": "models/greedy.prefab",
-          "__PrefabInstancePatch": {
-            "AddedObjects": [],
-            "RemovedObjects": [],
-            "PropertyOverrides": [
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Name",
-                "Value": "greedy (3)"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Position",
-                "Value": "14747.4697,-441.436432,18.2530823"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Rotation",
-                "Value": "0,0,-0.500000417,0.866025329"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
-              }
-            ],
-            "MovedObjects": []
-          },
-          "__PrefabIdToInstanceId": {
-            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "0564d3d5-2d11-46fa-8aa1-0683281d7ef9",
-            "1072d239-05f1-4518-b669-3f7edcd84225": "c2bb5a0e-4716-4b9a-bbc8-e07b5e910391",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "f5f3d04c-d0f1-4d4b-89cb-84c40da9648c",
-            "590b3ac4-8708-4abd-90ea-68e123206b0d": "2f38d358-fb48-46b0-9950-30c8059b5b3d"
-          }
-        },
-        {
-          "__guid": "2ca35b81-5d60-40b1-a657-34b8c3b31933",
-          "__version": 2,
-          "__Prefab": "models/greedy.prefab",
-          "__PrefabInstancePatch": {
-            "AddedObjects": [],
-            "RemovedObjects": [],
-            "PropertyOverrides": [
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Name",
-                "Value": "greedy (4)"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Position",
-                "Value": "6679.37402,-1742.56543,64.0000458"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Rotation",
-                "Value": "0,0,-0.707107306,0.70710659"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
-              }
-            ],
-            "MovedObjects": []
-          },
-          "__PrefabIdToInstanceId": {
-            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "2ca35b81-5d60-40b1-a657-34b8c3b31933",
-            "1072d239-05f1-4518-b669-3f7edcd84225": "d71b05c5-bb62-4033-bec1-6ab9f406cd88",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "ea754f37-4c53-46b5-a3a3-6830bbab2894",
-            "590b3ac4-8708-4abd-90ea-68e123206b0d": "1bd00b23-e742-457d-87b4-7ea732afeaf8"
-          }
-        },
-        {
-          "__guid": "796384b2-481d-47c8-b0e9-65e606714662",
-          "__version": 2,
-          "__Prefab": "models/greedy.prefab",
-          "__PrefabInstancePatch": {
-            "AddedObjects": [],
-            "RemovedObjects": [],
-            "PropertyOverrides": [
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Name",
-                "Value": "greedy (5)"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Position",
-                "Value": "6827.50537,-2233.52539,64.0000916"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Rotation",
-                "Value": "0,0,-0.707107306,0.70710659"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
-              }
-            ],
-            "MovedObjects": []
-          },
-          "__PrefabIdToInstanceId": {
-            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "796384b2-481d-47c8-b0e9-65e606714662",
-            "1072d239-05f1-4518-b669-3f7edcd84225": "9e7a3b93-dcdd-4729-945b-bd76cf68f7c9",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "bf2c6620-808b-41b3-b9b3-456c91372b29",
-            "590b3ac4-8708-4abd-90ea-68e123206b0d": "2979f099-5456-46b7-a991-acbe05cbbcad"
-          }
-        },
-        {
-          "__guid": "1d50be56-5e0e-4cc2-a874-c6ff168403e0",
-          "__version": 2,
-          "__Prefab": "models/greedy.prefab",
-          "__PrefabInstancePatch": {
-            "AddedObjects": [],
-            "RemovedObjects": [],
-            "PropertyOverrides": [
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Name",
-                "Value": "greedy (6)"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Position",
-                "Value": "8110.95264,-3431.83813,64.0000916"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Rotation",
-                "Value": "0,0,-0.707107306,0.70710659"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
-              }
-            ],
-            "MovedObjects": []
-          },
-          "__PrefabIdToInstanceId": {
-            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "1d50be56-5e0e-4cc2-a874-c6ff168403e0",
-            "1072d239-05f1-4518-b669-3f7edcd84225": "f817977c-f3b3-436f-9da3-641c46dd1c3e",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "8f76c298-1152-4dfa-a2fa-d3f77c5541df",
-            "590b3ac4-8708-4abd-90ea-68e123206b0d": "7688c3f4-260c-48b6-b392-377218873cc8"
-          }
-        },
-        {
-          "__guid": "6db26e71-967d-43e4-beba-e2e25cd43033",
-          "__version": 2,
-          "__Prefab": "models/greedy.prefab",
-          "__PrefabInstancePatch": {
-            "AddedObjects": [],
-            "RemovedObjects": [],
-            "PropertyOverrides": [
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Name",
-                "Value": "greedy (7)"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Position",
-                "Value": "10030.9463,-4263.83887,17.6179199"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Rotation",
-                "Value": "0,0,-0.707107306,0.70710659"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
-              }
-            ],
-            "MovedObjects": []
-          },
-          "__PrefabIdToInstanceId": {
-            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "6db26e71-967d-43e4-beba-e2e25cd43033",
-            "1072d239-05f1-4518-b669-3f7edcd84225": "c9d0dc55-0981-468b-8764-53ed27f4c134",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "3f1520ff-a217-48ef-9cbf-806bc872bd93",
-            "590b3ac4-8708-4abd-90ea-68e123206b0d": "aada3270-e79e-49a8-bd9d-5f1edf9a2154"
-          }
-        },
-        {
-          "__guid": "d033bbf2-22c3-496c-aa25-a176789f5f87",
-          "__version": 2,
-          "__Prefab": "models/greedy.prefab",
-          "__PrefabInstancePatch": {
-            "AddedObjects": [],
-            "RemovedObjects": [],
-            "PropertyOverrides": [
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Name",
-                "Value": "greedy (8)"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Position",
-                "Value": "4590.95459,-3333.50049,64.0000916"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Rotation",
-                "Value": "0,0,-0.707107306,0.70710659"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
-              }
-            ],
-            "MovedObjects": []
-          },
-          "__PrefabIdToInstanceId": {
-            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "d033bbf2-22c3-496c-aa25-a176789f5f87",
-            "1072d239-05f1-4518-b669-3f7edcd84225": "727d6d96-a17c-4d20-88e2-b682d7f6fbbb",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "6aa83145-1240-45f7-bd24-eda72327a3dd",
-            "590b3ac4-8708-4abd-90ea-68e123206b0d": "aae7c064-be06-4bf0-9069-79ef5085eef3"
-          }
-        },
-        {
-          "__guid": "0cc9a92e-3959-4e40-b7a0-ce37d58edcb2",
-          "__version": 2,
-          "__Prefab": "models/greedy.prefab",
-          "__PrefabInstancePatch": {
-            "AddedObjects": [],
-            "RemovedObjects": [],
-            "PropertyOverrides": [
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Name",
-                "Value": "greedy (9)"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Position",
-                "Value": "-1169.05896,-7079.83789,64.0000916"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Rotation",
-                "Value": "0,0,-0.707107306,0.70710659"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
-              }
-            ],
-            "MovedObjects": []
-          },
-          "__PrefabIdToInstanceId": {
-            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "0cc9a92e-3959-4e40-b7a0-ce37d58edcb2",
-            "1072d239-05f1-4518-b669-3f7edcd84225": "a0f6f93d-d384-4f6c-82be-285df4fdede4",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "a21e4e29-f0bf-4c81-bb57-62ad1979c372",
-            "590b3ac4-8708-4abd-90ea-68e123206b0d": "1545a5e4-4061-42bf-b33e-89d55ff138c4"
-          }
-        },
-        {
-          "__guid": "b589ce0d-9d02-4025-bbbe-fea525737584",
-          "__version": 2,
-          "__Prefab": "models/greedy.prefab",
-          "__PrefabInstancePatch": {
-            "AddedObjects": [],
-            "RemovedObjects": [],
-            "PropertyOverrides": [
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Name",
-                "Value": "greedy (10)"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Position",
-                "Value": "-2227.09985,-7182.39844,-63.9998932"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Rotation",
-                "Value": "0,0,-0.866025627,0.499999821"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
-              }
-            ],
-            "MovedObjects": []
-          },
-          "__PrefabIdToInstanceId": {
-            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "b589ce0d-9d02-4025-bbbe-fea525737584",
-            "1072d239-05f1-4518-b669-3f7edcd84225": "8abea722-c93c-41cf-b263-cbdef2d5ca51",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "77be3168-51c4-46d5-9bd5-8bb8350fc5d0",
-            "590b3ac4-8708-4abd-90ea-68e123206b0d": "865617f2-8112-44bf-9f61-2edc37b24fc4"
-          }
-        },
-        {
-          "__guid": "66221c60-f54c-46d4-9aab-4d11cdc4f497",
-          "__version": 2,
-          "__Prefab": "models/greedy.prefab",
-          "__PrefabInstancePatch": {
-            "AddedObjects": [],
-            "RemovedObjects": [],
-            "PropertyOverrides": [
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Name",
-                "Value": "greedy (11)"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Position",
-                "Value": "110.938614,-7207.8374,-63.9999695"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Rotation",
-                "Value": "0,0,-0.500000596,0.866025329"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
-              }
-            ],
-            "MovedObjects": []
-          },
-          "__PrefabIdToInstanceId": {
-            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "66221c60-f54c-46d4-9aab-4d11cdc4f497",
-            "1072d239-05f1-4518-b669-3f7edcd84225": "8371ea1f-97b0-40b0-a138-423610996170",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "71056353-e3fd-4296-81ea-88c07376b81f",
-            "590b3ac4-8708-4abd-90ea-68e123206b0d": "3882bf13-5b88-4e82-a53c-b6b5fbad3a09"
-          }
-        }
-      ]
-    },
-    {
       "__guid": "fb1169d8-3c31-4e94-83f6-02acea60ac58",
       "__version": 2,
       "Flags": 0,
@@ -9561,10 +8966,389 @@
       "NetworkOrphaned": 0,
       "NetworkTransmit": true,
       "OwnerTransfer": 1,
+      "Components": [],
+      "Children": []
+    },
+    {
+      "__guid": "58c9f08e-1e91-43f9-8130-4bebdcf064be",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Greedyz",
+      "Position": "1664.00024,-384,128.000092",
+      "Rotation": "0,0,-0.500000358,0.866025448",
+      "Scale": "0.100000098,0.5,0.5",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [],
+      "Children": [
+        {
+          "__guid": "48ba2865-903e-4e8d-8f8f-6a5844396217",
+          "__version": 2,
+          "__Prefab": "models/greedyz.prefab",
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Name",
+                "Value": "Greedy"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0,0.99999994"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Scale",
+                "Value": "1,1,1"
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "48ba2865-903e-4e8d-8f8f-6a5844396217",
+            "1072d239-05f1-4518-b669-3f7edcd84225": "a661c842-c327-4de0-aa5e-8807fdede2bf",
+            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "a500f0aa-6216-4d0a-923b-da706665bc45",
+            "590b3ac4-8708-4abd-90ea-68e123206b0d": "23b13e0a-9281-4242-9c10-334897672ff0"
+          }
+        },
+        {
+          "__guid": "a564b735-a8b5-48d3-a769-e3612b541ae0",
+          "__version": 2,
+          "__Prefab": "models/greedyz.prefab",
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Name",
+                "Value": "Greedy"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Position",
+                "Value": "-7228.64404,-1872.22632,-0.000183105469"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.500000119,0.866025031"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Scale",
+                "Value": "1,1,1"
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "a564b735-a8b5-48d3-a769-e3612b541ae0",
+            "1072d239-05f1-4518-b669-3f7edcd84225": "bef81c00-986b-4066-8cf8-10472fda27c0",
+            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "f62e4633-ea4c-430b-8574-aad8f91473c6",
+            "590b3ac4-8708-4abd-90ea-68e123206b0d": "eb7b992b-8332-42a4-86f1-8a05ba277cd5"
+          }
+        },
+        {
+          "__guid": "5a68c2f5-fc91-4329-8241-ef2ab2fea4ee",
+          "__version": 2,
+          "__Prefab": "models/greedyz.prefab",
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Name",
+                "Value": "Greedy"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Position",
+                "Value": "-5779.88623,-1106.21545,-64.0001526"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.500000119,0.866025031"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Scale",
+                "Value": "1,1,1"
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "5a68c2f5-fc91-4329-8241-ef2ab2fea4ee",
+            "1072d239-05f1-4518-b669-3f7edcd84225": "90e73b25-1b72-4d37-987f-e9625e4ff2b0",
+            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "5706c9a4-d6eb-4aad-98c0-46951f56a487",
+            "590b3ac4-8708-4abd-90ea-68e123206b0d": "7d99de18-5d4b-4bb1-b5d7-1350f9a969f9"
+          }
+        },
+        {
+          "__guid": "8efbb3a9-7ea1-433a-a6f0-c0a111c9789b",
+          "__version": 2,
+          "__Prefab": "models/greedyz.prefab",
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Name",
+                "Value": "Greedy"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Position",
+                "Value": "-4039.00293,-669.656799,-64.0001526"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.500000119,0.866025031"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Scale",
+                "Value": "1,1,1"
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "8efbb3a9-7ea1-433a-a6f0-c0a111c9789b",
+            "1072d239-05f1-4518-b669-3f7edcd84225": "26d0faf1-eed1-46f7-ae40-a03589abb442",
+            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "1e33f2a3-73ea-4cde-a963-4226be2ace33",
+            "590b3ac4-8708-4abd-90ea-68e123206b0d": "8a3dd3f2-9a00-4ee1-a5da-59301c4ea5bc"
+          }
+        },
+        {
+          "__guid": "7fe5c64b-3a8f-4f62-b594-c9177bc6512b",
+          "__version": 2,
+          "__Prefab": "models/greedyz.prefab",
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Name",
+                "Value": "Greedy"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Position",
+                "Value": "-7251.26953,-1231.91833,-0.000228941441"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.500000119,0.866025031"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Scale",
+                "Value": "1,1,1"
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "7fe5c64b-3a8f-4f62-b594-c9177bc6512b",
+            "1072d239-05f1-4518-b669-3f7edcd84225": "26151d6b-abc4-42b1-bc70-e60ddfc5cfe5",
+            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "8a1f5e93-9176-49f5-8ca6-9234009abaa9",
+            "590b3ac4-8708-4abd-90ea-68e123206b0d": "b84ccf44-d9b3-45d4-a732-a8c6cc1881cb"
+          }
+        },
+        {
+          "__guid": "94618f9b-22b1-4259-b81e-43e4d6464cb1",
+          "__version": 2,
+          "__Prefab": "models/greedyz.prefab",
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Name",
+                "Value": "Greedy"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Position",
+                "Value": "-5438.38965,-773.571289,-64.0001526"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.500000119,0.866025031"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Scale",
+                "Value": "1,1,1"
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "94618f9b-22b1-4259-b81e-43e4d6464cb1",
+            "1072d239-05f1-4518-b669-3f7edcd84225": "7cb3c620-b4c1-45c5-a9af-4b4924928668",
+            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "95e6e2be-6380-4b68-941b-e73dcc07925c",
+            "590b3ac4-8708-4abd-90ea-68e123206b0d": "2b8434bd-ada9-4e34-8c8c-89344e8c0a99"
+          }
+        },
+        {
+          "__guid": "95423f02-3946-48b5-b58a-2e6c9c887976",
+          "__version": 2,
+          "__Prefab": "models/greedyz.prefab",
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Name",
+                "Value": "Greedy"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Position",
+                "Value": "1919.16785,166.227798,9.14931297E-05"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.00738555193,0.999972403"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
+                },
+                "Property": "Scale",
+                "Value": "1,1,1"
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "26a2c13b-80f9-4e83-a9de-90878dfbb545": "95423f02-3946-48b5-b58a-2e6c9c887976",
+            "1072d239-05f1-4518-b669-3f7edcd84225": "90874bee-0d6a-495f-8c99-240c7c42715b",
+            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "46777ad4-f6a5-43af-9e10-3c46a0b8f4e8",
+            "590b3ac4-8708-4abd-90ea-68e123206b0d": "33d6dac1-0db5-4406-b768-b58a99c30815"
+          }
+        }
+      ]
+    },
+    {
+      "__guid": "de7ad36f-4df7-4891-9c7e-2dae623039f2",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "NetworkHelper",
+      "Position": "244.968369,991.248779,1229.40503",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
       "Components": [
         {
-          "__type": "PlayerSpawn",
-          "__guid": "dd55d829-63b4-49c3-ae3f-7fc829871c64",
+          "__type": "Sandbox.NetworkHelper",
+          "__guid": "20cc22d9-5225-43c7-8add-1a84c69dd06a",
           "__enabled": true,
           "Flags": 0,
           "OnComponentDestroy": null,
@@ -9573,10 +9357,67 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "Player": {
+          "PlayerPrefab": {
             "_type": "gameobject",
             "prefab": "models/player.prefab"
-          }
+          },
+          "SpawnPoints": [
+            {
+              "_type": "gameobject",
+              "go": "4de40265-85f4-4a60-945c-2d4a5a417833"
+            }
+          ],
+          "StartServer": true
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "0c1b7b8c-8ba9-49b6-bf30-132c5adea596",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "HUD",
+      "Position": "137.553711,-130.03064,71.5366974",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "4e412668-3a9b-4315-951c-79a0ad7406a1",
+          "__enabled": true,
+          "Flags": 0,
+          "AutoScreenScale": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Opacity": 1,
+          "Scale": 1,
+          "ScaleStrategy": "ConsistentHeight",
+          "TargetCamera": null,
+          "ZIndex": 100
+        },
+        {
+          "__type": "Sandbox.UI.HUDUIComponent",
+          "__guid": "de19b291-ec76-4590-8c3b-ea481d3e897b",
+          "__enabled": true,
+          "Flags": 0,
+          "MyStringValue": "Hello World!",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
         }
       ],
       "Children": []

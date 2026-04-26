@@ -1,0 +1,22 @@
+@using Sandbox;
+@using Sandbox.UI;
+
+<style>
+  GreedyPanel {
+    .greedy-label {
+      font-size: 30px;
+      color: gold;
+    }
+  }
+
+</style>
+<root>
+  <div class="greedy-label">Greedyz: @Greedyz</div>
+</root>
+
+@code
+{
+  public int Greedyz { get; set; } = 100;
+
+  protected int BuildHash() => System.HashCode.Combine( Greedyz);
+}
