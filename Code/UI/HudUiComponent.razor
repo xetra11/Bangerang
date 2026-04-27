@@ -1,0 +1,21 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@implements IGreedyCollectEvent
+
+<root>
+  <GreedyPanel Coins="@Coins"/>
+</root>
+
+@code
+{
+  [Property] public int Coins { get; set; } = 20;
+
+  protected override int BuildHash() => System.HashCode.Combine( Coins );
+
+  public void OnGreedyCollect()
+  {
+    Log.Info( "Greedy collected!" );
+    Coins++;
+  }
+}

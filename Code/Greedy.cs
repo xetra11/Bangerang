@@ -1,3 +1,4 @@
+using System.Dynamic;
 using Sandbox;
 using Sandbox.Diagnostics;
 
@@ -15,6 +16,18 @@ public sealed class Greedy : Component, Component.ITriggerListener
     Component player = other.GameObject.GetComponentInParent<Player>();
     if ( !player.IsValid ) return;
     if ( CoinSound != null ) Sound.Play( CoinSound, WorldPosition );
+    IGreedyCollectEvent.Post(x => x.OnGreedyCollect());
     DestroyGameObject();
   }
+
+}
+
+public interface IGreedyCollectEvent : ISceneEvent<IGreedyCollectEvent>
+{
+  void OnGreedyCollect();
+}
+
+public interface IGreedyPickup
+{
+	void OnPickup( int amount );
 }

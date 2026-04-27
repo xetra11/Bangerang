@@ -9407,8 +9407,8 @@
           "ZIndex": 100
         },
         {
-          "__type": "Sandbox.UI.HUDUIComponent",
-          "__guid": "de19b291-ec76-4590-8c3b-ea481d3e897b",
+          "__type": "Sandbox.UI.HudUiComponent",
+          "__guid": "6108f968-f0bf-40a1-b341-91a49552d4ef",
           "__enabled": true,
           "Flags": 0,
           "MyStringValue": "Hello World!",
@@ -9443,13 +9443,13 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
-      "Sandbox.MovieMaker.MovieRecorderSystem": {
-        "DisableClientRecording": false
-      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
           "$blob": "8ae60bd4-2307-4fc9-8303-eb1d8c05e1ff"
         }
+      },
+      "Sandbox.MovieMaker.MovieRecorderSystem": {
+        "DisableClientRecording": false
       }
     }
   },

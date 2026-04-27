@@ -1,5 +1,6 @@
 @using Sandbox;
 @using Sandbox.UI;
+@inherits Panel
 
 <style>
   GreedyPanel {
@@ -11,12 +12,12 @@
 
 </style>
 <root>
-  <div class="greedy-label">Greedyz: @Greedyz</div>
+  <div class="greedy-label">Greedyz: @Coins</div>
 </root>
 
 @code
 {
-  public int Greedyz { get; set; } = 100;
+  [Parameter] public int Coins { get; set; } = 10;
 
-  protected int BuildHash() => System.HashCode.Combine( Greedyz);
+  protected override int BuildHash() => System.HashCode.Combine( Coins );
 }
