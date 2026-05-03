@@ -2,20 +2,31 @@
 @using Sandbox.UI;
 @inherits PanelComponent
 @implements IGreedyCollectEvent
+@implements Sandbox.Gameplay.GoalPost.IGoalEnterEvent
 
 <root>
   <GreedyPanel Coins="@Coins"/>
+  @if ( ShowGameEndPanel )
+  {
+    <GameEndPanel></GameEndPanel>
+  }
 </root>
 
 @code
 {
   [Property] public int Coins { get; set; } = 20;
+  [Property] public bool ShowGameEndPanel { get; set; } = false;
 
-  protected override int BuildHash() => System.HashCode.Combine( Coins );
+  protected override int BuildHash() => System.HashCode.Combine( Coins, ShowGameEndPanel );
 
   public void OnGreedyCollect()
   {
     Log.Info( "Greedy collected!" );
     Coins++;
+  }
+
+  public void OnGoalEntered( Player player )
+  {
+    ShowGameEndPanel = true;
   }
 }
