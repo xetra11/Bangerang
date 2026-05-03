@@ -13,8 +13,11 @@ public sealed class Greedy : Component, Component.ITriggerListener
 
   public void OnTriggerEnter( Collider other )
   {
-    Component player = other.GameObject.GetComponentInParent<Player>();
-    if ( !player.IsValid ) return;
+    if ( other?.GameObject is null ) return;
+
+    Player player = other.GameObject.GetComponentInParent<Player>();
+    if ( player is null || !player.IsValid ) return;
+
     if ( CoinSound != null ) Sound.Play( CoinSound, WorldPosition );
     IGreedyCollectEvent.Post(x => x.OnGreedyCollect());
     DestroyGameObject();
