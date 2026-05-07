@@ -112,7 +112,7 @@
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "",
-      "Enabled": true,
+      "Enabled": false,
       "NetworkMode": 2,
       "NetworkFlags": 0,
       "NetworkOrphaned": 0,
@@ -202,6 +202,86 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "f7412b1a-1c65-4668-bcd5-01c8d10b1f50",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "start_button",
+      "Position": "5.43812799,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": false,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.SpriteRenderer",
+          "__guid": "989d176b-0ba3-44ed-bc02-6afa5ef3809f",
+          "__enabled": true,
+          "Flags": 0,
+          "__version": 2,
+          "Additive": false,
+          "AlphaCutoff": 0.5,
+          "Billboard": "Always",
+          "Color": "1,1,1,1",
+          "DepthFeather": 0,
+          "FlipHorizontal": false,
+          "FlipVertical": false,
+          "FogStrength": 1,
+          "IsSorted": false,
+          "Lighting": false,
+          "OnAnimationEnd": null,
+          "OnAnimationStart": null,
+          "OnBroadcastMessage": null,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Opaque": false,
+          "OverlayColor": "1,1,1,0",
+          "PlaybackSpeed": 1,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Shadows": false,
+          "Size": "10,10",
+          "Sprite": {
+            "$compiler": "embed",
+            "$source": null,
+            "data": {
+              "Animations": [
+                {
+                  "Name": "Default",
+                  "FrameRate": 15,
+                  "Origin": "0.5,0.5",
+                  "LoopMode": "Loop",
+                  "Frames": [
+                    {
+                      "Texture": "images/start_button.png",
+                      "BroadcastMessages": []
+                    }
+                  ]
+                }
+              ],
+              "__references": null
+            },
+            "compiled": null
+          },
+          "StartingAnimationName": "Default",
+          "TextureFilter": "Bilinear"
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
@@ -224,13 +304,18 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
-      "Sandbox.MovieMaker.MovieRecorderSystem": {
-        "DisableClientRecording": false
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "1a8506c9-f9a9-4ce0-aee4-1d435087707a"
+        }
       },
       "Sandbox.SelectionSetsSystem": {
         "Data": {
           "SelectionSets": []
         }
+      },
+      "Sandbox.MovieMaker.MovieRecorderSystem": {
+        "DisableClientRecording": false
       }
     }
   },

@@ -4,6 +4,8 @@
 
 <style>
   MainMenuComponent {
+    width: 100%;
+    flex-direction: column;
     .title {
       font-size: 30px;
       color: white;
@@ -11,10 +13,13 @@
   }
 
 </style>
+
 <root>
   <h1 class="title">Main Menu</h1>
+  <MainMenuControlPanel Button="@Button"></MainMenuControlPanel>
 </root>
 
 @code
 {
+  [Property] public Image Button { get; set; }
 }
