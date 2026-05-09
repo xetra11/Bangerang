@@ -5,6 +5,7 @@ public sealed class Player : Component
 
 	protected override void OnStart()
 	{
+    Mouse.Visibility = MouseVisibility.Hidden;
 		_mainCamera = Scene.GetAllComponents<CameraComponent>().FirstOrDefault();
 
 		if ( _mainCamera == null )

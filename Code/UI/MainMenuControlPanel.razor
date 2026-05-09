@@ -4,6 +4,8 @@
 
 <style>
   MainMenuControlPanel {
+    pointer-events: all;
+
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
@@ -44,7 +46,7 @@
 <root>
   <div class="spacer-x"></div>
   <div class="buttons">
-    <div class="buttons-image" style="background-image: url('@_buttonImageUrl');"></div>
+    <div onmousedown="@StartGame" class="buttons-image" style="background-image: url('@_buttonImageUrl');"></div>
     <div class="spacer-s"></div>
     <div class="buttons-image" style="background-image: url('@_buttonImageUrl');"></div>
   </div>
@@ -54,12 +56,19 @@
 {
   [Parameter] public Image Button { get; set; }
 
+  private void StartGame()
+  {
+    Log.Error( "Loading Scene" );
+    Scene.LoadFromFile( "scenes/testzone.scene" );
+  }
+
   private string _buttonImageUrl;
 
   protected override void OnParametersSet()
   {
     base.OnParametersSet();
     _buttonImageUrl = Button?.SourceFile.SimplifyPath() ?? "images/start_button.png";
+    Mouse.Visibility = MouseVisibility.Visible;
   }
 
   protected override int BuildHash() => System.HashCode.Combine( Button );
