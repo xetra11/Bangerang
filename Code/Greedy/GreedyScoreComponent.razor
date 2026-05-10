@@ -1,0 +1,14 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+  <div>Test</div>
+</root>
+
+@code
+{
+  [Property] public int Score { get; set; }
+
+  protected override int BuildHash() => System.HashCode.Combine( Score );
+}

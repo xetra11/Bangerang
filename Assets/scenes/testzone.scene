@@ -9001,22 +9001,6 @@
                 },
                 "Property": "Name",
                 "Value": "Greedy"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Rotation",
-                "Value": "0,0,0,0.99999994"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
               }
             ],
             "MovedObjects": []
@@ -9024,8 +9008,8 @@
           "__PrefabIdToInstanceId": {
             "26a2c13b-80f9-4e83-a9de-90878dfbb545": "48ba2865-903e-4e8d-8f8f-6a5844396217",
             "1072d239-05f1-4518-b669-3f7edcd84225": "a661c842-c327-4de0-aa5e-8807fdede2bf",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "a500f0aa-6216-4d0a-923b-da706665bc45",
-            "590b3ac4-8708-4abd-90ea-68e123206b0d": "23b13e0a-9281-4242-9c10-334897672ff0"
+            "590b3ac4-8708-4abd-90ea-68e123206b0d": "23b13e0a-9281-4242-9c10-334897672ff0",
+            "6404c5de-0005-4fa4-85ff-e2f42a863d6e": "62031008-7405-4f64-adf1-703803132c2d"
           }
         },
         {
@@ -9059,14 +9043,6 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,0.500000119,0.866025031"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
               }
             ],
             "MovedObjects": []
@@ -9074,7 +9050,7 @@
           "__PrefabIdToInstanceId": {
             "26a2c13b-80f9-4e83-a9de-90878dfbb545": "a564b735-a8b5-48d3-a769-e3612b541ae0",
             "1072d239-05f1-4518-b669-3f7edcd84225": "bef81c00-986b-4066-8cf8-10472fda27c0",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "f62e4633-ea4c-430b-8574-aad8f91473c6",
+            "6404c5de-0005-4fa4-85ff-e2f42a863d6e": "cdafa0ee-a330-4b59-bd37-5987f20a0bc6",
             "590b3ac4-8708-4abd-90ea-68e123206b0d": "eb7b992b-8332-42a4-86f1-8a05ba277cd5"
           }
         },
@@ -9109,14 +9085,6 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,0.500000119,0.866025031"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
               }
             ],
             "MovedObjects": []
@@ -9124,7 +9092,7 @@
           "__PrefabIdToInstanceId": {
             "26a2c13b-80f9-4e83-a9de-90878dfbb545": "5a68c2f5-fc91-4329-8241-ef2ab2fea4ee",
             "1072d239-05f1-4518-b669-3f7edcd84225": "90e73b25-1b72-4d37-987f-e9625e4ff2b0",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "5706c9a4-d6eb-4aad-98c0-46951f56a487",
+            "6404c5de-0005-4fa4-85ff-e2f42a863d6e": "c7463abb-8897-4bb3-9f2b-0e4e691c27f4",
             "590b3ac4-8708-4abd-90ea-68e123206b0d": "7d99de18-5d4b-4bb1-b5d7-1350f9a969f9"
           }
         },
@@ -9159,14 +9127,6 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,0.500000119,0.866025031"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
               }
             ],
             "MovedObjects": []
@@ -9174,7 +9134,7 @@
           "__PrefabIdToInstanceId": {
             "26a2c13b-80f9-4e83-a9de-90878dfbb545": "8efbb3a9-7ea1-433a-a6f0-c0a111c9789b",
             "1072d239-05f1-4518-b669-3f7edcd84225": "26d0faf1-eed1-46f7-ae40-a03589abb442",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "1e33f2a3-73ea-4cde-a963-4226be2ace33",
+            "6404c5de-0005-4fa4-85ff-e2f42a863d6e": "bc1e9de3-4473-4da9-8da0-a57e24afd076",
             "590b3ac4-8708-4abd-90ea-68e123206b0d": "8a3dd3f2-9a00-4ee1-a5da-59301c4ea5bc"
           }
         },
@@ -9209,14 +9169,6 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,0.500000119,0.866025031"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
               }
             ],
             "MovedObjects": []
@@ -9224,7 +9176,7 @@
           "__PrefabIdToInstanceId": {
             "26a2c13b-80f9-4e83-a9de-90878dfbb545": "7fe5c64b-3a8f-4f62-b594-c9177bc6512b",
             "1072d239-05f1-4518-b669-3f7edcd84225": "26151d6b-abc4-42b1-bc70-e60ddfc5cfe5",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "8a1f5e93-9176-49f5-8ca6-9234009abaa9",
+            "6404c5de-0005-4fa4-85ff-e2f42a863d6e": "73d89857-f981-458d-8702-dc67c83b043a",
             "590b3ac4-8708-4abd-90ea-68e123206b0d": "b84ccf44-d9b3-45d4-a732-a8c6cc1881cb"
           }
         },
@@ -9259,14 +9211,6 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,0.500000119,0.866025031"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
               }
             ],
             "MovedObjects": []
@@ -9274,7 +9218,7 @@
           "__PrefabIdToInstanceId": {
             "26a2c13b-80f9-4e83-a9de-90878dfbb545": "94618f9b-22b1-4259-b81e-43e4d6464cb1",
             "1072d239-05f1-4518-b669-3f7edcd84225": "7cb3c620-b4c1-45c5-a9af-4b4924928668",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "95e6e2be-6380-4b68-941b-e73dcc07925c",
+            "6404c5de-0005-4fa4-85ff-e2f42a863d6e": "21b5b050-38da-497f-ab01-d91da4b6ed5e",
             "590b3ac4-8708-4abd-90ea-68e123206b0d": "2b8434bd-ada9-4e34-8c8c-89344e8c0a99"
           }
         },
@@ -9309,14 +9253,6 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,0.00738555193,0.999972403"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Scale",
-                "Value": "1,1,1"
               }
             ],
             "MovedObjects": []
@@ -9324,7 +9260,7 @@
           "__PrefabIdToInstanceId": {
             "26a2c13b-80f9-4e83-a9de-90878dfbb545": "95423f02-3946-48b5-b58a-2e6c9c887976",
             "1072d239-05f1-4518-b669-3f7edcd84225": "90874bee-0d6a-495f-8c99-240c7c42715b",
-            "4a3c266c-8584-4e4d-adb7-ff5214384a73": "46777ad4-f6a5-43af-9e10-3c46a0b8f4e8",
+            "6404c5de-0005-4fa4-85ff-e2f42a863d6e": "f032c5d3-7b36-4529-bda8-081d063042f4",
             "590b3ac4-8708-4abd-90ea-68e123206b0d": "33d6dac1-0db5-4406-b768-b58a99c30815"
           }
         }
@@ -9407,8 +9343,8 @@
           "ZIndex": 100
         },
         {
-          "__type": "Sandbox.UI.HudUiComponent",
-          "__guid": "6108f968-f0bf-40a1-b341-91a49552d4ef",
+          "__type": "Sandbox.HUD.HudUiComponent",
+          "__guid": "74ff6941-abde-4048-93e6-2f5f2fdbf442",
           "__enabled": true,
           "Flags": 0,
           "Coins": 0,
@@ -9608,17 +9544,17 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
+      "Sandbox.SelectionSetsSystem": {
+        "Data": {
+          "SelectionSets": []
+        }
+      },
       "Sandbox.MovieMaker.MovieRecorderSystem": {
         "DisableClientRecording": false
       },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
           "$blob": "8ae60bd4-2307-4fc9-8303-eb1d8c05e1ff"
-        }
-      },
-      "Sandbox.SelectionSetsSystem": {
-        "Data": {
-          "SelectionSets": []
         }
       }
     }

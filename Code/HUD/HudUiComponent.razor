@@ -1,5 +1,6 @@
 @using Sandbox;
-@using Sandbox.UI;
+@using Sandbox.Greedy
+@using Sandbox.Screens
 @inherits PanelComponent
 @implements IGreedyCollectEvent
 @implements Sandbox.Gameplay.GoalPost.IGoalEnterEvent
@@ -14,7 +15,7 @@
 @code
 {
   [Property] public int Coins { get; set; } = 20;
-  [Property] public bool ShowGameEndPanel { get; set; } = false;
+  [Property] public bool ShowGameEndPanel { get; set; }
 
   protected override int BuildHash() => System.HashCode.Combine( Coins, ShowGameEndPanel );
 
