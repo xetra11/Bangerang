@@ -9347,7 +9347,7 @@
           "__guid": "74ff6941-abde-4048-93e6-2f5f2fdbf442",
           "__enabled": true,
           "Flags": 0,
-          "Coins": 0,
+          "Coins": 20,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -9522,6 +9522,56 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "f5d5ec7f-eef4-483b-8441-927051fbfb21",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Systems",
+      "Position": "95.3685455,157.740265,-181.820129",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [],
+      "Children": [
+        {
+          "__guid": "682732ba-3c05-4a3d-868d-f55fc6265e17",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "GreedySystem",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.Greedy.GreedySystem",
+              "__guid": "dc0759f7-b203-4f15-abd7-643dc9dc53c6",
+              "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ],
+          "Children": []
+        }
+      ]
     }
   ],
   "SceneProperties": {

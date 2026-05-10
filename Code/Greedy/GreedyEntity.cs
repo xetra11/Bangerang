@@ -16,18 +16,8 @@ public sealed class GreedyEntity : Component, Component.ITriggerListener
     if ( player is null || !player.IsValid ) return;
 
     if ( CoinSound != null ) Sound.Play( CoinSound, WorldPosition );
-    IGreedyCollectEvent.Post(x => x.OnGreedyCollect());
+    Scene.GetSystem<GreedySystem>().Collect();
     DestroyGameObject();
   }
 
-}
-
-public interface IGreedyCollectEvent : ISceneEvent<IGreedyCollectEvent>
-{
-  void OnGreedyCollect();
-}
-
-public interface IGreedyPickup
-{
-  void OnPickup( int amount );
 }
