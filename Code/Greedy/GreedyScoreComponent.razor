@@ -1,6 +1,7 @@
 @using Sandbox;
 @using Sandbox.UI;
 @inherits PanelComponent
+@implements IGreedyCollectEvent
 
 <root>
   <GreedyPanel Coins="@Score"></GreedyPanel>
@@ -11,4 +12,8 @@
   [Property] public int Score { get; set; }
 
   protected override int BuildHash() => System.HashCode.Combine( Score );
+  public void OnGreedyCollect( int current )
+  {
+    Score = current;
+  }
 }
