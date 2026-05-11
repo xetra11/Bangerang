@@ -1,0 +1,21 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "Mainmenu Bg",
+      "Type": "sprite",
+      "Org": "local",
+      "Ident": "mainmenubg",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "images/mainmenu_bg.sprite"
+      }
+    }
+  }
+}

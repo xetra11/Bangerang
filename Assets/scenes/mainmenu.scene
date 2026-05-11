@@ -29,9 +29,9 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "Opacity": 0.25925925,
-          "Scale": 1,
-          "ScaleStrategy": "ConsistentHeight",
+          "Opacity": 1,
+          "Scale": 0,
+          "ScaleStrategy": "FollowDesktopScaling",
           "TargetCamera": {
             "_type": "component",
             "component_id": "aa45ebf1-70e1-44d1-a7ae-0b883f745368",
@@ -45,6 +45,7 @@
           "__guid": "d1ddb8d3-92c1-41e4-b94b-6034a545f700",
           "__enabled": true,
           "Flags": 0,
+          "Button": "images/start_button.vtex",
           "GameScene": "scenes/testzone.scene",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -225,17 +226,17 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
-      "Sandbox.SelectionSetsSystem": {
-        "Data": {
-          "SelectionSets": []
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "1a8506c9-f9a9-4ce0-aee4-1d435087707a"
         }
       },
       "Sandbox.MovieMaker.MovieRecorderSystem": {
         "DisableClientRecording": false
       },
-      "Sandbox.Clutter.ClutterGridSystem": {
-        "Storage": {
-          "$blob": "1a8506c9-f9a9-4ce0-aee4-1d435087707a"
+      "Sandbox.SelectionSetsSystem": {
+        "Data": {
+          "SelectionSets": []
         }
       }
     }

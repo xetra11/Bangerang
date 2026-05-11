@@ -54,7 +54,7 @@
 
 @code
 {
-  [Parameter] public Image Button { get; set; }
+  [Parameter] public Texture Button { get; set; }
 
   private void StartGame()
   {
@@ -66,7 +66,7 @@
   protected override void OnParametersSet()
   {
     base.OnParametersSet();
-    _buttonImageUrl = Button?.SourceFile.SimplifyPath() ?? "images/start_button.png";
+    _buttonImageUrl = Button?.ResourcePath.SimplifyPath() ?? "images/start_button2.png";
     Mouse.Visibility = MouseVisibility.Visible;
   }
 

@@ -5,7 +5,7 @@
   "Ident": "bangerang",
   "Schema": 1,
   "IncludeSourceFiles": false,
-  "Resources": null,
+  "Resources": "images/*",
   "PackageReferences": [],
   "EditorReferences": null,
   "Mounts": null,
@@ -23,7 +23,7 @@
     "PerMapRanking": false,
     "LeaderboardType": "None",
     "CsProjName": "",
-    "StartupScene": "scenes/testzone.scene",
+    "StartupScene": "scenes/mainmenu.scene",
     "LaunchMode": "Normal",
     "Compiler": {
       "RootNamespace": "Sandbox",
@@ -32,7 +32,7 @@
       "WarningsAsErrors": "",
       "TreatWarningsAsErrors": false,
       "Nullables": false,
-      "ReleaseMode": "Debug",
+      "ReleaseMode": "Release",
       "AssemblyReferences": [],
       "ReplacementDirectives": {
         ".Server.cs": "SERVER"
