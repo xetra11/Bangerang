@@ -2,8 +2,32 @@
 @using Sandbox.UI;
 @inherits PanelComponent
 
+<style>
+  GreedyScoreComponent{
+    .text {
+      font-size: 100px;
+    }
+    .result {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+  }
+
+
+</style>
 <root>
-  <GreedyPanel Coins="@Score"></GreedyPanel>
+  <div class="result">
+    <div class="text">You finished the map!</div>
+    <GreedyPanel Coins="@Score"></GreedyPanel>
+  </div>
 </root>
 
 @code
