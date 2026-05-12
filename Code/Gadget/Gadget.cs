@@ -2,7 +2,7 @@ using System;
 using Sandbox;
 using Sandbox.Gadget;
 
-public interface Gadget
+public abstract class Gadget : Component
 {
-  public void UseGadget( Vector3 playerLocation, Vector3 playerFacingDirection );
+  public abstract void UseGadget( Vector3 playerLocation, Vector3 playerFacingDirection );
 }
