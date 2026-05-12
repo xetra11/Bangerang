@@ -1,6 +1,4 @@
-using System;
-using Sandbox;
-using Sandbox.Gadget;
+namespace Sandbox.Gadget;
 
 public abstract class Gadget : Component
 {

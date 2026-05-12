@@ -13,7 +13,7 @@ public class SelectedGadget : Component
 		var mainCamera = GameObject.Root.GetComponent<Player>()?.GetMainCamera();
 		if ( mainCamera != null && GadgetPrefab != null )
 		{
-			GadgetPrefab.GetComponent<global::Gadget>()?.UseGadget( mainCamera.WorldPosition, mainCamera.WorldRotation.Forward );
+			GadgetPrefab.GetComponent<global::Sandbox.Gadget.Gadget>()?.UseGadget( mainCamera.WorldPosition, mainCamera.WorldRotation.Forward );
 		}
 	}
 

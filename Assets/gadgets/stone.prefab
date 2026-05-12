@@ -16,8 +16,8 @@
     "OwnerTransfer": 1,
     "Components": [
       {
-        "__type": "StoneGadget",
-        "__guid": "3ed27025-c0f1-47ad-b7ea-fc55f725890f",
+        "__type": "Sandbox.Gadget.StoneGadget",
+        "__guid": "8dee590f-3611-489e-acf5-69bb6da820e8",
         "__enabled": true,
         "Flags": 0,
         "Name": "Stone",

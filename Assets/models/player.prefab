@@ -205,11 +205,11 @@
         "OnComponentUpdate": null
       },
       {
-        "__type": "Sandbox.Gadget.SelectedGadget",
-        "__guid": "c1d2c2dc-f071-49a2-8865-6093b8d4f90f",
+        "__type": "Sandbox.PlayerGadgetInput",
+        "__guid": "0ce6f024-e29d-42ac-a4ee-6f6b18daac22",
         "__enabled": true,
         "Flags": 0,
-        "GadgetPrefab": {
+        "gadget": {
           "_type": "gameobject",
           "prefab": "gadgets/stone.prefab"
         },
@@ -219,24 +219,6 @@
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null
-      },
-      {
-        "__type": "Sandbox.PlayerGadgetInput",
-        "__guid": "0ce6f024-e29d-42ac-a4ee-6f6b18daac22",
-        "__enabled": true,
-        "Flags": 0,
-        "OnComponentDestroy": null,
-        "OnComponentDisabled": null,
-        "OnComponentEnabled": null,
-        "OnComponentFixedUpdate": null,
-        "OnComponentStart": null,
-        "OnComponentUpdate": null,
-        "SelectedGadget": {
-          "_type": "component",
-          "component_id": "c1d2c2dc-f071-49a2-8865-6093b8d4f90f",
-          "go": "92d755a9-37ed-451e-a401-c0a38d12e42d",
-          "component_type": "SelectedGadget"
-        }
       }
     ],
     "Children": [

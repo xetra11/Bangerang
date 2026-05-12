@@ -2,7 +2,7 @@ using System;
 
 namespace Sandbox.Gadget;
 
-public sealed class StoneGadget : global::Gadget
+public sealed class StoneGadget : global::Sandbox.Gadget.Gadget
 {
   [Property] public String Name { get; set; }
   [Property] public GameObject ProjectilePrefab { get; set; }
