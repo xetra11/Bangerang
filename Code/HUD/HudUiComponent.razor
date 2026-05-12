@@ -3,20 +3,46 @@
 @using Sandbox.Screens
 @inherits PanelComponent
 @implements IGreedyCollectEvent
+<style>
+  HudUiComponent {
+    .gadget-bar {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 400px;
+      height: 80px;
+      background-color: grey;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      margin-bottom: 15px;
+    }
+
+    .gadget-bar__slot {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+</style>
 <root>
   <GreedyPanel Coins="@Coins"/>
-  @if ( ShowGameEndPanel )
-  {
-    <GameEndPanel></GameEndPanel>
-  }
+  <div class="gadget-bar">
+    <div class="gadget-bar__slot"></div>
+    <div class="gadget-bar__slot"></div>
+    <div class="gadget-bar__slot"></div>
+  </div>
 </root>
 
 @code
 {
   [Property] public int Coins { get; set; }
-  [Property] public bool ShowGameEndPanel { get; set; }
 
-  protected override int BuildHash() => System.HashCode.Combine( Coins, ShowGameEndPanel );
+  protected override int BuildHash() => System.HashCode.Combine( Coins );
 
   public void OnGreedyCollect( int current )
   {
