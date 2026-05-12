@@ -9547,6 +9547,10 @@
             {
               "_type": "gameobject",
               "prefab": "gadgets/stone.prefab"
+            },
+            {
+              "_type": "gameobject",
+              "prefab": "gadgets/sword.prefab"
             }
           ],
           "OnComponentDestroy": null,

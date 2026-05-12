@@ -15,15 +15,16 @@ public class GadgetSelectionSystem : GameObjectSystem
 
     if ( _gadgetHolder == null )
     {
-      Log.Warning( "GadgetHolder not found yet" );
+      Log.Error( "GadgetHolder not found yet" );
       return;
     }
 
     if ( _gadgetHolder.Gadgets.Count == 0 )
     {
-      Log.Warning( "GadgetHolder is empty" );
+      Log.Error( "GadgetHolder is empty" );
       return;
     }
+
 
     if ( Input.Released( "Slot1" ) )
       SelectGadget( 0 );
@@ -38,9 +39,13 @@ public class GadgetSelectionSystem : GameObjectSystem
   private void SelectGadget( int index )
   {
     if ( index >= _gadgetHolder.Gadgets.Count )
+    {
+      Log.Error( $"Invalid index: {index}" );
       return;
+    }
 
     var gadget = _gadgetHolder.Gadgets[index].GetComponent<Gadget>();
+    Log.Info( $"Selected gadget: {gadget}" );
     if ( gadget == null )
       return;
 
