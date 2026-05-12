@@ -2,20 +2,22 @@ using Sandbox.Gadget;
 
 namespace Sandbox;
 
-public sealed class PlayerGadgetInput : Component
+public sealed class PlayerGadgetInput : Component, IGadgetSelectedEvent
 {
-  [Property] public GameObject gadget { get; set; }
+  private Gadget.Gadget _selectedGadget;
 
   protected override void OnUpdate()
   {
     if ( Input.Released( "attack1" ) )
     {
-
       var mainCamera = GameObject.Root.GetComponent<Player>()?.GetMainCamera();
-      if ( mainCamera != null && gadget != null )
+      if ( mainCamera != null && _selectedGadget != null )
       {
-        gadget.GetComponent<global::Sandbox.Gadget.Gadget>()?.UseGadget( mainCamera.WorldPosition, mainCamera.WorldRotation.Forward );
+        _selectedGadget.GetComponent<global::Sandbox.Gadget.Gadget>()?.UseGadget( mainCamera.WorldPosition, mainCamera.WorldRotation.Forward );
       }
     }
+
   }
+
+  public void OnGadgetSelected( Gadget.Gadget gadget ) => _selectedGadget = gadget;
 }
