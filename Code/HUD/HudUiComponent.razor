@@ -1,15 +1,19 @@
 @inherits PanelComponent
-@implements Sandbox.Greedy.IGreedyCollectEvent
 @using Sandbox.Gadget
 @using Sandbox.Gadget.Development
 @using Sandbox.Gadget.UI
 @using Sandbox.Greedy
 @implements Sandbox.Gadget.IGadgetSelectedEvent
+@implements Sandbox.Greedy.IGreedyCollectEvent
+@implements DeveloperInputSystem.IOpenGadgetDebuggerEvent
 
 <root>
   <GreedyPanel Coins="@_coins"/>
   <GadgetSelectionPanel SelectedSlot="@_selectedSlot"></GadgetSelectionPanel>
-  <GadgetSelectionDebugger GadgetHolder="@_gadgetHolder"></GadgetSelectionDebugger>
+  @if ( _showGadgetDebugger )
+  {
+    <GadgetSelectionDebugger GadgetHolder="@_gadgetHolder"></GadgetSelectionDebugger>
+  }
 </root>
 
 @code
@@ -17,23 +21,13 @@
   private int _coins;
   private int _selectedSlot;
   private GadgetHolder _gadgetHolder;
+  private bool _showGadgetDebugger;
 
-  protected override int BuildHash() => System.HashCode.Combine( _coins, _selectedSlot, _gadgetHolder);
+  protected override int BuildHash() => System.HashCode.Combine( _coins, _selectedSlot, _gadgetHolder, _showGadgetDebugger);
 
-  protected override void OnStart()
-  {
-    _gadgetHolder = Scene.GetSystem<GadgetSelectionSystem>().GadgetHolder;
-  }
+  protected override void OnStart() => _gadgetHolder = Scene.GetSystem<GadgetSelectionSystem>().GadgetHolder;
 
-  public void OnGreedyCollect( int current )
-  {
-    Log.Info( "Greedy collected!" );
-    _coins = current;
-  }
-
-  public void OnGadgetSelected( int index, Gadget gadget )
-  {
-    Log.Info( $"Selected slot: {index}" );
-    _selectedSlot = index;
-  }
+  public void OnGreedyCollect( int current ) => _coins = current;
+  public void OnGadgetSelected( int index, Gadget gadget ) => _selectedSlot = index;
+  public void OnGadgetDebuggerToggle() => _showGadgetDebugger = !_showGadgetDebugger;
 }

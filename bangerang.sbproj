@@ -42,6 +42,11 @@
         "unittest"
       ],
       "DistinctAssemblyReferences": []
+    },
+    "ControlModes": {
+      "Keyboard": false,
+      "VR": false,
+      "Gamepad": false
     }
   }
 }

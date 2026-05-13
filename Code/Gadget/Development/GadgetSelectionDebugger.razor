@@ -1,11 +1,48 @@
 @using Sandbox.UI;
 @inherits Panel
 
-<root>
-  @foreach ( var gadget in GadgetHolder.Gadgets )
-  {
-    <div>@gadget.Name</div>
+<style>
+  GadgetSelectionDebugger{
+    .gadget-selection-debugger{
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #154d53;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+    }
+    .gadget-selection-debugger h2{
+      color: white;
+    }
+    .gadget-selection-debugger__gadget{
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #1b8f9a;
+    }
+    .gadget-selection-debugger__gadget p{
+      color: white;
+    }
+
   }
+
+</style>
+<root>
+  <div class="gadget-selection-debugger">
+    <h2>Gadget Selection Debugger</h2>
+    @foreach ( var gadget in GadgetHolder.Gadgets )
+    {
+      <div class="gadget-selection-debugger__gadget">
+        <p>
+          @gadget.Name
+        </p>
+      </div>
+    }
+  </div>
 </root>
 
 @code
