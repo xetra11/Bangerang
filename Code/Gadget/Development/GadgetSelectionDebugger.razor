@@ -34,11 +34,11 @@
 <root>
   <div class="gadget-selection-debugger">
     <h2>Gadget Selection Debugger</h2>
-    @foreach ( var gadget in GadgetHolder.Gadgets )
+    @foreach ( var gadget in GadgetHolder.GetGadgets() )
     {
       <div class="gadget-selection-debugger__gadget">
         <p>
-          @gadget.Name
+          @gadget.GadgetName()
         </p>
       </div>
     }

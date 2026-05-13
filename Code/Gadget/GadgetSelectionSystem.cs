@@ -19,7 +19,7 @@ public class GadgetSelectionSystem : GameObjectSystem
       return;
     }
 
-    if ( _gadgetHolder.Gadgets.Count == 0 )
+    if ( _gadgetHolder.GetGadgets().Count == 0 )
     {
       Log.Error( "GadgetHolder is empty" );
       return;
@@ -40,10 +40,10 @@ public class GadgetSelectionSystem : GameObjectSystem
 
   private void SelectGadget( int index )
   {
-    if ( index >= _gadgetHolder.Gadgets.Count )
+    if ( index >= _gadgetHolder.GetGadgets().Count )
       return;
 
-    var gadget = _gadgetHolder.Gadgets[index].GetComponent<Gadget>();
+    var gadget = _gadgetHolder.GetGadgets()[index].GetComponent<Gadget>();
     Log.Info( $"Selected gadget: {gadget}" );
     if ( gadget == null )
       return;

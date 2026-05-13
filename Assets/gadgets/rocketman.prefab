@@ -3,7 +3,7 @@
     "__guid": "7df408de-bd25-49f3-a4bf-fda9dfc45633",
     "__version": 2,
     "Flags": 0,
-    "Name": "sword",
+    "Name": "rocketman",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "1,1,1",
@@ -16,21 +16,17 @@
     "OwnerTransfer": 1,
     "Components": [
       {
-        "__type": "Sandbox.Gadget.SwordGadget",
-        "__guid": "5980d641-a8e9-4f74-82b0-446823322029",
+        "__type": "Sandbox.Gadget.RocketManGadget",
+        "__guid": "32105cef-0d78-4069-ba03-ba4b505f8295",
         "__enabled": true,
         "Flags": 0,
-        "Name": "Sword",
+        "Name": null,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
-        "OnComponentUpdate": null,
-        "ProjectilePrefab": {
-          "_type": "gameobject",
-          "prefab": "gadgets/projectiles/sword_projectile.prefab"
-        }
+        "OnComponentUpdate": null
       }
     ],
     "Children": [],
