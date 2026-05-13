@@ -9561,6 +9561,24 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "7adcc373-5c32-4178-9151-848ec8ff17ab",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "DevelopmentTools",
+      "Position": "168.464249,-236.685852,-200.082397",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [],
+      "Children": []
     }
   ],
   "SceneProperties": {
