@@ -19,5 +19,5 @@ public sealed class PlayerGadgetInput : Component, IGadgetSelectedEvent
 
   }
 
-  public void OnGadgetSelected( Gadget.Gadget gadget ) => _selectedGadget = gadget;
+  public void OnGadgetSelected(int index, Gadget.Gadget gadget ) => _selectedGadget = gadget;
 }

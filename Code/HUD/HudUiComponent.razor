@@ -1,23 +1,31 @@
 @using Sandbox;
+@using Sandbox.Gadget
 @using Sandbox.Greedy
-@using Sandbox.Screens
 @inherits PanelComponent
 @implements IGreedyCollectEvent
+@implements Sandbox.Gadget.IGadgetSelectedEvent
 
 <root>
-  <GreedyPanel Coins="@Coins"/>
-  <GadgetSelectionPanel></GadgetSelectionPanel>
+  <GreedyPanel Coins="@_coins"/>
+  <GadgetSelectionPanel SelectedSlot="@_selectedSlot"></GadgetSelectionPanel>
 </root>
 
 @code
 {
-  [Property] public int Coins { get; set; }
+  private int _coins;
+  private int _selectedSlot;
 
-  protected override int BuildHash() => System.HashCode.Combine( Coins );
+  protected override int BuildHash() => System.HashCode.Combine( _coins, _selectedSlot );
 
   public void OnGreedyCollect( int current )
   {
     Log.Info( "Greedy collected!" );
-    Coins = current;
+    _coins = current;
+  }
+
+  public void OnGadgetSelected( int index, Gadget gadget )
+  {
+    Log.Info( $"Selected slot: {index}" );
+    _selectedSlot = index;
   }
 }

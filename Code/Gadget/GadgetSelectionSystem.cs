@@ -39,21 +39,18 @@ public class GadgetSelectionSystem : GameObjectSystem
   private void SelectGadget( int index )
   {
     if ( index >= _gadgetHolder.Gadgets.Count )
-    {
-      Log.Error( $"Invalid index: {index}" );
       return;
-    }
 
     var gadget = _gadgetHolder.Gadgets[index].GetComponent<Gadget>();
     Log.Info( $"Selected gadget: {gadget}" );
     if ( gadget == null )
       return;
 
-    IGadgetSelectedEvent.Post( x => x.OnGadgetSelected( gadget ) );
+    IGadgetSelectedEvent.Post( x => x.OnGadgetSelected( index, gadget ) );
   }
 }
 
 public interface IGadgetSelectedEvent : ISceneEvent<IGadgetSelectedEvent>
 {
-  void OnGadgetSelected( Gadget gadget );
+  void OnGadgetSelected( int index, Gadget gadget );
 }

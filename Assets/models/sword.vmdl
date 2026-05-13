@@ -10,10 +10,9 @@
 				children = 
 				[
 					{
-						_class = "DefaultMaterialGroup"
+						_class = "MaterialGroup"
+						name = "SwordMaterial"
 						remaps = [  ]
-						use_global_default = true
-						global_default_material = "materials/default.vmat"
 					},
 				]
 			},
@@ -46,8 +45,8 @@
 				]
 			},
 		]
-		model_archetype = ""
-		primary_associated_entity = ""
+		model_archetype = "static_prop_model"
+		primary_associated_entity = "prop_static"
 		anim_graph_name = ""
 		base_model_name = ""
 	}
