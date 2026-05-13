@@ -29,6 +29,7 @@ public sealed class PlayerGadgetInput : Component, IGadgetSelectedEvent
       if ( mainCamera != null && _selectedGadget != null )
       {
         _selectedGadget.GetComponent<global::Sandbox.Gadget.Gadget>()?.UseGadget( gadgetMount.GetMountPosition(), mainCamera.WorldRotation.Forward );
+        _selectedGadget.GetComponent<global::Sandbox.Gadget.Gadget>()?.UseGadget( gadgetMount.GetMountPosition(), player);
       }
     }
   }
