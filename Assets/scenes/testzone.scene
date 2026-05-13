@@ -9344,7 +9344,7 @@
         },
         {
           "__type": "Sandbox.HUD.HudUiComponent",
-          "__guid": "74ff6941-abde-4048-93e6-2f5f2fdbf442",
+          "__guid": "2ca688f7-ecf2-4c2d-bc90-ba30f3807d80",
           "__enabled": true,
           "Flags": 0,
           "OnComponentDestroy": null,
@@ -9522,47 +9522,6 @@
       "Children": []
     },
     {
-      "__guid": "22a6e57d-ce05-48b0-b617-64557e5f72f4",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "GadgetHolder",
-      "Position": "158.192886,-22.8462067,-70.0093536",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.Gadget.GadgetHolder",
-          "__guid": "34074d95-2979-4184-a1f6-007047924d37",
-          "__enabled": true,
-          "Flags": 0,
-          "Gadgets": [
-            {
-              "_type": "gameobject",
-              "prefab": "gadgets/stone.prefab"
-            },
-            {
-              "_type": "gameobject",
-              "prefab": "gadgets/sword.prefab"
-            }
-          ],
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null
-        }
-      ],
-      "Children": []
-    },
-    {
       "__guid": "7adcc373-5c32-4178-9151-848ec8ff17ab",
       "__version": 2,
       "Flags": 0,
@@ -9579,6 +9538,66 @@
       "OwnerTransfer": 1,
       "Components": [],
       "Children": []
+    },
+    {
+      "__guid": "7eb9edb9-a1ad-4ba1-a470-76f5c397ea87",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Gadgets",
+      "Position": "220.45137,-15.5267334,122.099838",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [],
+      "Children": [
+        {
+          "__guid": "22a6e57d-ce05-48b0-b617-64557e5f72f4",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "GadgetHolder",
+          "Position": "-62.2584839,-7.31947327,-192.109192",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.Gadget.GadgetHolder",
+              "__guid": "34074d95-2979-4184-a1f6-007047924d37",
+              "__enabled": true,
+              "Flags": 0,
+              "Gadgets": [
+                {
+                  "_type": "gameobject",
+                  "prefab": "gadgets/stone.prefab"
+                },
+                {
+                  "_type": "gameobject",
+                  "prefab": "gadgets/sword.prefab"
+                }
+              ],
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ],
+          "Children": []
+        }
+      ]
     }
   ],
   "SceneProperties": {

@@ -1,0 +1,15 @@
+@using Sandbox.UI;
+@inherits Panel
+
+<root>
+  @foreach ( var gadget in GadgetHolder.Gadgets )
+  {
+    <div>@gadget.Name</div>
+  }
+</root>
+
+@code
+{
+  [Parameter] public GadgetHolder GadgetHolder { get; set; }
+
+}

@@ -6,13 +6,13 @@ public class GadgetSelectionSystem : GameObjectSystem
 
   public GadgetSelectionSystem( Scene scene ) : base( scene )
   {
+    Listen( Stage.SceneLoaded, 10, LoadHolder, "CheckGadgetSelection" );
     Listen( Stage.FinishUpdate, 10, CheckSelection, "CheckGadgetSelection" );
   }
 
-  private void CheckSelection()
+  private void LoadHolder()
   {
     _gadgetHolder ??= Scene.GetAllComponents<GadgetHolder>().FirstOrDefault();
-
     if ( _gadgetHolder == null )
     {
       Log.Error( "GadgetHolder not found yet" );
@@ -24,8 +24,10 @@ public class GadgetSelectionSystem : GameObjectSystem
       Log.Error( "GadgetHolder is empty" );
       return;
     }
+  }
 
-
+  private void CheckSelection()
+  {
     if ( Input.Released( "Slot1" ) )
       SelectGadget( 0 );
 
@@ -48,6 +50,8 @@ public class GadgetSelectionSystem : GameObjectSystem
 
     IGadgetSelectedEvent.Post( x => x.OnGadgetSelected( index, gadget ) );
   }
+
+  public GadgetHolder GadgetHolder => _gadgetHolder;
 }
 
 public interface IGadgetSelectedEvent : ISceneEvent<IGadgetSelectedEvent>

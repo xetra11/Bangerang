@@ -1,21 +1,29 @@
-@using Sandbox;
-@using Sandbox.Gadget
-@using Sandbox.Greedy
 @inherits PanelComponent
-@implements IGreedyCollectEvent
+@implements Sandbox.Greedy.IGreedyCollectEvent
+@using Sandbox.Gadget
+@using Sandbox.Gadget.Development
+@using Sandbox.Gadget.UI
+@using Sandbox.Greedy
 @implements Sandbox.Gadget.IGadgetSelectedEvent
 
 <root>
   <GreedyPanel Coins="@_coins"/>
   <GadgetSelectionPanel SelectedSlot="@_selectedSlot"></GadgetSelectionPanel>
+  <GadgetSelectionDebugger GadgetHolder="@_gadgetHolder"></GadgetSelectionDebugger>
 </root>
 
 @code
 {
   private int _coins;
   private int _selectedSlot;
+  private GadgetHolder _gadgetHolder;
 
-  protected override int BuildHash() => System.HashCode.Combine( _coins, _selectedSlot );
+  protected override int BuildHash() => System.HashCode.Combine( _coins, _selectedSlot, _gadgetHolder);
+
+  protected override void OnStart()
+  {
+    _gadgetHolder = Scene.GetSystem<GadgetSelectionSystem>().GadgetHolder;
+  }
 
   public void OnGreedyCollect( int current )
   {
