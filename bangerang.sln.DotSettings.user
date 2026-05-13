@@ -1,0 +1,8 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=dcd92151_002D5e18_002D962e_002D8bdb_002D928a53e920d1_0023Base_0020Library/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=3e4d3cd4_002Db04e_002D595c_002D0842_002Da059775ebbae_0023Base_0020Editor_0020Library/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=290318a0_002D0f0a_002D6d44_002D5ed6_002D411a4abae841_0023actiongraph/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=ba9ed4c7_002D5dd4_002Da65f_002D865a_002Da3166b33ed67_0023dooeditor/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=86c57fa0_002D513b_002D1213_002D739c_002Dff33aa6ad60c_0023hammer/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=5aa09998_002D2209_002Daea7_002D8103_002Dbecda1ba9aef_0023moviemaker/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=03fabf3b_002D32e1_002D75f1_002Da428_002D69a95fd0bc60_0023shadergraph/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

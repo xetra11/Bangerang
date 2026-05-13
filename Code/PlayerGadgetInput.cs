@@ -10,14 +10,28 @@ public sealed class PlayerGadgetInput : Component, IGadgetSelectedEvent
   {
     if ( Input.Released( "attack1" ) )
     {
-      var mainCamera = GameObject.Root.GetComponent<Player>()?.GetMainCamera();
+      var player = GameObject.Root.GetComponent<Player>();
+      if ( player == null )
+      {
+        Log.Error( "Player not defined for Gadget Input" );
+        return;
+      }
+
+      var mainCamera = player.GetMainCamera();
+      var gadgetMount = player.GetComponent<GadgetMount>();
+
+      if ( gadgetMount == null )
+      {
+        Log.Error( "Missing Gadget Mount on Player" );
+        return;
+      }
+
       if ( mainCamera != null && _selectedGadget != null )
       {
-        _selectedGadget.GetComponent<global::Sandbox.Gadget.Gadget>()?.UseGadget( mainCamera.WorldPosition, mainCamera.WorldRotation.Forward );
+        _selectedGadget.GetComponent<global::Sandbox.Gadget.Gadget>()?.UseGadget( gadgetMount.GetMountPosition(), mainCamera.WorldRotation.Forward );
       }
     }
-
   }
 
-  public void OnGadgetSelected(int index, Gadget.Gadget gadget ) => _selectedGadget = gadget;
+  public void OnGadgetSelected( int index, Gadget.Gadget gadget ) => _selectedGadget = gadget;
 }

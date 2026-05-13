@@ -209,9 +209,21 @@
         "__guid": "0ce6f024-e29d-42ac-a4ee-6f6b18daac22",
         "__enabled": true,
         "Flags": 0,
-        "gadget": {
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null
+      },
+      {
+        "__type": "Sandbox.GadgetMount",
+        "__guid": "f68e3648-7163-48d3-893d-af0d33d88299",
+        "__enabled": true,
+        "Flags": 0,
+        "GadgetMountPos": {
           "_type": "gameobject",
-          "prefab": "gadgets/stone.prefab"
+          "go": "91388728-606b-43e6-8a34-bb83dc27fd3f"
         },
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
@@ -356,6 +368,24 @@
             "SurfaceVelocity": "0,0,0"
           }
         ],
+        "Children": []
+      },
+      {
+        "__guid": "91388728-606b-43e6-8a34-bb83dc27fd3f",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "GadgetMount",
+        "Position": "11.2102451,0,55.0634193",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [],
         "Children": []
       }
     ],
