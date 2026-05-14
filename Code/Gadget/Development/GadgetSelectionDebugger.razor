@@ -19,11 +19,17 @@
       color: white;
     }
     .gadget-selection-debugger__gadget{
+      pointer-events: all;
       padding: 8px;
       border: 1px solid #ccc;
       border-radius: 4px;
       background-color: #1b8f9a;
     }
+
+    .gadget-selection-debugger__gadget--selected{
+      background-color: #a64dda;
+    }
+
     .gadget-selection-debugger__gadget p{
       color: white;
     }
@@ -36,11 +42,22 @@
     <h2>Gadget Selection Debugger</h2>
     @foreach ( var gadget in GadgetHolder.GetGadgets() )
     {
-      <div class="gadget-selection-debugger__gadget">
-        <p>
-          @gadget.GadgetName()
-        </p>
-      </div>
+      if ( _selectedGadget == gadget.GadgetName() )
+      {
+        <div class="gadget-selection-debugger__gadget gadget-selection-debugger__gadget--selected">
+          <p>
+            @gadget.GadgetName()
+          </p>
+        </div>
+      }
+      else
+      {
+        <div onclick="@(() => OnGadgetClick(gadget.GadgetName()))" class="gadget-selection-debugger__gadget">
+          <p>
+            @gadget.GadgetName()
+          </p>
+        </div>
+      }
     }
   </div>
 </root>
@@ -48,5 +65,10 @@
 @code
 {
   [Parameter] public GadgetHolder GadgetHolder { get; set; }
+  private string _selectedGadget;
+
+  protected override int BuildHash() => System.HashCode.Combine( _selectedGadget);
+
+  private void OnGadgetClick(string gadgetName) => _selectedGadget = gadgetName;
 
 }
