@@ -6,7 +6,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Directional Light",
-      "Position": "448,-416,459.492004",
+      "Position": "781.833984,-847.339539,446.972046",
       "Rotation": "-0.245984197,0.593858182,0.293152511,0.707732677",
       "Scale": "1,1,1",
       "Tags": "light_directional,light",
@@ -23,8 +23,8 @@
           "__enabled": true,
           "Flags": 0,
           "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
+          "FogStrength": 0,
+          "LightColor": "0.97674,0.97674,0.97674,1",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -32,8 +32,8 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "ShadowBias": 0.0005,
-          "ShadowCascadeCount": 4,
-          "ShadowCascadeSplitRatio": 0.91,
+          "ShadowCascadeCount": 3,
+          "ShadowCascadeSplitRatio": 0.39814815,
           "ShadowHardness": 0,
           "Shadows": true,
           "SkyColor": "0,0,0,0",
@@ -9049,14 +9049,6 @@
                 },
                 "Property": "Position",
                 "Value": "-7228.64404,-1872.22632,-0.000183105469"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Rotation",
-                "Value": "0,0,0.500000119,0.866025031"
               }
             ],
             "MovedObjects": []
@@ -9091,14 +9083,6 @@
                 },
                 "Property": "Position",
                 "Value": "-5779.88623,-1106.21545,-64.0001526"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Rotation",
-                "Value": "0,0,0.500000119,0.866025031"
               }
             ],
             "MovedObjects": []
@@ -9133,14 +9117,6 @@
                 },
                 "Property": "Position",
                 "Value": "-4039.00293,-669.656799,-64.0001526"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Rotation",
-                "Value": "0,0,0.500000119,0.866025031"
               }
             ],
             "MovedObjects": []
@@ -9175,14 +9151,6 @@
                 },
                 "Property": "Position",
                 "Value": "-7251.26953,-1231.91833,-0.000228941441"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Rotation",
-                "Value": "0,0,0.500000119,0.866025031"
               }
             ],
             "MovedObjects": []
@@ -9217,14 +9185,6 @@
                 },
                 "Property": "Position",
                 "Value": "-5438.38965,-773.571289,-64.0001526"
-              },
-              {
-                "Target": {
-                  "Type": "GameObject",
-                  "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
-                },
-                "Property": "Rotation",
-                "Value": "0,0,0.500000119,0.866025031"
               }
             ],
             "MovedObjects": []
@@ -9598,6 +9558,163 @@
           "Children": []
         }
       ]
+    },
+    {
+      "__guid": "e20c4871-ac38-4193-9958-e2c4ca4a1ccf",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Point Light",
+      "Position": "832,-224,192",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.PointLight",
+          "__guid": "140559a7-0918-4aca-bd48-5e2bbf930452",
+          "__enabled": true,
+          "Flags": 0,
+          "Attenuation": 1,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91667,1,0,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Radius": 400,
+          "ShadowBias": 0.0005,
+          "ShadowHardness": 0,
+          "Shadows": true
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "0d104fa5-e118-444d-82be-d05ab5bf32f2",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "800,0,128",
+      "Rotation": "0,0,0,1",
+      "Scale": "3.9691534,1,3.68031359",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "7d15ef77-8106-419c-8b0e-223ca6a97b96",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/default.vmat",
+          "Materials": {
+            "indexed": {
+              "0": "materials/dev/primary_white.vmat"
+            }
+          },
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "Off",
+          "Tint": "0.20085,0.74884,0.19156,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "8745cdcf-cca5-4753-bcdc-1f234507c923",
+          "__enabled": true,
+          "Flags": 0,
+          "Center": "0,0,0",
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "356ede5e-dc67-42bf-841e-62af6deee0a1",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Indirect Light Volume",
+      "Position": "633.225586,-123.180786,210.376083",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.IndirectLightVolume",
+          "__guid": "4d0edbd2-9a3a-46fc-8815-d5b416b5b7f3",
+          "__enabled": true,
+          "Flags": 0,
+          "Bounds": {
+            "Mins": "-512,-512,-256",
+            "Maxs": "512,512,512"
+          },
+          "Contrast": 1,
+          "DistanceTexture": null,
+          "InsideGeometry": "Relocate",
+          "IrradianceTexture": null,
+          "NormalBias": 5,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "ProbeDensity": 8,
+          "RelocationTexture": null
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {

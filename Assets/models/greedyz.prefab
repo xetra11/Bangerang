@@ -5,7 +5,7 @@
     "Flags": 0,
     "Name": "Greedy",
     "Position": "0,0,0",
-    "Rotation": "0,0,0,0.99999994",
+    "Rotation": "0,0,0.500000119,0.866025031",
     "Scale": "1,1,1",
     "Tags": "",
     "Enabled": true,
@@ -24,7 +24,7 @@
         "CreateAttachments": false,
         "LodOverride": null,
         "MaterialGroup": null,
-        "MaterialOverride": null,
+        "MaterialOverride": "materials/default.vmat",
         "Materials": null,
         "Model": "models/dev/box.vmdl",
         "OnComponentDestroy": null,
@@ -39,7 +39,7 @@
           "BloomLayer": false,
           "AfterUILayer": false
         },
-        "RenderType": "On",
+        "RenderType": "Off",
         "Tint": "1,0.85003,0,1"
       },
       {
