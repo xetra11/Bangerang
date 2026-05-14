@@ -2,8 +2,8 @@
 @inherits Panel
 
 <style>
-  GadgetSelectionDebugger{
-    .gadget-selection-debugger{
+  GadgetSelectionDebugger {
+    .gadget-selection-debugger {
       display: flex;
       flex-direction: column;
       gap: 8px;
@@ -15,10 +15,12 @@
       top: 100px;
       left: 100px;
     }
-    .gadget-selection-debugger h2{
+
+    .gadget-selection-debugger h2 {
       color: white;
     }
-    .gadget-selection-debugger__gadget{
+
+    .gadget-selection-debugger__gadget {
       pointer-events: all;
       padding: 8px;
       border: 1px solid #ccc;
@@ -26,11 +28,15 @@
       background-color: #1b8f9a;
     }
 
-    .gadget-selection-debugger__gadget--selected{
+    .gadget-selection-debugger__gadget--selected {
       background-color: #a64dda;
     }
 
-    .gadget-selection-debugger__gadget p{
+    .gadget-selection-debugger__gadget--hover {
+      background-color: #9f17b3;
+    }
+
+    .gadget-selection-debugger__gadget p {
       color: white;
     }
 
@@ -42,9 +48,17 @@
     <h2>Gadget Selection Debugger</h2>
     @foreach ( var gadget in GadgetHolder.GetGadgets() )
     {
-      if ( _selectedGadget == gadget.GadgetName() )
+      if ( _selectedGadget != null && _selectedGadget.GadgetName() == gadget.GadgetName() )
       {
         <div class="gadget-selection-debugger__gadget gadget-selection-debugger__gadget--selected">
+          <p>
+            @gadget.GadgetName()
+          </p>
+        </div>
+      } else if ( _hoveringGadget != null && _hoveringGadget.GadgetName() == gadget.GadgetName() )
+      {
+        <div class="gadget-selection-debugger__gadget gadget-selection-debugger__gadget--hover"
+             onclick="@( () => OnGadgetClick( gadget ) )">
           <p>
             @gadget.GadgetName()
           </p>
@@ -52,7 +66,9 @@
       }
       else
       {
-        <div onclick="@(() => OnGadgetClick(gadget.GadgetName()))" class="gadget-selection-debugger__gadget">
+        <div
+          class="gadget-selection-debugger__gadget"
+          onmouseover="@( () => _hoveringGadget = gadget )">
           <p>
             @gadget.GadgetName()
           </p>
@@ -65,10 +81,16 @@
 @code
 {
   [Parameter] public GadgetHolder GadgetHolder { get; set; }
-  private string _selectedGadget;
+  private static Gadget _selectedGadget;
+  private Gadget _hoveringGadget;
 
-  protected override int BuildHash() => System.HashCode.Combine( _selectedGadget);
+  protected override int BuildHash() => System.HashCode.Combine( _selectedGadget );
 
-  private void OnGadgetClick(string gadgetName) => _selectedGadget = gadgetName;
+  private void OnGadgetClick( Gadget gadget )
+  {
+    _selectedGadget = gadget;
+    IGadgetSelectedEvent.Post( x => x.OnGadgetSelected( 0, gadget ) );
+    DeveloperInputSystem.IOpenGadgetDebuggerEvent.Post( x => x.OnGadgetDebuggerToggle() );
+  }
 
 }
