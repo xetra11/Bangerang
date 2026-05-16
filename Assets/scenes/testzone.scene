@@ -9150,7 +9150,7 @@
                   "IdValue": "26a2c13b-80f9-4e83-a9de-90878dfbb545"
                 },
                 "Property": "Position",
-                "Value": "-7251.26953,-1231.91833,-0.000228941441"
+                "Value": "-6974.13721,-1263.91724,-0.000198364258"
               }
             ],
             "MovedObjects": []
@@ -9564,7 +9564,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "Point Light",
-      "Position": "832,-224,192",
+      "Position": "800,-118.501686,127.999962",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "light_point,light",
@@ -9578,6 +9578,45 @@
         {
           "__type": "Sandbox.PointLight",
           "__guid": "140559a7-0918-4aca-bd48-5e2bbf930452",
+          "__enabled": true,
+          "Flags": 0,
+          "Attenuation": 1,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91667,1,0,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Radius": 400,
+          "ShadowBias": 0.0005,
+          "ShadowHardness": 0,
+          "Shadows": true
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "6a143aea-ea8b-4802-8c77-faf16a19ec2a",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Point Light (1)",
+      "Position": "1717.58105,-605.853333,32.0001869",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.PointLight",
+          "__guid": "2a865792-577c-46a4-9fb4-4dcdb4832cf6",
           "__enabled": true,
           "Flags": 0,
           "Attenuation": 1,
@@ -9667,7 +9706,7 @@
           "OnTriggerExit": null,
           "RollingResistance": null,
           "Scale": "50,50,50",
-          "Static": false,
+          "Static": true,
           "Surface": null,
           "SurfaceVelocity": "0,0,0"
         }
@@ -9683,7 +9722,7 @@
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "",
-      "Enabled": true,
+      "Enabled": false,
       "NetworkMode": 2,
       "NetworkFlags": 0,
       "NetworkOrphaned": 0,
@@ -9696,13 +9735,13 @@
           "__enabled": true,
           "Flags": 0,
           "Bounds": {
-            "Mins": "-512,-512,-256",
-            "Maxs": "512,512,512"
+            "Mins": "-601.240906,-630.648315,-259.469513",
+            "Maxs": "1499.21143,164.180786,163.273026"
           },
           "Contrast": 1,
-          "DistanceTexture": null,
+          "DistanceTexture": "scenes/testzone_scene_data/ddgi/indirect light volume_distance_4d0edbd2-9a3a-46fc-8815-d5b416b5b7f3.vtex",
           "InsideGeometry": "Relocate",
-          "IrradianceTexture": null,
+          "IrradianceTexture": "scenes/testzone_scene_data/ddgi/indirect light volume_irradiance_4d0edbd2-9a3a-46fc-8815-d5b416b5b7f3.vtex",
           "NormalBias": 5,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -9710,8 +9749,180 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "ProbeDensity": 8,
-          "RelocationTexture": null
+          "ProbeDensity": 15,
+          "RelocationTexture": "scenes/testzone_scene_data/ddgi/indirect light volume_relocation_4d0edbd2-9a3a-46fc-8815-d5b416b5b7f3.vtex"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "7ec2e6b8-c85d-4755-a4d8-d7d2dc5ab764",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Enemy",
+      "Position": "1805.29175,-597.016113,49.4637451",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "c74cbd26-fcad-41d2-8e69-0ff9810c97af",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/dev/sphere.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "0.66977,0.12149,0.12149,1"
+        },
+        {
+          "__type": "Sandbox.Enemy.EnemyPatrol",
+          "__guid": "d2f69d56-0e23-4e19-9538-77519397d523",
+          "__enabled": true,
+          "Flags": 0,
+          "_pathNodes": [
+            {
+              "_type": "component",
+              "component_id": "a6f79f07-bdff-4ba9-bcbf-85ddb5d99a6d",
+              "go": "ccb71b60-68ca-4eba-86e4-f941e93e984a",
+              "component_type": "AI_PatrolPathNode"
+            },
+            {
+              "_type": "component",
+              "component_id": "608a4f2c-debc-44fa-acb1-0254a7faf33f",
+              "go": "06add5f7-ee5f-41df-b01d-907800289ab3",
+              "component_type": "AI_PatrolPathNode"
+            },
+            {
+              "_type": "component",
+              "component_id": "a53486f1-df6d-4241-9612-2cc7c7c51dda",
+              "go": "fb84e788-1d3b-46f2-9bad-ccc57e9d4400",
+              "component_type": "AI_PatrolPathNode"
+            }
+          ],
+          "_speed": 0.23500001,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "ccb71b60-68ca-4eba-86e4-f941e93e984a",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Path_1",
+      "Position": "1831.27441,-411.648193,25.8679829",
+      "Rotation": "0,0,0,1",
+      "Scale": "0.346756786,0.346756786,0.346756786",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.AI_PatrolPathNode",
+          "__guid": "a6f79f07-bdff-4ba9-bcbf-85ddb5d99a6d",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "06add5f7-ee5f-41df-b01d-907800289ab3",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Path_2",
+      "Position": "1593.62073,-348.37674,36.1357841",
+      "Rotation": "0,0,0,1",
+      "Scale": "0.346756786,0.346756786,0.346756786",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.AI_PatrolPathNode",
+          "__guid": "608a4f2c-debc-44fa-acb1-0254a7faf33f",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "fb84e788-1d3b-46f2-9bad-ccc57e9d4400",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Path_3",
+      "Position": "1706.79712,-196.265442,36.1357841",
+      "Rotation": "0,0,0,1",
+      "Scale": "0.346756786,0.346756786,0.346756786",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.AI_PatrolPathNode",
+          "__guid": "a53486f1-df6d-4241-9612-2cc7c7c51dda",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
         }
       ],
       "Children": []
@@ -9742,13 +9953,13 @@
           "SelectionSets": []
         }
       },
-      "Sandbox.MovieMaker.MovieRecorderSystem": {
-        "DisableClientRecording": false
-      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
           "$blob": "8ae60bd4-2307-4fc9-8303-eb1d8c05e1ff"
         }
+      },
+      "Sandbox.MovieMaker.MovieRecorderSystem": {
+        "DisableClientRecording": false
       }
     }
   },
