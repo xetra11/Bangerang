@@ -5,7 +5,6 @@ namespace Sandbox.Enemy;
 public sealed class EnemyPatrol : Component
 {
   [Property] private readonly List<AI_PatrolPathNode> _pathNodes = [];
-  [Property, Range( 0.1f, 1 )] private readonly float _speed = 0.1f;
 
   private AI_PatrolPathNode _currentTargetNode = null;
 
@@ -15,10 +14,7 @@ public sealed class EnemyPatrol : Component
     if ( _currentTargetNode == null ) return;
 
     if ( WorldPosition.Distance( _currentTargetNode.WorldPosition ) < 10f ) DetermineNextMovementTarget();
-
-    var direction = (_currentTargetNode.WorldPosition - WorldPosition).Normal;
-    var distance = MathF.Min( (_speed * 100) * Time.Delta, WorldPosition.Distance( _currentTargetNode.WorldPosition ) );
-    WorldPosition += direction * distance;
+    GetComponent<EnemyMovement>().DestinationTarget = _currentTargetNode.WorldPosition;
   }
 
   private void DetermineNextMovementTarget()
