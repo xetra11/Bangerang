@@ -1,3 +1,5 @@
+using System;
+
 namespace Sandbox.Enemy;
 
 public sealed class EnemyPatrol : Component
@@ -10,15 +12,14 @@ public sealed class EnemyPatrol : Component
   protected override void OnUpdate()
   {
     if ( _currentTargetNode == null ) DetermineNextMovementTarget();
+    if ( _currentTargetNode == null ) return;
 
-    if ( WorldPosition.Normal.SubtractDirection( _currentTargetNode.WorldPosition, 1.0f ).IsNearlyZero( 0.1f ) )
-    {
-      DetermineNextMovementTarget();
-    }
+    if ( WorldPosition.Distance( _currentTargetNode.WorldPosition ) < 10f ) DetermineNextMovementTarget();
 
-    WorldPosition = Vector3.Lerp( WorldPosition, _currentTargetNode.WorldPosition, Time.Delta * _speed );
+    var direction = (_currentTargetNode.WorldPosition - WorldPosition).Normal;
+    var distance = MathF.Min( (_speed * 100) * Time.Delta, WorldPosition.Distance( _currentTargetNode.WorldPosition ) );
+    WorldPosition += direction * distance;
   }
-
 
   private void DetermineNextMovementTarget()
   {
@@ -37,28 +38,13 @@ public sealed class EnemyPatrol : Component
       return;
     }
 
-    for ( var i = 0; i < _pathNodes.Count; i++ )
-    {
-      var nextNode = _pathNodes[i];
-      if ( nextNode == _currentTargetNode )
-      {
-        Log.Info( $"Skipping current node: {_currentTargetNode.GameObject.Name}" );
-        continue;
-      }
+    var currentIndex = _pathNodes.IndexOf( _currentTargetNode );
+    // 2 + 1 % 3 = 0
+    // 0 + 1 % 3 = 1
+    // 1 + 1 % 3 = 2
+    var nextIndex = (currentIndex + 1) % _pathNodes.Count;
 
-      // When reached the last node
-      if ( i == _pathNodes.Count - 1 )
-      {
-        // Set next node to first node (to reset path loop)
-        _currentTargetNode = _pathNodes[0];
-        // but still return position or last node (otherwise it's skipped)
-        Log.Info( $"Reached last node, resetting to first node: {_currentTargetNode?.GameObject.Name}" );
-        return;
-      }
-
-      Log.Info( $"Setting next node {nextNode.GameObject.Name} as current node" );
-      _currentTargetNode = nextNode;
-    }
+    _currentTargetNode = _pathNodes[nextIndex];
   }
 
   protected override void DrawGizmos()
