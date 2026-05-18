@@ -9823,7 +9823,21 @@
               "component_type": "AI_PatrolPathNode"
             }
           ],
-          "_speed": 0.1,
+          "_speed": 1,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "Sandbox.EnemyBehaviour",
+          "__guid": "710b45a6-0fbf-4992-9782-ad7825845d9c",
+          "__enabled": true,
+          "Flags": 0,
+          "_activeBehaviourComponent": null,
+          "_currentState": "Patrol",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
