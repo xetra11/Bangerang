@@ -1,3 +1,5 @@
+using Sandbox.Enemy;
+
 namespace Sandbox;
 
 public sealed class EnemyLineOfSight : Component
@@ -11,21 +13,25 @@ public sealed class EnemyLineOfSight : Component
   protected override void OnUpdate()
   {
     ScanForward();
-    if ( SeePlayer( _detectedObjects ) ) GetComponent<EnemyBehaviour>().SetState( EnemyBehaviour.EnemyState.Chase );
+    var target = SeePlayer( _detectedObjects );
+    if ( target == null ) return;
+
+    GetComponent<EnemyBehaviour>().SetState( EnemyBehaviour.EnemyState.Chase );
+    GetComponent<EnemyChase>().Target = target;
   }
 
-  private bool SeePlayer( List<GameObject> detectedObjects )
+  private GameObject SeePlayer( List<GameObject> detectedObjects )
   {
     for ( var i = 0; i < _detectedObjects.Count; i++ )
     {
       var detectedObject = _detectedObjects[i];
       if ( detectedObject.Tags.Contains( "player" ) )
       {
-        return true;
+        return detectedObject;
       }
     }
 
-    return false;
+    return null;
   }
 
   private void ScanForward()
