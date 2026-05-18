@@ -39,6 +39,8 @@ public sealed class EnemyBehaviour : Component
     }
   }
 
+  public void SetState( EnemyState state ) => _currentState = state;
+
   private void SetActiveBehaviour( Component behaviourComponent )
   {
     if ( _activeBehaviourComponent == behaviourComponent ) return;
