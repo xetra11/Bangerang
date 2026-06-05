@@ -168,7 +168,7 @@
 			"ParentID": "1d497a364d399e52970e10a92327e2a2",
 			"V": {
 	"PlayerController": "1d497a364d399e52970e10a92327e2a2",
-	"CameraTarget": "3cdfccf7442b9c59756618a8b80c109a",
+	"CameraAnchor": "3cdfccf7442b9c59756618a8b80c109a",
 	"Camera": "b0d72c3746caebca055e1f921ca21c7c"
 }
 		},
