@@ -21,7 +21,8 @@
 			"ID": "6ff0581d474c84230b3d0fa9f17e0972",
 			"TypeName": "ExitOnEsc",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"V": {}
+			"V": {},
+			"Enabled": false
 		},
 		{
 			"ID": "28553d634087c67c711ebd96080482aa",
@@ -176,6 +177,14 @@
 }
 		},
 		{
+			"ID": "d8fbade14d8a787df4fba59bc790ab39",
+			"TypeName": "Game.PlayerAnimationManager",
+			"ParentID": "1d497a364d399e52970e10a92327e2a2",
+			"V": {
+	"AnimatedModel": "a60bde9249c5354b4e67caa83861bbdd"
+}
+		},
+		{
 			"ID": "a60bde9249c5354b4e67caa83861bbdd",
 			"TypeName": "FlaxEngine.AnimatedModel",
 			"ParentID": "1d497a364d399e52970e10a92327e2a2",
@@ -206,14 +215,6 @@
 					}
 				]
 			}
-		},
-		{
-			"ID": "0ca14b3046d1c686034b5085ad2d4f65",
-			"TypeName": "Game.Test",
-			"ParentID": "a60bde9249c5354b4e67caa83861bbdd",
-			"V": {
-	"AnimatedModel": "a60bde9249c5354b4e67caa83861bbdd"
-}
 		},
 		{
 			"ID": "3cdfccf7442b9c59756618a8b80c109a",
@@ -249,6 +250,19 @@
 			},
 			"StaticFlags": 0,
 			"RenderLayersMask": 4294967293
+		},
+		{
+			"ID": "411b040848958009ce9f1cb72beb5b8c",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "Systems"
+		},
+		{
+			"ID": "35caf1be48e635d48c719c9a2135939d",
+			"TypeName": "Game.Game.GameEventSystem",
+			"ParentID": "411b040848958009ce9f1cb72beb5b8c",
+			"V": {},
+			"Name": "GameEventSystem"
 		}
 	]
 }

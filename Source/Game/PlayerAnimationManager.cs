@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using FlaxEngine;
+﻿using FlaxEngine;
 
 namespace Game;
 
 /// <summary>
 /// Test Script.
 /// </summary>
-public class Test : Script
+public class PlayerAnimationManager : Script
 {
     public AnimatedModel AnimatedModel;
 

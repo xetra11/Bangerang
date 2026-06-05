@@ -290,6 +290,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Flax.Build">
+      <HintPath>..\..\..\Program Files (x86)\Flax\Flax_1.12\Binaries\Tools\Flax.Build.dll</HintPath>
+    </Reference>
     <Reference Include="FlaxEngine.CSharp">
       <HintPath>..\..\..\Program Files (x86)\Flax\Flax_1.12\Binaries\Editor\Win64\Development\FlaxEngine.CSharp.dll</HintPath>
     </Reference>
@@ -299,8 +302,9 @@
     <Compile Include="Game.Gen.cs" />
     <Compile Include="Game\ExitOnEsc.cs" />
     <Compile Include="Game\FreeCamera.cs" />
+    <Compile Include="Game\GameEventSystem.cs" />
+    <Compile Include="Game\PlayerAnimationManager.cs" />
     <Compile Include="Game\PlayerScript.cs" />
-    <Compile Include="Game\Test.cs" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'Editor.Windows.Debug|x64' " >
     <Compile Visible="false" Include="C:\Development\bangerang_v2\Cache\Intermediate\GameEditorTarget\Windows\x64\Debug\Game\Game.Bindings.Gen.cs" />
