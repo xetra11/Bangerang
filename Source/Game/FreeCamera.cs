@@ -9,15 +9,14 @@ public class FreeCamera : Script
 
     [Tooltip("Camera rotation smoothing factor")]
     public float CameraSmoothing { get; set; } = 20.0f;
-
-    private float pitch;
-    private float yaw;
+    private float _pitch;
+    private float _yaw;
 
     public override void OnStart()
     {
         var initialEulerAngles = Actor.Orientation.EulerAngles;
-        pitch = initialEulerAngles.X;
-        yaw = initialEulerAngles.Y;
+        _pitch = initialEulerAngles.X;
+        _yaw = initialEulerAngles.Y;
     }
 
     public override void OnUpdate()
@@ -26,8 +25,8 @@ public class FreeCamera : Script
         Screen.CursorLock = CursorLockMode.Locked;
 
         var mouseDelta = new Float2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-        pitch = Mathf.Clamp(pitch + mouseDelta.Y, -88, 88);
-        yaw += mouseDelta.X;
+        _pitch = Mathf.Clamp(_pitch + mouseDelta.Y, -88, 88);
+        _yaw += mouseDelta.X;
     }
 
     public override void OnFixedUpdate()
@@ -35,7 +34,7 @@ public class FreeCamera : Script
         var camTrans = Actor.Transform;
         var camFactor = Mathf.Saturate(CameraSmoothing * Time.DeltaTime);
 
-        camTrans.Orientation = Quaternion.Lerp(camTrans.Orientation, Quaternion.Euler(pitch, yaw, 0), camFactor);
+        camTrans.Orientation = Quaternion.Lerp(camTrans.Orientation, Quaternion.Euler(_pitch, _yaw, 0), camFactor);
 
         var inputH = Input.GetAxis("Horizontal");
         var inputV = Input.GetAxis("Vertical");

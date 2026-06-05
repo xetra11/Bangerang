@@ -18,8 +18,8 @@
 			}
 		},
 		{
-			"ID": "6ff0581d474c84230b3d0fa9f17e0972",
-			"TypeName": "ExitOnEsc",
+			"ID": "bacb14b743b45ed605364f81741a567b",
+			"TypeName": "Game.Game.ExitOnEsc",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
 			"V": {}
 		},
@@ -113,64 +113,21 @@
 			"Radius": 403.79998779296875
 		},
 		{
-			"ID": "4a9d87134ab42f4294db6bbcf1902bde",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Name": "Floor",
-			"Transform": {
-				"Translation": {
-					"X": 0.0,
-					"Y": -23.796920776367188,
-					"Z": 0.0
-				},
-				"Scale": {
-					"X": 10.0,
-					"Y": 0.5,
-					"Z": 10.0
-				}
-			},
-			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "382f1ae946c519eff6e6f3a2965cf56b",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "4a7045e748c74e3de29afd8856f99205",
-			"TypeName": "FlaxEngine.BoxCollider",
-			"ParentID": "4a9d87134ab42f4294db6bbcf1902bde",
-			"Name": "BoxCollider"
-		},
-		{
 			"ID": "1d497a364d399e52970e10a92327e2a2",
 			"TypeName": "FlaxEngine.CharacterController",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
 			"Name": "Player",
 			"Transform": {
 				"Translation": {
-					"X": 0.0,
+					"X": 1762.113037109375,
 					"Y": 138.0,
-					"Z": 0.0
+					"Z": -1779.280517578125
 				}
 			},
 			"Layer": 1,
 			"Tag": "Player",
 			"Height": 77.0,
 			"OriginMode": 1
-		},
-		{
-			"ID": "d8fbade14d8a787df4fba59bc790ab39",
-			"TypeName": "Game.PlayerAnimationManager",
-			"ParentID": "1d497a364d399e52970e10a92327e2a2",
-			"V": {
-	"AnimatedModel": "a60bde9249c5354b4e67caa83861bbdd"
-}
 		},
 		{
 			"ID": "1813b1044b7103a0893c639a04031103",
@@ -255,6 +212,36 @@
 			},
 			"StaticFlags": 0,
 			"RenderLayersMask": 4294967293
+		},
+		{
+			"ID": "55dc768246e2665cbd16538d2e8dcc92",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "Level_1",
+			"Model": "ee743bc24726aea909d346b0ea4c3fbf",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "e222d1a34b3c3a0b9a8a26be09aa6312",
+			"TypeName": "FlaxEngine.MeshCollider",
+			"ParentID": "55dc768246e2665cbd16538d2e8dcc92",
+			"Name": "MeshCollider",
+			"CollisionData": "1d6fc93c4013af5bf8c2e192873e6faf"
 		}
 	]
 }
