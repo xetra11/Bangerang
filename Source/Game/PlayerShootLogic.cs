@@ -5,14 +5,11 @@ namespace Game.Game;
 
 public class PlayerShootLogic : Script
 {
-    public override void OnStart()
+    public override void OnUpdate()
     {
-        GameEventSystem.Instance.OnGameEvent += @event =>
+        if (Input.GetAction("Fire"))
         {
-            if (@event.Args.Type == "player_action" && @event.Args.Type == "fire")
-            {
-                Debug.Log("Player fired");
-            }
-        };
+            Debug.Log("Player fired");
+        }
     }
 }

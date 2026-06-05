@@ -25,6 +25,7 @@ public struct GameEvent
         Sender = sender;
         Args = new GameEventArgs(args.Item1, args.Item2);
     }
+
     public GameEvent(object sender, GameEventArgs args)
     {
         Sender = sender;
