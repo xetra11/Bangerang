@@ -159,6 +159,8 @@
 					"Z": 0.0
 				}
 			},
+			"Layer": 1,
+			"Tag": "Player",
 			"Height": 77.0,
 			"OriginMode": 1
 		},
@@ -169,7 +171,8 @@
 			"V": {
 	"PlayerController": "1d497a364d399e52970e10a92327e2a2",
 	"CameraAnchor": "3cdfccf7442b9c59756618a8b80c109a",
-	"Camera": "b0d72c3746caebca055e1f921ca21c7c"
+	"Camera": "b0d72c3746caebca055e1f921ca21c7c",
+	"MaxVelocityGround": 200.0
 }
 		},
 		{
@@ -190,6 +193,7 @@
 					"W": -4.371138828673793e-8
 				}
 			},
+			"Layer": 1,
 			"SkinnedModel": "44508ba9427840a64fe5c18696c150b1",
 			"AnimationGraph": "1c0d6e944de7a7cba273dbbfc6512deb",
 			"Buffer": {
@@ -222,7 +226,8 @@
 					"Y": 161.81326293945313,
 					"Z": 0.0
 				}
-			}
+			},
+			"Layer": 1
 		},
 		{
 			"ID": "b0d72c3746caebca055e1f921ca21c7c",
@@ -242,7 +247,8 @@
 					"W": -0.6671086549758911
 				}
 			},
-			"StaticFlags": 0
+			"StaticFlags": 0,
+			"RenderLayersMask": 4294967293
 		}
 	]
 }
