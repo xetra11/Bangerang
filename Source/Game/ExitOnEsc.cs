@@ -1,5 +1,7 @@
 using FlaxEngine;
 
+namespace Game.Game;
+
 public class ExitOnEsc : Script
 {
     public override void OnUpdate()

@@ -1,5 +1,7 @@
 using FlaxEngine;
 
+namespace Game.Game;
+
 public class FreeCamera : Script
 {
     [Limit(0, 100), Tooltip("Camera movement speed factor")]
