@@ -299,6 +299,7 @@
     <Compile Include="Game.Gen.cs" />
     <Compile Include="Game\ExitOnEsc.cs" />
     <Compile Include="Game\FreeCamera.cs" />
+    <Compile Include="Game\PlayerScript.cs" />
     <Compile Include="Game\Test.cs" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'Editor.Windows.Debug|x64' " >

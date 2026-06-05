@@ -113,37 +113,16 @@
 			"Radius": 403.79998779296875
 		},
 		{
-			"ID": "b0d72c3746caebca055e1f921ca21c7c",
-			"TypeName": "FlaxEngine.Camera",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Name": "Camera",
-			"Transform": {
-				"Translation": {
-					"X": -198.75326538085938,
-					"Y": 196.89071655273438,
-					"Z": 190.70037841796875
-				},
-				"Orientation": {
-					"X": 0.06189095228910446,
-					"Y": 0.9198267459869385,
-					"Z": -0.1617070734500885,
-					"W": 0.35204988718032837
-				}
-			},
-			"StaticFlags": 0
-		},
-		{
-			"ID": "9053ad38428b10594c741db78d7fcca5",
-			"TypeName": "FreeCamera",
-			"ParentID": "b0d72c3746caebca055e1f921ca21c7c",
-			"V": {}
-		},
-		{
 			"ID": "4a9d87134ab42f4294db6bbcf1902bde",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
 			"Name": "Floor",
 			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": -23.796920776367188,
+					"Z": 0.0
+				},
 				"Scale": {
 					"X": 10.0,
 					"Y": 0.5,
@@ -169,15 +148,46 @@
 			"Name": "BoxCollider"
 		},
 		{
-			"ID": "a60bde9249c5354b4e67caa83861bbdd",
-			"TypeName": "FlaxEngine.AnimatedModel",
+			"ID": "1d497a364d399e52970e10a92327e2a2",
+			"TypeName": "FlaxEngine.CharacterController",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Name": "EnemyX",
+			"Name": "Player",
 			"Transform": {
 				"Translation": {
-					"X": 103.56822967529297,
-					"Y": 42.17632293701172,
-					"Z": 123.22293090820313
+					"X": 0.0,
+					"Y": 138.0,
+					"Z": 0.0
+				}
+			},
+			"Height": 77.0,
+			"OriginMode": 1
+		},
+		{
+			"ID": "ca84c44c483f7aa24b76d6be755a1fb9",
+			"TypeName": "Game.Game.PlayerScript",
+			"ParentID": "1d497a364d399e52970e10a92327e2a2",
+			"V": {
+	"PlayerController": "1d497a364d399e52970e10a92327e2a2",
+	"CameraTarget": "3cdfccf7442b9c59756618a8b80c109a",
+	"Camera": "b0d72c3746caebca055e1f921ca21c7c"
+}
+		},
+		{
+			"ID": "a60bde9249c5354b4e67caa83861bbdd",
+			"TypeName": "FlaxEngine.AnimatedModel",
+			"ParentID": "1d497a364d399e52970e10a92327e2a2",
+			"Name": "Model",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": 0.8893203735351563,
+					"Z": 0.0
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 1.0,
+					"Z": 0.0,
+					"W": -4.371138828673793e-8
 				}
 			},
 			"SkinnedModel": "44508ba9427840a64fe5c18696c150b1",
@@ -200,6 +210,39 @@
 			"V": {
 	"AnimatedModel": "a60bde9249c5354b4e67caa83861bbdd"
 }
+		},
+		{
+			"ID": "3cdfccf7442b9c59756618a8b80c109a",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "1d497a364d399e52970e10a92327e2a2",
+			"Name": "CameraAnchor",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": 161.81326293945313,
+					"Z": 0.0
+				}
+			}
+		},
+		{
+			"ID": "b0d72c3746caebca055e1f921ca21c7c",
+			"TypeName": "FlaxEngine.Camera",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "Camera",
+			"Transform": {
+				"Translation": {
+					"X": -780.6519165039063,
+					"Y": 349.376708984375,
+					"Z": 0.0
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": -0.7449604272842407,
+					"Z": 0.0,
+					"W": -0.6671086549758911
+				}
+			},
+			"StaticFlags": 0
 		}
 	]
 }
