@@ -7,7 +7,7 @@ public class PlayerShootLogic : Script
 {
     public override void OnStart()
     {
-        GameEvents.OnGameEvent += (sender, args) =>
+        GameEvents.Instance().OnGameEvent += (sender, args) =>
         {
             if (args is { Item1: "player", Item2: "fire" })
             {

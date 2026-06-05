@@ -263,11 +263,16 @@
 			"Name": "Systems"
 		},
 		{
-			"ID": "35caf1be48e635d48c719c9a2135939d",
-			"TypeName": "Game.Game.GameEventSystem",
+			"ID": "ff614e8b454e2d13d36bc7881ab780b1",
+			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "411b040848958009ce9f1cb72beb5b8c",
-			"V": {},
 			"Name": "GameEventSystem"
+		},
+		{
+			"ID": "d6a7ff814f8415ca0cb9de8d79a1cebc",
+			"TypeName": "Game.Game.GameEventSystem",
+			"ParentID": "ff614e8b454e2d13d36bc7881ab780b1",
+			"V": {}
 		}
 	]
 }

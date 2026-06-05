@@ -9,25 +9,36 @@ public struct GameEventArgs
     public string Data { get; set; }
 }
 
-public static class GameEvents {
-    public static Action<object, GameEventArgs> GameEventHandler;
-    public static event Action<object, (string, string)> OnGameEvent;
+public class GameEvents
+{
+    private static GameEvents _instance;
+    public Action<object, GameEventArgs> GameEventHandler;
+    public event Action<object, (string, string)> OnGameEvent;
 
-    public static void AddGameEvent(object sender, (string type, string data) args)
+    public static void Init()
+    {
+        _instance = new GameEvents();
+    }
+
+    public static GameEvents Instance()
+    {
+        if (_instance == null) throw new InvalidOperationException("GameEvents instance is null, please initialize with GameEvents.Init()");
+        return _instance;
+    }
+
+    public void AddGameEvent(object sender, (string type, string data) args)
     {
         OnGameEvent?.Invoke(sender, args);
     }
 }
 
-
-public class GameEventSystem: Actor
+public class GameEventSystem : Script
 {
-
-    public override void OnBeginPlay()
+    public override void OnAwake()
     {
-        base.OnBeginPlay();
+        base.OnEnable();
+        GameEvents.Init();
         Debug.Log("GameEventSystem initialized");
     }
-
 
 }
