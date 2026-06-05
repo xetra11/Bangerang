@@ -7,17 +7,12 @@ public class PlayerShootLogic : Script
 {
     public override void OnStart()
     {
-        GameEventSystem.Instance.OnGameEvent += (sender, args) =>
+        GameEventSystem.Instance.OnGameEvent += @event =>
         {
-            if (args is { Item1: "player", Item2: "fire" })
+            if (@event.Args.Type == "player_action" && @event.Args.Type == "fire")
             {
-                Debug.Log("Player fired, moving forward");
+                Debug.Log("Player fired");
             }
         };
-    }
-
-    public override void OnUpdate()
-    {
-        base.OnUpdate();
     }
 }

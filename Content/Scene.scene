@@ -147,6 +147,20 @@
 }
 		},
 		{
+			"ID": "bcadc0ca4f2e5051368c83aa1962c9ee",
+			"TypeName": "Game.Game.PlayerInputManager",
+			"ParentID": "1d497a364d399e52970e10a92327e2a2",
+			"V": {}
+		},
+		{
+			"ID": "f02c39ba450471ba4dcde2a62bcca7d2",
+			"TypeName": "Game.Game.PlayerAnimationManager",
+			"ParentID": "1d497a364d399e52970e10a92327e2a2",
+			"V": {
+	"AnimatedModel": "a60bde9249c5354b4e67caa83861bbdd"
+}
+		},
+		{
 			"ID": "a60bde9249c5354b4e67caa83861bbdd",
 			"TypeName": "FlaxEngine.AnimatedModel",
 			"ParentID": "1d497a364d399e52970e10a92327e2a2",

@@ -297,11 +297,13 @@
 
   <ItemGroup>
     <Compile Include="Game.Gen.cs" />
+    <Compile Include="Game\EventFactory.cs" />
     <Compile Include="Game\ExitOnEsc.cs" />
     <Compile Include="Game\FreeCamera.cs" />
     <Compile Include="Game\GameEventSystem.cs" />
     <Compile Include="Game\PlayerAnimationManager.cs" />
     <Compile Include="Game\PlayerFirstPersonLogic.cs" />
+    <Compile Include="Game\PlayerInputManager.cs" />
     <Compile Include="Game\PlayerShootLogic.cs" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'Editor.Windows.Debug|x64' " >
