@@ -1,4 +1,5 @@
 ﻿using FlaxEngine;
+using Game.Game;
 
 namespace Game;
 
@@ -30,10 +31,13 @@ public class PlayerAnimationManager : Script
     /// <inheritdoc/>
     public override void OnUpdate()
     {
+        if (Input.GetMouseButton(MouseButton.Left))
+        {
+            GameEvents.AddGameEvent(this, ("player", "fire"));
+        }
         if (Input.GetKey(KeyboardKeys.W))
         {
              AnimatedModel.SetParameterValue("IsWalking", true);
-             return;
         }
         AnimatedModel.SetParameterValue("IsWalking", false);
     }

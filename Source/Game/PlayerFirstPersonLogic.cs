@@ -3,7 +3,7 @@ using FlaxEngine;
 
 namespace Game.Game;
 
-public class PlayerScript : Script
+public class PlayerFirstPersonLogic : Script
 {
     public CharacterController PlayerController;
     public Actor CameraAnchor;

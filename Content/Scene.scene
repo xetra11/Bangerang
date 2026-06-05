@@ -21,8 +21,7 @@
 			"ID": "6ff0581d474c84230b3d0fa9f17e0972",
 			"TypeName": "ExitOnEsc",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"V": {},
-			"Enabled": false
+			"V": {}
 		},
 		{
 			"ID": "28553d634087c67c711ebd96080482aa",
@@ -166,22 +165,28 @@
 			"OriginMode": 1
 		},
 		{
-			"ID": "ca84c44c483f7aa24b76d6be755a1fb9",
-			"TypeName": "Game.Game.PlayerScript",
+			"ID": "d8fbade14d8a787df4fba59bc790ab39",
+			"TypeName": "Game.PlayerAnimationManager",
+			"ParentID": "1d497a364d399e52970e10a92327e2a2",
+			"V": {
+	"AnimatedModel": "a60bde9249c5354b4e67caa83861bbdd"
+}
+		},
+		{
+			"ID": "1813b1044b7103a0893c639a04031103",
+			"TypeName": "Game.Game.PlayerShootLogic",
+			"ParentID": "1d497a364d399e52970e10a92327e2a2",
+			"V": {}
+		},
+		{
+			"ID": "9fd690984d5c914abc5b2abc827b4a95",
+			"TypeName": "Game.Game.PlayerFirstPersonLogic",
 			"ParentID": "1d497a364d399e52970e10a92327e2a2",
 			"V": {
 	"PlayerController": "1d497a364d399e52970e10a92327e2a2",
 	"CameraAnchor": "3cdfccf7442b9c59756618a8b80c109a",
 	"Camera": "b0d72c3746caebca055e1f921ca21c7c",
 	"MaxVelocityGround": 200.0
-}
-		},
-		{
-			"ID": "d8fbade14d8a787df4fba59bc790ab39",
-			"TypeName": "Game.PlayerAnimationManager",
-			"ParentID": "1d497a364d399e52970e10a92327e2a2",
-			"V": {
-	"AnimatedModel": "a60bde9249c5354b4e67caa83861bbdd"
 }
 		},
 		{
