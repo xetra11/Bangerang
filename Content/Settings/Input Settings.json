@@ -59,9 +59,9 @@
 			"DeadZone": 0.5
 		},
 		{
-			"Name": "NavigateSubmit",
-			"Mode": 1,
-			"Key": 13,
+			"Name": "Sprint",
+			"Mode": 0,
+			"Key": 16,
 			"MouseButton": 0,
 			"GamepadButton": 13,
 			"Gamepad": -1,
