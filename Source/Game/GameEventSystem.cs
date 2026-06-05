@@ -9,36 +9,21 @@ public struct GameEventArgs
     public string Data { get; set; }
 }
 
-public class GameEvents
+public class GameEventSystem : GamePlugin
 {
-    private static GameEvents _instance;
-    public Action<object, GameEventArgs> GameEventHandler;
     public event Action<object, (string, string)> OnGameEvent;
+    public Action<object, GameEventArgs> GameEventHandler;
 
-    public static void Init()
+    public override void Initialize()
     {
-        _instance = new GameEvents();
+        base.Initialize();
+        Debug.Log("GameEventSystem initialized");
     }
 
-    public static GameEvents Instance()
-    {
-        if (_instance == null) throw new InvalidOperationException("GameEvents instance is null, please initialize with GameEvents.Init()");
-        return _instance;
-    }
+    public static GameEventSystem Instance => PluginManager.GetPlugin<GameEventSystem>();
 
     public void AddGameEvent(object sender, (string type, string data) args)
     {
         OnGameEvent?.Invoke(sender, args);
     }
-}
-
-public class GameEventSystem : Script
-{
-    public override void OnAwake()
-    {
-        base.OnEnable();
-        GameEvents.Init();
-        Debug.Log("GameEventSystem initialized");
-    }
-
 }

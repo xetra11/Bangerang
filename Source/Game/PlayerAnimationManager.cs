@@ -33,7 +33,7 @@ public class PlayerAnimationManager : Script
     {
         if (Input.GetMouseButton(MouseButton.Left))
         {
-            GameEvents.Instance().AddGameEvent(this, ("player", "fire"));
+            GameEventSystem.Instance.AddGameEvent(this, ("player", "fire"));
         }
         if (Input.GetKey(KeyboardKeys.W))
         {

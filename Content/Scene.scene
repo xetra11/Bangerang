@@ -255,24 +255,6 @@
 			},
 			"StaticFlags": 0,
 			"RenderLayersMask": 4294967293
-		},
-		{
-			"ID": "411b040848958009ce9f1cb72beb5b8c",
-			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Name": "Systems"
-		},
-		{
-			"ID": "ff614e8b454e2d13d36bc7881ab780b1",
-			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "411b040848958009ce9f1cb72beb5b8c",
-			"Name": "GameEventSystem"
-		},
-		{
-			"ID": "d6a7ff814f8415ca0cb9de8d79a1cebc",
-			"TypeName": "Game.Game.GameEventSystem",
-			"ParentID": "ff614e8b454e2d13d36bc7881ab780b1",
-			"V": {}
 		}
 	]
 }
