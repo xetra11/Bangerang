@@ -1,7 +1,6 @@
-using System;
 using FlaxEngine;
 
-namespace Game.Game;
+namespace Game.Game.Player;
 
 public class PlayerShootLogic : Script
 {
