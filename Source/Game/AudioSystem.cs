@@ -20,6 +20,6 @@ public class AudioSystem : GamePlugin
         audioSource.Parent = Level.GetScene(0);
         audioSource.Clip = clip;
         audioSource.Play();
+        audioSource.ClipFinished += () => Destroy(audioSource);
     }
-
 }

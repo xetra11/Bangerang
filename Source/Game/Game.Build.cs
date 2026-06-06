@@ -18,6 +18,8 @@ public class Game : GameModule
         base.Setup(options);
 
         options.ScriptingAPI.IgnoreMissingDocumentationWarnings = true;
+        Tags["Network"] = string.Empty;
+        options.PublicDependencies.Add("Networking");
 
         // Here you can modify the build options for your game module
         // To reference another module use: options.PublicDependencies.Add("Audio");
