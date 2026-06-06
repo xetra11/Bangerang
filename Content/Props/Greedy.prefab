@@ -1,0 +1,60 @@
+{
+	"ID": "c10500734f23c2852934aebde5156197",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6912,
+	"Data": [
+	{
+		"ID": "eded7ea14595a3b68cd4c08fbcf89689",
+		"TypeName": "FlaxEngine.StaticModel",
+		"Name": "Greedy",
+		"Transform": {
+			"Orientation": {
+				"X": -0.7156586647033691,
+				"Y": 0.0,
+				"Z": 0.0,
+				"W": 0.6984504461288452
+			},
+			"Scale": {
+				"X": 1.0,
+				"Y": 0.14000000059604645,
+				"Z": 1.0
+			}
+		},
+		"Model": "223aa9894e90973780ab508621517526",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "b3fcd65948a8f2c8d4044bb288651cf4",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "6ce94e0a4575e2d540c645862b843ca9",
+		"TypeName": "Game.Game.Greedy.GreedyPickupLogic",
+		"ParentID": "eded7ea14595a3b68cd4c08fbcf89689",
+		"V": {
+	"Collider": "b666538b4cfaf0b9d2697a920f2325c8",
+	"AudioSource": "f5cdd60f40aa78205080fbbc455e5fdd"
+}
+	},
+	{
+		"ID": "b666538b4cfaf0b9d2697a920f2325c8",
+		"TypeName": "FlaxEngine.BoxCollider",
+		"ParentID": "eded7ea14595a3b68cd4c08fbcf89689",
+		"Name": "BoxCollider",
+		"IsTrigger": true
+	},
+	{
+		"ID": "f5cdd60f40aa78205080fbbc455e5fdd",
+		"TypeName": "FlaxEngine.AudioSource",
+		"ParentID": "eded7ea14595a3b68cd4c08fbcf89689",
+		"Name": "AudioSource",
+		"Clip": "ca3596c84d6fcc6d8be9d09d2ff1575b",
+		"AllowSpatialization": false
+	}
+]
+}

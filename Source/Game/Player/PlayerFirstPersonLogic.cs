@@ -187,7 +187,6 @@ public class PlayerFirstPersonLogic : Script
         }
 
         var modifiedVelocity = Input.GetAction("Sprint") ? MaxVelocityGround * 2 : MaxVelocityGround;
-        Debug.Log("Applying modified velocity: " + modifiedVelocity);
 
         return Accelerate(
             accelDir,

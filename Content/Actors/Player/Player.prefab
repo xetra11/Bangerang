@@ -62,6 +62,7 @@
 			}
 		},
 		"Layer": 1,
+		"Tag": "Player",
 		"SkinnedModel": "44508ba9427840a64fe5c18696c150b1",
 		"AnimationGraph": "1c0d6e944de7a7cba273dbbfc6512deb",
 		"Buffer": {
@@ -87,6 +88,13 @@
 				"Z": 0.0
 			}
 		},
+		"Layer": 1
+	},
+	{
+		"ID": "57101a094fcc6b28e24d8b8b259486ed",
+		"TypeName": "FlaxEngine.AudioListener",
+		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"Name": "AudioListener",
 		"Layer": 1
 	}
 ]

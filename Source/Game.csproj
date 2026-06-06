@@ -297,10 +297,12 @@
 
   <ItemGroup>
     <Compile Include="Game.Gen.cs" />
+    <Compile Include="Game\AudioSystem.cs" />
     <Compile Include="Game\EventFactory.cs" />
     <Compile Include="Game\ExitOnEsc.cs" />
     <Compile Include="Game\FreeCamera.cs" />
     <Compile Include="Game\GameEventSystem.cs" />
+    <Compile Include="Game\Greedy\GreedyPickupLogic.cs" />
     <Compile Include="Game\Player\PlayerAnimationManager.cs" />
     <Compile Include="Game\Player\PlayerFirstPersonLogic.cs" />
     <Compile Include="Game\Player\PlayerInputManager.cs" />
