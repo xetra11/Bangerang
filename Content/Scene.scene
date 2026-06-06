@@ -347,6 +347,12 @@
 			"PrefabID": "c10500734f23c2852934aebde5156197",
 			"PrefabObjectID": "f5cdd60f40aa78205080fbbc455e5fdd",
 			"ParentID": "c92e98bf4892e558ae7d91a6274c854b"
+		},
+		{
+			"ID": "d9290bf74828ceeb66b74eb60305b052",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "NetworkManager"
 		}
 	]
 }
