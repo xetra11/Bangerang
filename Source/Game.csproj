@@ -305,7 +305,7 @@
     <Compile Include="Game\Player\PlayerFirstPersonLogic.cs" />
     <Compile Include="Game\Player\PlayerInputManager.cs" />
     <Compile Include="Game\Player\PlayerShootLogic.cs" />
-    <Compile Include="Game\Player\PlayerSpawnSystem.cs" />
+    <Compile Include="Game\Player\PlayerSpawnManager.cs" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'Editor.Windows.Debug|x64' " >
     <Compile Visible="false" Include="C:\Development\bangerang_v2\Cache\Intermediate\GameEditorTarget\Windows\x64\Debug\Game\Game.Bindings.Gen.cs" />

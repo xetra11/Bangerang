@@ -24,6 +24,12 @@
 			"V": {}
 		},
 		{
+			"ID": "611ad4cb460214aa82138e94c2f296f7",
+			"TypeName": "Game.Game.Player.PlayerSpawn",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"V": {}
+		},
+		{
 			"ID": "28553d634087c67c711ebd96080482aa",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
@@ -171,75 +177,25 @@
 			"CollisionData": "1d6fc93c4013af5bf8c2e192873e6faf"
 		},
 		{
-			"ID": "6b52824b4ffe3a757311e49e6ec17e92",
+			"ID": "9d6a67744d85164b100d7da0d18e239e",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
 			"Name": "PlayerSpawn",
 			"Transform": {
 				"Translation": {
-					"X": 1501.2086181640625,
-					"Y": 155.27076721191406,
-					"Z": -1671.463623046875
+					"X": 1608.605712890625,
+					"Y": 108.708251953125,
+					"Z": -1682.1431884765625
 				}
 			}
 		},
 		{
-			"ID": "458b008f41d9ec5f3dc66395a2120f08",
-			"PrefabID": "286d7d7b4b9cdfbd45734fb147525734",
-			"PrefabObjectID": "ff313ac3430b4e09320f909ff87c50c8",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Transform": {
-				"Translation": {
-					"X": 1648.080322265625,
-					"Y": 15.095962524414063,
-					"Z": -1572.5986328125
-				}
-			}
-		},
-		{
-			"ID": "78b796a14e4402935d45f7b35164ed9b",
-			"PrefabID": "286d7d7b4b9cdfbd45734fb147525734",
-			"PrefabObjectID": "44a46a13433ece9b859556b1cd0df2e3",
-			"ParentID": "458b008f41d9ec5f3dc66395a2120f08",
-			"V": {}
-		},
-		{
-			"ID": "806f74c34a0250f1ab83a0a8acb450e5",
-			"PrefabID": "286d7d7b4b9cdfbd45734fb147525734",
-			"PrefabObjectID": "f46a030145cff14cfce7109b0f32f6da",
-			"ParentID": "458b008f41d9ec5f3dc66395a2120f08",
-			"V": {}
-		},
-		{
-			"ID": "1ce27e20462d623fcd4175830132ba05",
-			"PrefabID": "286d7d7b4b9cdfbd45734fb147525734",
-			"PrefabObjectID": "fd98164b459a02a6b7b65e949a85242f",
-			"ParentID": "458b008f41d9ec5f3dc66395a2120f08",
-			"V": {}
-		},
-		{
-			"ID": "343655674d20b43f8310c083c46ee5f5",
-			"PrefabID": "286d7d7b4b9cdfbd45734fb147525734",
-			"PrefabObjectID": "386f9d834dd9668e96e57a8fa8b8c97f",
-			"ParentID": "458b008f41d9ec5f3dc66395a2120f08",
-			"V": {}
-		},
-		{
-			"ID": "82655dda454f528d500d09a9fb43f065",
-			"PrefabID": "286d7d7b4b9cdfbd45734fb147525734",
-			"PrefabObjectID": "e4d77efc433412a07e319dbcc3d4a8db",
-			"ParentID": "458b008f41d9ec5f3dc66395a2120f08",
-			"Buffer": {
-				"Entries": [
-					{}
-				]
-			}
-		},
-		{
-			"ID": "80882c90411622cdd5dd02861ae030af",
-			"PrefabID": "286d7d7b4b9cdfbd45734fb147525734",
-			"PrefabObjectID": "b14feef849d6e9890b2c7bb4f55a1974",
-			"ParentID": "458b008f41d9ec5f3dc66395a2120f08"
+			"ID": "2ebc05c14285c9feba5a239963428283",
+			"TypeName": "Game.Game.Player.PlayerSpawn",
+			"ParentID": "9d6a67744d85164b100d7da0d18e239e",
+			"V": {
+	"PlayerPrefab": "286d7d7b4b9cdfbd45734fb147525734"
+}
 		}
 	]
 }
