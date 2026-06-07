@@ -15,7 +15,9 @@
 		"ID": "44a46a13433ece9b859556b1cd0df2e3",
 		"TypeName": "Game.Game.Player.PlayerShootLogic",
 		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
-		"V": {}
+		"V": {
+	"Projectile": "622758c54cf790f94a73ceb909d21074"
+}
 	},
 	{
 		"ID": "f46a030145cff14cfce7109b0f32f6da",

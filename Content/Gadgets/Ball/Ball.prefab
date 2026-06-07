@@ -1,0 +1,46 @@
+{
+	"ID": "622758c54cf790f94a73ceb909d21074",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6912,
+	"Data": [
+	{
+		"ID": "d4a5b3a244a4391fc2cdcdb7f9ca61bf",
+		"TypeName": "FlaxEngine.RigidBody",
+		"Name": "RigidBody",
+		"Transform": {
+			"Scale": {
+				"X": 0.2900000214576721,
+				"Y": 0.29000020027160645,
+				"Z": 0.29000020027160645
+			}
+		},
+		"StaticFlags": 0,
+		"Mass": 523.5988159179688
+	},
+	{
+		"ID": "74d1e1f64a42defd0c3619b72a2616e8",
+		"TypeName": "FlaxEngine.SphereCollider",
+		"ParentID": "d4a5b3a244a4391fc2cdcdb7f9ca61bf",
+		"Name": "SphereCollider",
+		"StaticFlags": 0
+	},
+	{
+		"ID": "e0c10c9d4b7aa936ca723ab9eda0dadf",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d4a5b3a244a4391fc2cdcdb7f9ca61bf",
+		"Name": "Sphere",
+		"StaticFlags": 0,
+		"Model": "dd86c4724bf734c4959d23b3c74faa05",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	}
+]
+}

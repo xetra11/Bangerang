@@ -6,6 +6,9 @@ public class NetworkManager : Script
 {
     public override void OnAwake()
     {
+#if FLAX_EDITOR
+        return;
+#endif
         Debug.Log("Starting NetworkManager...");
 #if SERVER
         if (FlaxEngine.Networking.NetworkManager.StartHost())
