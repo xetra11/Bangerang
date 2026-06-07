@@ -18,18 +18,6 @@
 			}
 		},
 		{
-			"ID": "bacb14b743b45ed605364f81741a567b",
-			"TypeName": "Game.Game.ExitOnEsc",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"V": {}
-		},
-		{
-			"ID": "611ad4cb460214aa82138e94c2f296f7",
-			"TypeName": "Game.Game.Player.PlayerSpawn",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"V": {}
-		},
-		{
 			"ID": "28553d634087c67c711ebd96080482aa",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
