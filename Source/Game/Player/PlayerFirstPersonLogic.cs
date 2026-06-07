@@ -32,6 +32,11 @@ public class PlayerFirstPersonLogic : Script
 
     public override void OnUpdate()
     {
+        if (Input.GetKeyDown(KeyboardKeys.Escape))
+        {
+            UseMouse = !UseMouse;
+        }
+
         if (UseMouse)
         {
             Screen.CursorVisible = false;

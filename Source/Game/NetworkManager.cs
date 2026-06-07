@@ -4,29 +4,19 @@ namespace Game.Game;
 
 public class NetworkManager : Script
 {
-    private float _timer = 0;
-
     public override void OnStart()
     {
+        Debug.Log("Starting NetworkManager...");
 #if SERVER
-        FlaxEngine.Networking.NetworkManager.StartHost();
-        Debug.Log("NetworkManager started as Host");
+        if (FlaxEngine.Networking.NetworkManager.StartHost())
+        {
+            Debug.LogError("Failed to start NetworkManager as Host");
+        }
 #else
-        FlaxEngine.Networking.NetworkManager.StartClient();
-        Debug.Log("NetworkManager started as Client");
+        if (!FlaxEngine.Networking.NetworkManager.StartClient())
+        {
+            Debug.LogError("Failed to start NetworkManager as Client");
+        }
 #endif
-        base.OnStart();
-    }
-
-    public override void OnUpdate()
-    {
-        // _timer -= Time.DeltaTime;
-        // if (_timer < 0)
-        // {
-        //     _timer = 3;
-        //     Debug.Log($"Network is {FlaxEngine.Networking.NetworkManager.State}");
-        // }
-        //
-        base.OnUpdate();
     }
 }

@@ -9,9 +9,7 @@ public class PlayerSpawn : Script
 
     public override void OnStart()
     {
-#if !SERVER
         var player = PrefabManager.SpawnPrefab(PlayerPrefab, Transform);
         Debug.Log("Player spawned: " + player.Name);
-#endif
     }
 }

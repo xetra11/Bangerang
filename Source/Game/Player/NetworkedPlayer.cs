@@ -7,11 +7,7 @@ public class NetworkedPlayer : Script
 {
     public override void OnEnable()
     {
-        NetworkReplicator.AddObject(this);
-        if (NetworkReplicator.IsObjectOwned(Actor))
-        {
-            Actor.Layer = 1;
-        }
+        // NetworkReplicator.AddObject(this);
     }
 
     public override void OnDisable()
