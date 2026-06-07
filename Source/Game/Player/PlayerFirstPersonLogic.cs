@@ -30,6 +30,7 @@ public class PlayerFirstPersonLogic : Script
     private float _horizontal;
     private float _vertical;
 
+
     public override void OnUpdate()
     {
         if (Input.GetKeyDown(KeyboardKeys.Escape))
