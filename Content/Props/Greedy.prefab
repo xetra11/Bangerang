@@ -42,6 +42,12 @@
 }
 	},
 	{
+		"ID": "9f2c74db431151ea5e2e79be554f1985",
+		"TypeName": "Game.Game.Greedy.NetworkedGreedy",
+		"ParentID": "eded7ea14595a3b68cd4c08fbcf89689",
+		"V": {}
+	},
+	{
 		"ID": "b666538b4cfaf0b9d2697a920f2325c8",
 		"TypeName": "FlaxEngine.BoxCollider",
 		"ParentID": "eded7ea14595a3b68cd4c08fbcf89689",
