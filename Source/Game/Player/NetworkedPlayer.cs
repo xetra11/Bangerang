@@ -33,11 +33,6 @@ public class NetworkedPlayer : Script
         SetScriptEnabled<PlayerInputManager>(isLocalPlayer);
         SetScriptEnabled<PlayerShootLogic>(isLocalPlayer);
         SetScriptEnabled<PlayerAnimationManager>(isLocalPlayer);
-
-        Debug.Log(
-            $"Configured player owner={ownerClientId}, local={localClientId}, " +
-            $"role={role}, input={isLocalPlayer}"
-        );
     }
 
     private void SetScriptEnabled<T>(bool enabled) where T : Script

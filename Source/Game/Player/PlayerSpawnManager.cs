@@ -12,7 +12,7 @@ public class PlayerSpawn : Script
 
     public override void OnEnable()
     {
-        (sdd!FlaxEngine.Networking.NetworkManager.IsServer &&
+        if (!FlaxEngine.Networking.NetworkManager.IsServer &&
             !FlaxEngine.Networking.NetworkManager.IsHost)
             return;
 
@@ -38,11 +38,6 @@ public class PlayerSpawn : Script
 
     private void OnClientConnected(NetworkClient client)
     {
-        Debug.Log(
-            $"Client connected: id={client.ClientId}, " +
-            $"local={FlaxEngine.Networking.NetworkManager.LocalClientId}"
-        );
-
         // StartHost owns its local player already. This event is only used
         // to create pawns for remote clients.
         if (client.ClientId == FlaxEngine.Networking.NetworkManager.LocalClientId)
@@ -63,7 +58,6 @@ public class PlayerSpawn : Script
         NetworkReplicator.SetObjectOwnership(player, ownerClientId, localRole);
         NetworkReplicator.AddObject(player);
 
-        Debug.Log($"Spawned player for client {ownerClientId}");
         player.GetScript<NetworkedPlayer>()?.TryConfigureOwnership();
     }
 }
