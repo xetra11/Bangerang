@@ -38,7 +38,7 @@
 		"ParentID": "eded7ea14595a3b68cd4c08fbcf89689",
 		"V": {
 	"Collider": "b666538b4cfaf0b9d2697a920f2325c8",
-	"AudioSource": "f5cdd60f40aa78205080fbbc455e5fdd"
+	"Clip": "ca3596c84d6fcc6d8be9d09d2ff1575b"
 }
 	},
 	{
@@ -47,14 +47,6 @@
 		"ParentID": "eded7ea14595a3b68cd4c08fbcf89689",
 		"Name": "BoxCollider",
 		"IsTrigger": true
-	},
-	{
-		"ID": "f5cdd60f40aa78205080fbbc455e5fdd",
-		"TypeName": "FlaxEngine.AudioSource",
-		"ParentID": "eded7ea14595a3b68cd4c08fbcf89689",
-		"Name": "AudioSource",
-		"Clip": "ca3596c84d6fcc6d8be9d09d2ff1575b",
-		"AllowSpatialization": false
 	}
 ]
 }

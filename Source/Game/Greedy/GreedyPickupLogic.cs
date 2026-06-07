@@ -6,7 +6,7 @@ namespace Game.Game.Greedy;
 public class GreedyPickupLogic: Script
 {
     public Collider Collider;
-    public AudioSource AudioSource;
+    public AudioClip Clip;
     private bool _collided;
 
     public override void OnUpdate()
@@ -19,7 +19,7 @@ public class GreedyPickupLogic: Script
         if (_collided) return;
         if (!obj.HasTag("Player")) return;
         _collided = true;
-        AudioSystem.Instance.PlayAudio(Transform, AudioSource.Clip);
+        AudioSystem.Instance.PlayAudio(Transform, Clip);
         Destroy(Actor);
     }
 

@@ -113,15 +113,15 @@
 			"Name": "Camera",
 			"Transform": {
 				"Translation": {
-					"X": 1621.9464111328125,
-					"Y": 160.62217712402344,
-					"Z": -1921.735595703125
+					"X": -780.6519165039063,
+					"Y": 349.376708984375,
+					"Z": 0.0
 				},
 				"Orientation": {
-					"X": 0.15754814445972443,
-					"Y": 0.16802002489566803,
-					"Z": -0.02721329592168331,
-					"W": 0.9727319478988647
+					"X": 0.0,
+					"Y": -0.7449604272842407,
+					"Z": 0.0,
+					"W": -0.6671086549758911
 				}
 			},
 			"StaticFlags": 0,
@@ -171,9 +171,9 @@
 			"Name": "PlayerSpawn",
 			"Transform": {
 				"Translation": {
-					"X": 1621.9464111328125,
-					"Y": 630.7874755859375,
-					"Z": -1921.735595703125
+					"X": 2055.189208984375,
+					"Y": 192.01815795898438,
+					"Z": -1141.25390625
 				}
 			}
 		},
@@ -217,12 +217,6 @@
 			"ParentID": "76c77ec04b1998b6ed20f2ae5fa760c5"
 		},
 		{
-			"ID": "726e3702466631333cc24f895f49ce91",
-			"PrefabID": "c10500734f23c2852934aebde5156197",
-			"PrefabObjectID": "f5cdd60f40aa78205080fbbc455e5fdd",
-			"ParentID": "76c77ec04b1998b6ed20f2ae5fa760c5"
-		},
-		{
 			"ID": "8902b3214f7aef56cfca51847daf92f1",
 			"PrefabID": "c10500734f23c2852934aebde5156197",
 			"PrefabObjectID": "eded7ea14595a3b68cd4c08fbcf89689",
@@ -252,12 +246,6 @@
 			"ID": "07dd98804b6b714ec0f3e9952f6a8091",
 			"PrefabID": "c10500734f23c2852934aebde5156197",
 			"PrefabObjectID": "b666538b4cfaf0b9d2697a920f2325c8",
-			"ParentID": "8902b3214f7aef56cfca51847daf92f1"
-		},
-		{
-			"ID": "7af3cced446ca69229303bace32a2a3b",
-			"PrefabID": "c10500734f23c2852934aebde5156197",
-			"PrefabObjectID": "f5cdd60f40aa78205080fbbc455e5fdd",
 			"ParentID": "8902b3214f7aef56cfca51847daf92f1"
 		},
 		{
@@ -293,12 +281,6 @@
 			"ParentID": "9e2ed0f34f0c57bf4644c3a35c7ea357"
 		},
 		{
-			"ID": "b35b211e4a9965a516e18c9785b2a61f",
-			"PrefabID": "c10500734f23c2852934aebde5156197",
-			"PrefabObjectID": "f5cdd60f40aa78205080fbbc455e5fdd",
-			"ParentID": "9e2ed0f34f0c57bf4644c3a35c7ea357"
-		},
-		{
 			"ID": "c92e98bf4892e558ae7d91a6274c854b",
 			"PrefabID": "c10500734f23c2852934aebde5156197",
 			"PrefabObjectID": "eded7ea14595a3b68cd4c08fbcf89689",
@@ -331,100 +313,10 @@
 			"ParentID": "c92e98bf4892e558ae7d91a6274c854b"
 		},
 		{
-			"ID": "6a7edc9e465fbed8ae7d338637ac6014",
-			"PrefabID": "c10500734f23c2852934aebde5156197",
-			"PrefabObjectID": "f5cdd60f40aa78205080fbbc455e5fdd",
-			"ParentID": "c92e98bf4892e558ae7d91a6274c854b"
-		},
-		{
 			"ID": "d9290bf74828ceeb66b74eb60305b052",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
 			"Name": "NetworkManager"
-		},
-		{
-			"ID": "d56e46e14079a198a854f2b2d8baaed2",
-			"TypeName": "Game.Game.NetworkManager",
-			"ParentID": "d9290bf74828ceeb66b74eb60305b052",
-			"V": {}
-		},
-		{
-			"ID": "687a0a6b4a8279929f7698b6a5028bb1",
-			"PrefabID": "286d7d7b4b9cdfbd45734fb147525734",
-			"PrefabObjectID": "ff313ac3430b4e09320f909ff87c50c8",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Transform": {
-				"Translation": {
-					"X": 1621.9464111328125,
-					"Y": -1.1910896301269531,
-					"Z": -1921.735595703125
-				},
-				"Orientation": {
-					"X": 0.0,
-					"Y": 0.17020954191684723,
-					"Z": 0.0,
-					"W": 0.9854079484939575
-				}
-			}
-		},
-		{
-			"ID": "1b81f76d49631d9b7e0c1fa105d06251",
-			"PrefabID": "286d7d7b4b9cdfbd45734fb147525734",
-			"PrefabObjectID": "44a46a13433ece9b859556b1cd0df2e3",
-			"ParentID": "687a0a6b4a8279929f7698b6a5028bb1",
-			"V": {}
-		},
-		{
-			"ID": "4eee41444bd05e9ba269d7836745174b",
-			"PrefabID": "286d7d7b4b9cdfbd45734fb147525734",
-			"PrefabObjectID": "f46a030145cff14cfce7109b0f32f6da",
-			"ParentID": "687a0a6b4a8279929f7698b6a5028bb1",
-			"V": {}
-		},
-		{
-			"ID": "bf1581cb4f0b1b222ef598b962c95128",
-			"PrefabID": "286d7d7b4b9cdfbd45734fb147525734",
-			"PrefabObjectID": "fd98164b459a02a6b7b65e949a85242f",
-			"ParentID": "687a0a6b4a8279929f7698b6a5028bb1",
-			"V": {}
-		},
-		{
-			"ID": "a43606f7472698afe07737bf650b2aad",
-			"PrefabID": "286d7d7b4b9cdfbd45734fb147525734",
-			"PrefabObjectID": "386f9d834dd9668e96e57a8fa8b8c97f",
-			"ParentID": "687a0a6b4a8279929f7698b6a5028bb1",
-			"V": {}
-		},
-		{
-			"ID": "ea6fadac475236cc50df56a916c25c3c",
-			"PrefabID": "286d7d7b4b9cdfbd45734fb147525734",
-			"PrefabObjectID": "e4d77efc433412a07e319dbcc3d4a8db",
-			"ParentID": "687a0a6b4a8279929f7698b6a5028bb1",
-			"Buffer": {
-				"Entries": [
-					{}
-				]
-			}
-		},
-		{
-			"ID": "7d6d3da244e52a6d898354b2df7206bf",
-			"PrefabID": "286d7d7b4b9cdfbd45734fb147525734",
-			"PrefabObjectID": "b14feef849d6e9890b2c7bb4f55a1974",
-			"ParentID": "687a0a6b4a8279929f7698b6a5028bb1",
-			"Transform": {
-				"Orientation": {
-					"X": 0.15988114476203918,
-					"Y": 0.0,
-					"Z": 0.0,
-					"W": 0.9871363043785095
-				}
-			}
-		},
-		{
-			"ID": "0ccb75cd46aa528b8a852ba1c25233b5",
-			"PrefabID": "286d7d7b4b9cdfbd45734fb147525734",
-			"PrefabObjectID": "57101a094fcc6b28e24d8b8b259486ed",
-			"ParentID": "687a0a6b4a8279929f7698b6a5028bb1"
 		}
 	]
 }

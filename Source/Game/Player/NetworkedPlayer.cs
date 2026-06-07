@@ -3,7 +3,7 @@ using FlaxEngine.Networking;
 
 namespace Game.Game.Player;
 
-public class NetworkedPlayer: Script
+public class NetworkedPlayer : Script
 {
     public override void OnEnable()
     {
@@ -16,6 +16,6 @@ public class NetworkedPlayer: Script
 
     public override void OnDisable()
     {
-        NetworkReplicator.RemoveObject(this);
+        // NetworkReplicator.RemoveObject(this);
     }
 }

@@ -12,7 +12,6 @@ public class PlayerSpawn : Script
 #if !SERVER
         var player = PrefabManager.SpawnPrefab(PlayerPrefab, Transform);
         Debug.Log("Player spawned: " + player.Name);
-        NetworkReplicator.SpawnObject(player);
 #endif
     }
 }
