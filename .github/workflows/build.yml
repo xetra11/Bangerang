@@ -1,0 +1,82 @@
+name: Build Flax Artifacts
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build-client:
+    name: Build Client
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Pull Git LFS files
+        run: git lfs pull
+
+      - name: Build client artifact
+        shell: powershell
+        run: |
+          $FlaxEditor = "C:\Program Files\Flax\FlaxEditor.exe"
+          $Project = "${{ github.workspace }}\YourProject.flaxproj"
+
+          & $FlaxEditor `
+            -project $Project `
+            -headless `
+            -mute `
+            -null `
+            -std `
+            -clearCooker `
+            -build "Development.Win64Client"
+
+      - name: Upload client artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bangerang-win64-client
+          path: |
+            **/Build/**
+            **/Binaries/**
+          if-no-files-found: warn
+
+  build-server:
+    name: Build Server
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Pull Git LFS files
+        run: git lfs pull
+
+      - name: Build server artifact
+        shell: powershell
+        run: |
+          $FlaxEditor = "C:\Program Files\Flax\FlaxEditor.exe"
+          $Project = "${{ github.workspace }}\YourProject.flaxproj"
+
+          & $FlaxEditor `
+            -project $Project `
+            -headless `
+            -mute `
+            -null `
+            -std `
+            -clearCooker `
+            -build "Development.Win64Server"
+
+      - name: Upload server artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bangerang-win64-server
+          path: |
+            **/Build/**
+            **/Binaries/**
+          if-no-files-found: warn

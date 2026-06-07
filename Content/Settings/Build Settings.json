@@ -23,7 +23,7 @@
 			"Name": "Development",
 			"Targets": [
 				{
-					"Name": "Win64 Server",
+					"Name": "Win64Server",
 					"Output": "Output\\Win64Server",
 					"Platform": 2,
 					"Mode": 1,
@@ -34,7 +34,7 @@
 					"PostBuildAction": null
 				},
 				{
-					"Name": "Win64 Client",
+					"Name": "Win64Client",
 					"Output": "Output\\Win64Client",
 					"Platform": 2,
 					"Mode": 1,
