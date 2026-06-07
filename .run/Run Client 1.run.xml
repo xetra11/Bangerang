@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run Client 1" type="PowerShellRunType" factoryName="PowerShell" scriptUrl="C:\Development\bangerang_v2\run_client.ps1" workingDirectory="C:\Development\bangerang_v2" executablePath="$PROJECT_DIR$/../../WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe">
+    <envs />
+    <method v="2">
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="Build Client" run_configuration_type="PowerShellRunType" />
+    </method>
+  </configuration>
+</component>

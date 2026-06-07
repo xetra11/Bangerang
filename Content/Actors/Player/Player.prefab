@@ -7,7 +7,6 @@
 		"ID": "ff313ac3430b4e09320f909ff87c50c8",
 		"TypeName": "FlaxEngine.CharacterController",
 		"Name": "Player",
-		"Layer": 1,
 		"Tag": "Player",
 		"Height": 77.0,
 		"OriginMode": 1
@@ -44,6 +43,12 @@
 }
 	},
 	{
+		"ID": "11e1a24e4e9e727f58ef3c9aa38f9015",
+		"TypeName": "Game.Game.Player.NetworkedPlayer",
+		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"V": {}
+	},
+	{
 		"ID": "e4d77efc433412a07e319dbcc3d4a8db",
 		"TypeName": "FlaxEngine.AnimatedModel",
 		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
@@ -61,7 +66,6 @@
 				"W": -4.371138828673793e-8
 			}
 		},
-		"Layer": 1,
 		"Tag": "Player",
 		"SkinnedModel": "44508ba9427840a64fe5c18696c150b1",
 		"AnimationGraph": "1c0d6e944de7a7cba273dbbfc6512deb",
@@ -87,15 +91,13 @@
 				"Y": 161.81326293945313,
 				"Z": 0.0
 			}
-		},
-		"Layer": 1
+		}
 	},
 	{
 		"ID": "57101a094fcc6b28e24d8b8b259486ed",
 		"TypeName": "FlaxEngine.AudioListener",
 		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
-		"Name": "AudioListener",
-		"Layer": 1
+		"Name": "AudioListener"
 	}
 ]
 }
