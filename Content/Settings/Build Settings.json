@@ -41,6 +41,15 @@
 					"CustomDefines": null,
 					"PreBuildAction": null,
 					"PostBuildAction": null
+				},
+				{
+					"Name": "MacOS (ARM)",
+					"Output": "Output\\MacOS",
+					"Platform": 13,
+					"Mode": 1,
+					"CustomDefines": null,
+					"PreBuildAction": null,
+					"PostBuildAction": null
 				}
 			]
 		},

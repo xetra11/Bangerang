@@ -26,6 +26,8 @@ public class NetworkedPlayer : Script
         _configuredOwnerClientId = ownerClientId;
         _configuredRole = role;
 
+        RegisterNetworkScript<PlayerShootLogic>();
+
         var localClientId = FlaxEngine.Networking.NetworkManager.LocalClientId;
         var isLocalPlayer = ownerClientId == localClientId;
 
@@ -33,6 +35,13 @@ public class NetworkedPlayer : Script
         SetScriptEnabled<PlayerInputManager>(isLocalPlayer);
         SetScriptEnabled<PlayerShootLogic>(isLocalPlayer);
         SetScriptEnabled<PlayerAnimationManager>(isLocalPlayer);
+    }
+
+    private void RegisterNetworkScript<T>() where T : Script
+    {
+        var script = Actor.GetScript<T>();
+        if (script != null && !NetworkReplicator.HasObject(script))
+            NetworkReplicator.AddObject(script, Actor);
     }
 
     private void SetScriptEnabled<T>(bool enabled) where T : Script

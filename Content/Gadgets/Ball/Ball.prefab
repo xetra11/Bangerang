@@ -18,17 +18,44 @@
 		"Mass": 523.5988159179688
 	},
 	{
+		"ID": "67476cd940ae9cc01d9d23be6c5ff2e5",
+		"TypeName": "FlaxEngine.Networking.NetworkTransform",
+		"ParentID": "d4a5b3a244a4391fc2cdcdb7f9ca61bf",
+		"Mode": 2
+	},
+	{
+		"ID": "545ae5af4f15db970b692ca4b4c42cf0",
+		"TypeName": "Game.Game.Projectile",
+		"ParentID": "d4a5b3a244a4391fc2cdcdb7f9ca61bf",
+		"V": {}
+	},
+	{
 		"ID": "74d1e1f64a42defd0c3619b72a2616e8",
 		"TypeName": "FlaxEngine.SphereCollider",
 		"ParentID": "d4a5b3a244a4391fc2cdcdb7f9ca61bf",
 		"Name": "SphereCollider",
-		"StaticFlags": 0
+		"Transform": {
+			"Translation": {
+				"X": -0.5221061110496521,
+				"Y": -0.5409483313560486,
+				"Z": 0.0
+			}
+		},
+		"StaticFlags": 0,
+		"Radius": 3.0
 	},
 	{
 		"ID": "e0c10c9d4b7aa936ca723ab9eda0dadf",
 		"TypeName": "FlaxEngine.StaticModel",
 		"ParentID": "d4a5b3a244a4391fc2cdcdb7f9ca61bf",
 		"Name": "Sphere",
+		"Transform": {
+			"Scale": {
+				"X": 0.21000003814697266,
+				"Y": 0.21000003814697266,
+				"Z": 0.21000003814697266
+			}
+		},
 		"StaticFlags": 0,
 		"Model": "dd86c4724bf734c4959d23b3c74faa05",
 		"Buffer": {

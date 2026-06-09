@@ -1,4 +1,5 @@
 using FlaxEngine;
+using FlaxEngine.Networking;
 
 namespace Game.Game.Player;
 
@@ -13,6 +14,12 @@ public class PlayerShootLogic : Script
         if (!Input.GetAction("Fire"))
             return;
 
+        NetworkedSpawnProjectile();
+
+    }
+
+    private void SpawnProjectile()
+    {
         var camera = Camera.MainCamera;
         if (Projectile == null || camera == null)
         {
@@ -37,5 +44,11 @@ public class PlayerShootLogic : Script
         }
 
         rigidBody.LinearVelocity = direction * ProjectileSpeed;
+    }
+
+    [NetworkRpc(Server = true)]
+    private void NetworkedSpawnProjectile()
+    {
+        SpawnProjectile();
     }
 }

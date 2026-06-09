@@ -53,7 +53,8 @@
 	{
 		"ID": "4be5c3c6483add6d8264279e3f3b2e8a",
 		"TypeName": "FlaxEngine.Networking.NetworkTransform",
-		"ParentID": "ff313ac3430b4e09320f909ff87c50c8"
+		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"Mode": 2
 	},
 	{
 		"ID": "e4d77efc433412a07e319dbcc3d4a8db",
