@@ -33,8 +33,8 @@ public class NetworkedPlayer : Script
 
         SetScriptEnabled<PlayerFirstPersonLogic>(isLocalPlayer);
         SetScriptEnabled<PlayerInputManager>(isLocalPlayer);
-        SetScriptEnabled<PlayerShootLogic>(isLocalPlayer);
         SetScriptEnabled<PlayerAnimationManager>(isLocalPlayer);
+        SetScriptEnabled<PlayerShootLogic>(isLocalPlayer);
     }
 
     private void RegisterNetworkScript<T>() where T : Script

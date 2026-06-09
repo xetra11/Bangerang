@@ -11,29 +11,49 @@ public class PlayerShootLogic : Script
 
     public override void OnUpdate()
     {
+        if (!NetworkReplicator.HasObject(this) ||
+            !NetworkReplicator.IsObjectOwned(this))
+            return;
+
         if (!Input.GetAction("Fire"))
             return;
 
-        NetworkedSpawnProjectile();
-
-    }
-
-    private void SpawnProjectile()
-    {
         var camera = Camera.MainCamera;
-        if (Projectile == null || camera == null)
+        if (camera == null)
         {
-            Debug.LogWarning("PlayerShootLogic requires a projectile prefab and main camera.");
+            Debug.LogWarning("PlayerShootLogic requires a main camera.");
             return;
         }
 
         var cameraTransform = camera.Transform;
         var direction = cameraTransform.Forward;
         var spawnPosition = cameraTransform.Translation + direction * SpawnOffset;
+
+        NetworkedSpawnProjectile(
+            spawnPosition,
+            direction,
+            cameraTransform.Orientation
+        );
+    }
+
+    private void SpawnProjectile(
+        Vector3 spawnPosition,
+        Vector3 direction,
+        Quaternion orientation
+    )
+    {
+        if (Projectile == null)
+        {
+            Debug.LogWarning("PlayerShootLogic requires a projectile prefab.");
+            return;
+        }
+
+        direction.Normalize();
+
         var projectile = PrefabManager.SpawnPrefab(
             Projectile,
             spawnPosition,
-            cameraTransform.Orientation
+            orientation
         );
 
         var rigidBody = projectile as RigidBody ?? projectile.GetChild<RigidBody>();
@@ -47,8 +67,12 @@ public class PlayerShootLogic : Script
     }
 
     [NetworkRpc(Server = true)]
-    private void NetworkedSpawnProjectile()
+    private void NetworkedSpawnProjectile(
+        Vector3 spawnPosition,
+        Vector3 direction,
+        Quaternion orientation
+    )
     {
-        SpawnProjectile();
+        SpawnProjectile(spawnPosition, direction, orientation);
     }
 }

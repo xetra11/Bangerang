@@ -12,10 +12,6 @@ public class PlayerSpawn : Script
 
     public override void OnEnable()
     {
-#if FLAX_EDITOR
-        PrefabManager.SpawnPrefab(PlayerPrefab, Transform);
-        return;
-#endif
         if (!FlaxEngine.Networking.NetworkManager.IsServer &&
             !FlaxEngine.Networking.NetworkManager.IsHost)
             return;
