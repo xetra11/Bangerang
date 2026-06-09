@@ -15,7 +15,8 @@
 			}
 		},
 		"StaticFlags": 0,
-		"Mass": 523.5988159179688
+		"Mass": 523.5988159179688,
+		"UseCCD": true
 	},
 	{
 		"ID": "67476cd940ae9cc01d9d23be6c5ff2e5",
