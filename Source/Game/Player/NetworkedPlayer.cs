@@ -28,8 +28,7 @@ public class NetworkedPlayer : Script
 
         RegisterNetworkScript<PlayerShootLogic>();
 
-        var localClientId = FlaxEngine.Networking.NetworkManager.LocalClientId;
-        var isLocalPlayer = ownerClientId == localClientId;
+        var isLocalPlayer = NetworkHelper.IsLocalOwner(Actor);
 
         SetScriptEnabled<PlayerFirstPersonLogic>(isLocalPlayer);
         SetScriptEnabled<PlayerInputManager>(isLocalPlayer);
