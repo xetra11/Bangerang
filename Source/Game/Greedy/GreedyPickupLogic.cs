@@ -20,6 +20,7 @@ public class GreedyPickupLogic: Script
         if (!obj.HasTag("Player")) return;
         _collided = true;
         AudioSystem.Instance.PlayAudio(Transform, Clip);
+        GameEventSystem.Instance.Publish(EventFactory.GreedyCollectEvent(this));
         Destroy(Actor);
     }
 

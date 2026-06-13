@@ -303,6 +303,7 @@
     <Compile Include="Game\FreeCamera.cs" />
     <Compile Include="Game\GameEventSystem.cs" />
     <Compile Include="Game\Greedy\GreedyPickupLogic.cs" />
+    <Compile Include="Game\Greedy\GreedyUIManager.cs" />
     <Compile Include="Game\Greedy\NetworkedGreedy.cs" />
     <Compile Include="Game\NetworkManager.cs" />
     <Compile Include="Game\Player\NetworkedPlayer.cs" />
