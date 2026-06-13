@@ -28,12 +28,13 @@ public class NetworkedPlayer : Script
 
         RegisterNetworkScript<PlayerShootLogic>();
 
-        var isLocalPlayer = NetworkHelper.IsLocalOwner(Actor);
+        var isLocalPlayer = NetworkReplicator.IsObjectOwned(Actor);
 
         SetScriptEnabled<PlayerFirstPersonLogic>(isLocalPlayer);
         SetScriptEnabled<PlayerInputManager>(isLocalPlayer);
         SetScriptEnabled<PlayerAnimationManager>(isLocalPlayer);
         SetScriptEnabled<PlayerShootLogic>(isLocalPlayer);
+
     }
 
     private void RegisterNetworkScript<T>() where T : Script

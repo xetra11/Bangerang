@@ -1,5 +1,7 @@
 using FlaxEngine;
 using FlaxEngine.GUI;
+using FlaxEngine.Networking;
+using Game.Game.Player;
 
 namespace Game.Game.Greedy;
 
@@ -14,6 +16,10 @@ public class GreedyUIManager : Script
         Debug.Log("GreedyUIManager started");
         GameEventSystem.Instance.OnGameEvent += @event =>
         {
+            if (@event.Sender is Actor actor)
+            {
+                if (!NetworkReplicator.IsObjectOwned(actor)) return;
+            }
             if (Validate()) return;
 
             if (@event.Args.Type == EventType.GreedyCollect)

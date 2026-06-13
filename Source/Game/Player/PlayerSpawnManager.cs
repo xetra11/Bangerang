@@ -54,6 +54,7 @@ public class PlayerSpawn : Script
 
         // Flax 1.12 does not process SpawnQueue while the registered object
         // collection is empty. Queue ownership first, then register the actor.
+        player.Name = $"Player {ownerClientId}";
         NetworkReplicator.SpawnObject(player);
         NetworkReplicator.SetObjectOwnership(player, ownerClientId, localRole);
         NetworkReplicator.AddObject(player);

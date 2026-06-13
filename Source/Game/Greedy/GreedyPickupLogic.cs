@@ -14,13 +14,13 @@ public class GreedyPickupLogic: Script
         Collider.TriggerEnter += OnPickup;
     }
 
-    private void OnPickup(PhysicsColliderActor obj)
+    private void OnPickup(PhysicsColliderActor collidedActor)
     {
         if (_collided) return;
-        if (!obj.HasTag("Player")) return;
+        if (!collidedActor.HasTag("Player")) return;
         _collided = true;
         AudioSystem.Instance.PlayAudio(Transform, Clip);
-        GameEventSystem.Instance.Publish(EventFactory.GreedyCollectEvent(this));
+        GameEventSystem.Instance.Publish(EventFactory.GreedyCollectEvent(collidedActor));
         Destroy(Actor);
     }
 
