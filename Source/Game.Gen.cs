@@ -16,5 +16,5 @@ using System.Runtime.CompilerServices;
 [assembly: Guid("7c85a97f-1a91-a036-c294-453405150000")]
 [assembly: AssemblyVersion("1.0")]
 [assembly: AssemblyFileVersion("1.0")]
-[assembly: AssemblyInformationalVersion("1.0+master+a04867edcea4cf5c617aa2fdc82d2eeb3bb66fa1")]
+[assembly: AssemblyInformationalVersion("1.0+master+913a76fdfd73e179ab07fea434cc688d9b6c76a7")]
 [assembly: DisableRuntimeMarshalling]
