@@ -16,7 +16,9 @@ public class NetworkedPlayer : Script
     public void TryConfigureOwnership()
     {
         if (!NetworkReplicator.HasObject(Actor))
+        {
             return;
+        }
 
         var ownerClientId = NetworkReplicator.GetObjectOwnerClientId(Actor);
         var role = NetworkReplicator.GetObjectRole(Actor);
@@ -30,11 +32,18 @@ public class NetworkedPlayer : Script
 
         var isLocalPlayer = NetworkReplicator.IsObjectOwned(Actor);
 
+        SetLayerRecursively(Actor, isLocalPlayer ? 1 : 0);
         SetScriptEnabled<PlayerFirstPersonLogic>(isLocalPlayer);
         SetScriptEnabled<PlayerInputManager>(isLocalPlayer);
         SetScriptEnabled<PlayerAnimationManager>(isLocalPlayer);
         SetScriptEnabled<PlayerShootLogic>(isLocalPlayer);
+    }
 
+    private static void SetLayerRecursively(Actor actor, int layer)
+    {
+        actor.Layer = layer;
+        foreach (var child in actor.Children)
+            SetLayerRecursively(child, layer);
     }
 
     private void RegisterNetworkScript<T>() where T : Script
