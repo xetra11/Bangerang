@@ -1,15 +1,18 @@
 using System.Threading.Tasks;
 using FlaxEngine;
+using FlaxEngine.Networking;
 
 namespace Game.Game.Player;
 
 public class PlayerHitLogic : Script
 {
     public Collider Collider;
+    public Prefab RigidPlayer;
     public int TimeAfterRegainControl = 100;
 
     public override void OnStart()
     {
+        NetworkReplicator.AddObject(this);
         if (!FlaxEngine.Networking.NetworkManager.IsServer && !FlaxEngine.Networking.NetworkManager.IsHost) return;
         Debug.Logger.Log("PlayerHit Collision registered");
         Collider.CollisionEnter += OnCollision;
@@ -24,17 +27,25 @@ public class PlayerHitLogic : Script
 
     private void Hit(Vector3 impulse)
     {
-        var characterController = Actor.FindActor<CharacterController>();
-        if (characterController == null)
-        {
-            Debug.LogError("Character controller not found");
-            return;
-        }
+        var spawnTransform = Actor.Transform;
+        DisableActor(Actor);
 
-        characterController.IsActive = false;
-        Debug.Logger.Log("Adding force to rigid body {}", impulse);
-        // rigidBody.AddForce(new Vector3(0, 1, 0), ForceMode.Impulse);
-        // await Task.Delay(TimeAfterRegainControl);
-        // characterController.IsActive = false;
+        var rigidBody = PrefabManager.SpawnPrefab(RigidPlayer, spawnTransform);
+        NetworkReplicator.SpawnObject(rigidBody);
+        NetworkReplicator.SetObjectOwnership(rigidBody, FlaxEngine.Networking.NetworkManager.LocalClientId, NetworkObjectRole.OwnedAuthoritative);
+        NetworkReplicator.AddObject(rigidBody);
+        // rigidBody.FindActor<RigidBody>().AddForce(impulse, ForceMode.Impulse);
+    }
+
+    private void DisableActor(Actor actor)
+    {
+        actor.IsActive = false;
+        DisableActorOnClient(actor);
+    }
+
+    [NetworkRpc( client: true)]
+    private void DisableActorOnClient(Actor actor)
+    {
+        actor.IsActive = false;
     }
 }
