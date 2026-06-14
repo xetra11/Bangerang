@@ -33,6 +33,9 @@ public class NetworkedPlayer : Script
         var isLocalPlayer = NetworkReplicator.IsObjectOwned(Actor);
 
         SetLayerRecursively(Actor, isLocalPlayer ? 1 : 0);
+        var audioListener = Actor.GetChild<AudioListener>();
+        if (audioListener != null) Destroy(audioListener);
+
         SetScriptEnabled<PlayerFirstPersonLogic>(isLocalPlayer);
         SetScriptEnabled<PlayerInputManager>(isLocalPlayer);
         SetScriptEnabled<PlayerAnimationManager>(isLocalPlayer);
