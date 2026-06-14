@@ -6,6 +6,7 @@ namespace Game.Game;
 public enum EventType
 {
     GreedyCollect,
+    PlayerGoalPass,
     PlayerMove,
 }
 

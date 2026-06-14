@@ -13,7 +13,6 @@ public class GreedyUIManager : Script
 
     public override void OnStart()
     {
-        Debug.Log("GreedyUIManager started");
         GameEventSystem.Instance.OnGameEvent += @event =>
         {
             if (@event.Sender is Actor actor)

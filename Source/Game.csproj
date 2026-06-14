@@ -302,6 +302,8 @@
     <Compile Include="Game\ExitOnEsc.cs" />
     <Compile Include="Game\FreeCamera.cs" />
     <Compile Include="Game\GameEventSystem.cs" />
+    <Compile Include="Game\Goal\GoalLogic.cs" />
+    <Compile Include="Game\Goal\GoalUIManager.cs" />
     <Compile Include="Game\Greedy\GreedyPickupLogic.cs" />
     <Compile Include="Game\Greedy\GreedyUIManager.cs" />
     <Compile Include="Game\Greedy\NetworkedGreedy.cs" />

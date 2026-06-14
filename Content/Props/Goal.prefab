@@ -1,0 +1,38 @@
+{
+	"ID": "d73574354bf5a0f3ff8b578c5bfec4c3",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6912,
+	"Data": [
+	{
+		"ID": "b07fef494563aca5cb813f8be45dcc4d",
+		"TypeName": "FlaxEngine.StaticModel",
+		"Name": "Goal",
+		"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "a5e869484384f83d8fadba9fd3b7cbce",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "97b2ae1349c36beccac1dbb80158c50a",
+		"TypeName": "Game.Game.GoalLogic",
+		"ParentID": "b07fef494563aca5cb813f8be45dcc4d",
+		"V": {
+	"Collider": "6c0b77e644ebea7e9fac4fb64a55cecc"
+}
+	},
+	{
+		"ID": "6c0b77e644ebea7e9fac4fb64a55cecc",
+		"TypeName": "FlaxEngine.BoxCollider",
+		"ParentID": "b07fef494563aca5cb813f8be45dcc4d",
+		"Name": "BoxCollider",
+		"IsTrigger": true
+	}
+]
+}

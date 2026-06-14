@@ -668,12 +668,60 @@
 			"Name": "GreedyUIManager"
 		},
 		{
-			"ID": "406ad11b431a063341fd9ba022d08d1c",
+			"ID": "c06f34234d10430101ccb08fc2524c32",
 			"TypeName": "Game.Game.Greedy.GreedyUIManager",
 			"ParentID": "e7cdae72427b41d01d96e3bd53e9cb43",
 			"V": {
 	"GreedyAmountLabel": "e1f61a3845a5aca97ecea7993a70ce73"
 }
+		},
+		{
+			"ID": "c31c087444bc9aad6f74a38d2acc9038",
+			"PrefabID": "d73574354bf5a0f3ff8b578c5bfec4c3",
+			"PrefabObjectID": "b07fef494563aca5cb813f8be45dcc4d",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Transform": {
+				"Translation": {
+					"X": -1043.913818359375,
+					"Y": 1289.76513671875,
+					"Z": 899.6448974609375
+				},
+				"Scale": {
+					"X": 2.9790992736816406,
+					"Y": 5.542872905731201,
+					"Z": 1.0
+				}
+			},
+			"Buffer": {
+				"Entries": [
+					{}
+				]
+			}
+		},
+		{
+			"ID": "3be6992940e345842916d297fd331573",
+			"PrefabID": "d73574354bf5a0f3ff8b578c5bfec4c3",
+			"PrefabObjectID": "97b2ae1349c36beccac1dbb80158c50a",
+			"ParentID": "c31c087444bc9aad6f74a38d2acc9038",
+			"V": {}
+		},
+		{
+			"ID": "77bbe7084def60068ee9a2b8c4e9834b",
+			"PrefabID": "d73574354bf5a0f3ff8b578c5bfec4c3",
+			"PrefabObjectID": "6c0b77e644ebea7e9fac4fb64a55cecc",
+			"ParentID": "c31c087444bc9aad6f74a38d2acc9038"
+		},
+		{
+			"ID": "e903b14342ce332f1d47b58bec569326",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "GoalUIManager"
+		},
+		{
+			"ID": "c955867242deffdf7f5a28aeedeba05b",
+			"TypeName": "Game.Game.Goal.GoalUIManager",
+			"ParentID": "e903b14342ce332f1d47b58bec569326",
+			"V": {}
 		}
 	]
 }
