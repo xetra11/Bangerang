@@ -35,6 +35,14 @@
 }
 	},
 	{
+		"ID": "085526e8462929b1ba81e88eb5ad123e",
+		"TypeName": "Game.Game.Player.PlayerHitLogic",
+		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"V": {
+	"Collider": "ff313ac3430b4e09320f909ff87c50c8"
+}
+	},
+	{
 		"ID": "386f9d834dd9668e96e57a8fa8b8c97f",
 		"TypeName": "Game.Game.Player.PlayerFirstPersonLogic",
 		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
@@ -56,14 +64,6 @@
 		"TypeName": "FlaxEngine.Networking.NetworkTransform",
 		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
 		"Mode": 2
-	},
-	{
-		"ID": "7f481d0b421807a9fb0446af1ec66ef6",
-		"TypeName": "Game.Game.Player.PlayerHitLogic",
-		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
-		"V": {
-	"Collider": "ff313ac3430b4e09320f909ff87c50c8"
-}
 	},
 	{
 		"ID": "e4d77efc433412a07e319dbcc3d4a8db",
@@ -117,6 +117,14 @@
 		"TypeName": "FlaxEngine.AudioListener",
 		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
 		"Name": "AudioListener",
+		"Layer": 1
+	},
+	{
+		"ID": "6dcef8b242f3258d8578eb8ca93be2a7",
+		"TypeName": "FlaxEngine.RigidBody",
+		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"Name": "RigidBody",
+		"StaticFlags": 0,
 		"Layer": 1
 	}
 ]

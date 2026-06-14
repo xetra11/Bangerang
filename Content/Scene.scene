@@ -182,7 +182,7 @@
 			"TypeName": "Game.Game.Player.PlayerSpawn",
 			"ParentID": "9d6a67744d85164b100d7da0d18e239e",
 			"V": {
-	"PlayerPrefab": "286d7d7b4b9cdfbd45734fb147525734"
+	"PlayerPrefab": "16842b4242ef6992a7e1598fbdf1d841"
 }
 		},
 		{
@@ -668,8 +668,8 @@
 			"Name": "GameEndPanel",
 			"Transform": {
 				"Translation": {
-					"X": 810.0,
-					"Y": 390.0,
+					"X": 809.0,
+					"Y": 391.0,
 					"Z": 0.0
 				}
 			},
@@ -713,9 +713,9 @@
 		"Y": 0.5
 	},
 	"Offsets": {
-		"Left": -150.0,
+		"Left": -151.0,
 		"Right": 300.0,
-		"Top": -150.0,
+		"Top": -149.0,
 		"Bottom": 300.0
 	},
 	"Scale": {

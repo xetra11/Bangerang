@@ -1,0 +1,192 @@
+{
+	"ID": "16842b4242ef6992a7e1598fbdf1d841",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6912,
+	"Data": [
+	{
+		"ID": "41e119c94da4dd5ab089129fe7329fad",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"Name": "Player"
+	},
+	{
+		"ID": "edb414e84b2f8a398b66fabc1756ff1d",
+		"TypeName": "Game.Game.Player.PlayerFirstPersonLogic",
+		"ParentID": "41e119c94da4dd5ab089129fe7329fad",
+		"V": {
+	"PlayerController": "c25467224b0cae7086662fbdf2befb93",
+	"CameraAnchor": "06e0d8174f24466de62e52ab9f867c0b",
+	"Camera": "b0d72c3746caebca055e1f921ca21c7c"
+}
+	},
+	{
+		"ID": "b092ae37485e906d35b3cb96762b7ae5",
+		"TypeName": "Game.Game.Player.PlayerHitLogic",
+		"ParentID": "41e119c94da4dd5ab089129fe7329fad",
+		"V": {
+	"Collider": "c25467224b0cae7086662fbdf2befb93"
+}
+	},
+	{
+		"ID": "c00c06b94c2678bb3f9716be41bb3cf9",
+		"TypeName": "Game.Game.Player.PlayerInputManager",
+		"ParentID": "41e119c94da4dd5ab089129fe7329fad",
+		"V": {}
+	},
+	{
+		"ID": "1c96681b4daee2537d4a70b5c28567a3",
+		"TypeName": "Game.Game.Player.PlayerShootLogic",
+		"ParentID": "41e119c94da4dd5ab089129fe7329fad",
+		"V": {
+	"Projectile": "622758c54cf790f94a73ceb909d21074"
+}
+	},
+	{
+		"ID": "7140ce9545a9d4510ba828a0f28af45e",
+		"TypeName": "Game.Game.Player.NetworkedPlayer",
+		"ParentID": "41e119c94da4dd5ab089129fe7329fad",
+		"V": {}
+	},
+	{
+		"ID": "c25467224b0cae7086662fbdf2befb93",
+		"PrefabID": "286d7d7b4b9cdfbd45734fb147525734",
+		"PrefabObjectID": "ff313ac3430b4e09320f909ff87c50c8",
+		"ParentID": "41e119c94da4dd5ab089129fe7329fad",
+		"IsActive": false,
+		"Name": "Controller",
+		"RemovedObjects": [
+			"e4d77efc433412a07e319dbcc3d4a8db",
+			"b14feef849d6e9890b2c7bb4f55a1974",
+			"57101a094fcc6b28e24d8b8b259486ed",
+			"44a46a13433ece9b859556b1cd0df2e3",
+			"f46a030145cff14cfce7109b0f32f6da",
+			"fd98164b459a02a6b7b65e949a85242f",
+			"386f9d834dd9668e96e57a8fa8b8c97f",
+			"11e1a24e4e9e727f58ef3c9aa38f9015",
+			"7f481d0b421807a9fb0446af1ec66ef6"
+		]
+	},
+	{
+		"ID": "97d5b0ea4dc341ff39e34291d2076b88",
+		"PrefabID": "286d7d7b4b9cdfbd45734fb147525734",
+		"PrefabObjectID": "4be5c3c6483add6d8264279e3f3b2e8a",
+		"ParentID": "c25467224b0cae7086662fbdf2befb93"
+	},
+	{
+		"ID": "dee40be24bae0ee42f59d8a037585a92",
+		"TypeName": "FlaxEngine.AnimatedModel",
+		"ParentID": "c25467224b0cae7086662fbdf2befb93",
+		"Name": "Model",
+		"Transform": {
+			"Orientation": {
+				"X": 0.0,
+				"Y": 1.0,
+				"Z": -0.0,
+				"W": -4.371138828673793e-8
+			}
+		},
+		"Layer": 1,
+		"Tag": "Player",
+		"SkinnedModel": "44508ba9427840a64fe5c18696c150b1",
+		"AnimationGraph": "1c0d6e944de7a7cba273dbbfc6512deb",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "ddb0fcb8416713a9cf136c9a715845d5",
+		"TypeName": "Game.Game.Player.PlayerAnimationManager",
+		"ParentID": "dee40be24bae0ee42f59d8a037585a92",
+		"V": {
+	"AnimatedModel": "dee40be24bae0ee42f59d8a037585a92"
+}
+	},
+	{
+		"ID": "e7b8f2774f6e9458628723ba2dc3cd9f",
+		"TypeName": "FlaxEngine.RigidBody",
+		"ParentID": "41e119c94da4dd5ab089129fe7329fad",
+		"IsActive": false,
+		"Name": "RigidBody",
+		"StaticFlags": 0
+	},
+	{
+		"ID": "4ed6aae64816c51ccf0d3ab7cf4d81ea",
+		"TypeName": "FlaxEngine.BoxCollider",
+		"ParentID": "e7b8f2774f6e9458628723ba2dc3cd9f",
+		"Name": "BoxCollider",
+		"Center": {
+			"X": 0.0,
+			"Y": 87.0,
+			"Z": 0.0
+		},
+		"Size": {
+			"X": 40.0,
+			"Y": 178.0,
+			"Z": 36.0
+		}
+	},
+	{
+		"ID": "3e5980634b6b1ddf845653ac79da412d",
+		"TypeName": "FlaxEngine.AnimatedModel",
+		"ParentID": "e7b8f2774f6e9458628723ba2dc3cd9f",
+		"Name": "Model",
+		"Transform": {
+			"Orientation": {
+				"X": 0.0,
+				"Y": 1.0,
+				"Z": -0.0,
+				"W": -4.371138828673793e-8
+			}
+		},
+		"Layer": 1,
+		"Tag": "Player",
+		"SkinnedModel": "44508ba9427840a64fe5c18696c150b1",
+		"AnimationGraph": "1c0d6e944de7a7cba273dbbfc6512deb",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "c1698aef4f8c2a3b748b508c59f67541",
+		"TypeName": "Game.Game.Player.PlayerAnimationManager",
+		"ParentID": "3e5980634b6b1ddf845653ac79da412d",
+		"V": {
+	"AnimatedModel": "3e5980634b6b1ddf845653ac79da412d"
+}
+	},
+	{
+		"ID": "a5330bf14136b86d69c0ffad3d89c157",
+		"TypeName": "FlaxEngine.AudioListener",
+		"ParentID": "41e119c94da4dd5ab089129fe7329fad",
+		"Name": "AudioListener",
+		"Layer": 1
+	},
+	{
+		"ID": "06e0d8174f24466de62e52ab9f867c0b",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"ParentID": "41e119c94da4dd5ab089129fe7329fad",
+		"Name": "CameraAnchor",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": 161.81326293945313,
+				"Z": 0.0
+			}
+		},
+		"Layer": 1
+	}
+]
+}

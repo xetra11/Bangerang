@@ -30,6 +30,10 @@ public class PlayerFirstPersonLogic : Script
     private float _horizontal;
     private float _vertical;
 
+    public void AddImpulse(Vector3 velocityChange)
+    {
+        _velocity += velocityChange;
+    }
 
     public override void OnUpdate()
     {
