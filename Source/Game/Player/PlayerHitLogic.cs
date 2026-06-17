@@ -34,7 +34,7 @@ public class PlayerHitLogic : Script
         NetworkReplicator.SpawnObject(rigidBody);
         NetworkReplicator.SetObjectOwnership(rigidBody, FlaxEngine.Networking.NetworkManager.LocalClientId, NetworkObjectRole.OwnedAuthoritative);
         NetworkReplicator.AddObject(rigidBody);
-        // rigidBody.FindActor<RigidBody>().AddForce(impulse, ForceMode.Impulse);
+        rigidBody.FindActor<RigidBody>().AddForce(impulse, ForceMode.Impulse);
     }
 
     private void DisableActor(Actor actor)

@@ -12,11 +12,6 @@
 		"Mass": 0.5
 	},
 	{
-		"ID": "317bbd0042a12407a8c4b4be3c0f03df",
-		"TypeName": "FlaxEngine.Networking.NetworkTransform",
-		"ParentID": "f72b17a74c6aff840bb9c489369a7b2b"
-	},
-	{
 		"ID": "32768c714af03bb8cca50aa3aca85c9a",
 		"TypeName": "FlaxEngine.Networking.NetworkTransform",
 		"ParentID": "f72b17a74c6aff840bb9c489369a7b2b"
