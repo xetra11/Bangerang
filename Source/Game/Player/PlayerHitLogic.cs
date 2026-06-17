@@ -30,11 +30,32 @@ public class PlayerHitLogic : Script
         var spawnTransform = Actor.Transform;
         DisableActor(Actor);
 
-        var rigidBody = PrefabManager.SpawnPrefab(RigidPlayer, spawnTransform);
-        NetworkReplicator.SpawnObject(rigidBody);
-        NetworkReplicator.SetObjectOwnership(rigidBody, FlaxEngine.Networking.NetworkManager.LocalClientId, NetworkObjectRole.OwnedAuthoritative);
-        NetworkReplicator.AddObject(rigidBody);
-        rigidBody.FindActor<RigidBody>().AddForce(impulse, ForceMode.Impulse);
+        if (RigidPlayer == null)
+        {
+            Debug.Logger.Log("ERROR: RigidPlayer prefab is not assigned to PlayerHitLogic.");
+            return;
+        }
+
+        var spawnedActor = PrefabManager.SpawnPrefab(RigidPlayer, spawnTransform);
+        if (spawnedActor == null)
+        {
+            Debug.Logger.Log("ERROR: Failed to spawn RigidPlayer prefab.");
+            return;
+        }
+
+        NetworkReplicator.SpawnObject(spawnedActor);
+        NetworkReplicator.SetObjectOwnership(spawnedActor, FlaxEngine.Networking.NetworkManager.LocalClientId, NetworkObjectRole.OwnedAuthoritative);
+        NetworkReplicator.AddObject(spawnedActor);
+
+        var rb = spawnedActor as RigidBody ?? spawnedActor.FindActor<RigidBody>();
+        if (rb != null)
+        {
+            rb.AddForce(impulse, ForceMode.Impulse);
+        }
+        else
+        {
+            Debug.Logger.Log("ERROR: Spawned RigidPlayer prefab does not contain a RigidBody actor.");
+        }
     }
 
     private void DisableActor(Actor actor)

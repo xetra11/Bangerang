@@ -1106,54 +1106,6 @@
 			"V": {
 	"EndGamePanel": "e9ec30f24c4c5ddfd67a4bb80923d4a9"
 }
-		},
-		{
-			"ID": "56a548a242e734e7c81f278276fdee23",
-			"PrefabID": "d08d246945052b839df1358ad0c522bf",
-			"PrefabObjectID": "f72b17a74c6aff840bb9c489369a7b2b",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Transform": {
-				"Translation": {
-					"X": 1296.0848388671875,
-					"Y": 190.42645263671875,
-					"Z": -462.74761962890625
-				}
-			}
-		},
-		{
-			"ID": "430ee6ad4ab934f364561da9db7e881a",
-			"PrefabID": "d08d246945052b839df1358ad0c522bf",
-			"PrefabObjectID": "317bbd0042a12407a8c4b4be3c0f03df",
-			"ParentID": "56a548a242e734e7c81f278276fdee23"
-		},
-		{
-			"ID": "0831858543f5d081989595883e797909",
-			"TypeName": "FlaxEngine.Networking.NetworkTransform",
-			"ParentID": "56a548a242e734e7c81f278276fdee23"
-		},
-		{
-			"ID": "8142a7084b8b67c554e9be91d4863a99",
-			"PrefabID": "d08d246945052b839df1358ad0c522bf",
-			"PrefabObjectID": "2b7a6b6944f278fe19f5888bfc656b4c",
-			"ParentID": "56a548a242e734e7c81f278276fdee23",
-			"Buffer": {
-				"Entries": [
-					{}
-				]
-			}
-		},
-		{
-			"ID": "1a834c024845f8b5f3b7d38fb60455c7",
-			"PrefabID": "d08d246945052b839df1358ad0c522bf",
-			"PrefabObjectID": "82540e5747fd206bc934d88969c5b180",
-			"ParentID": "8142a7084b8b67c554e9be91d4863a99",
-			"V": {}
-		},
-		{
-			"ID": "9d63a902452ec66221ab1ab51665aaa7",
-			"PrefabID": "d08d246945052b839df1358ad0c522bf",
-			"PrefabObjectID": "8c1b7f31429fefe207cfc587eb33a301",
-			"ParentID": "56a548a242e734e7c81f278276fdee23"
 		}
 	]
 }
