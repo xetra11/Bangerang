@@ -11,6 +11,7 @@ public class PlayerHitLogic : Script
     public int TimeAfterRegainControl = 100;
 
     private Actor _spawnedRigidBodyActor;
+    private Transform _groundedPosition;
 
     public override void OnStart()
     {
@@ -64,6 +65,7 @@ public class PlayerHitLogic : Script
     private async Task RegainControl()
     {
         await Task.Delay(TimeAfterRegainControl);
+        _groundedPosition = _spawnedRigidBodyActor.Transform;
         Debug.Log("RegainControl called");
         EnableActor(Actor);
         NetworkReplicator.DespawnObject(_spawnedRigidBodyActor);
@@ -73,6 +75,7 @@ public class PlayerHitLogic : Script
 
     private void EnableActor(Actor actor)
     {
+        actor.Transform = _groundedPosition;
         actor.IsActive = true;
         EnableActorOnClient(actor);
     }
