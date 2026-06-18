@@ -22,7 +22,7 @@ public class PlayerHitLogic : Script
     {
         if (!collision.OtherActor.HasTag("Projectile")) return;
         Debug.Logger.Log("Hit detected");
-        Hit(collision.Impulse);
+        Hit(collision.Impulse.Negative);
     }
 
     private void Hit(Vector3 impulse)
@@ -32,14 +32,14 @@ public class PlayerHitLogic : Script
 
         if (RigidPlayer == null)
         {
-            Debug.Logger.Log("ERROR: RigidPlayer prefab is not assigned to PlayerHitLogic.");
+            Debug.Logger.LogError("Player","RigidPlayer prefab is not assigned to PlayerHitLogic.");
             return;
         }
 
         var spawnedActor = PrefabManager.SpawnPrefab(RigidPlayer, spawnTransform);
         if (spawnedActor == null)
         {
-            Debug.Logger.Log("ERROR: Failed to spawn RigidPlayer prefab.");
+            Debug.Logger.LogError("Player","Failed to spawn RigidPlayer prefab.");
             return;
         }
 
@@ -54,7 +54,7 @@ public class PlayerHitLogic : Script
         }
         else
         {
-            Debug.Logger.Log("ERROR: Spawned RigidPlayer prefab does not contain a RigidBody actor.");
+            Debug.Logger.LogError("Player", "Spawned RigidPlayer prefab does not contain a RigidBody actor.");
         }
     }
 
