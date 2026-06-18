@@ -10,6 +10,8 @@ public class PlayerHitLogic : Script
     public Prefab RigidPlayer;
     public int TimeAfterRegainControl = 100;
 
+    private Actor _spawnedRigidBodyActor;
+
     public override void OnStart()
     {
         NetworkReplicator.AddObject(this);
@@ -36,26 +38,49 @@ public class PlayerHitLogic : Script
             return;
         }
 
-        var spawnedActor = PrefabManager.SpawnPrefab(RigidPlayer, spawnTransform);
-        if (spawnedActor == null)
+        _spawnedRigidBodyActor = PrefabManager.SpawnPrefab(RigidPlayer, spawnTransform);
+        if (_spawnedRigidBodyActor == null)
         {
             Debug.Logger.LogError("Player","Failed to spawn RigidPlayer prefab.");
             return;
         }
 
-        NetworkReplicator.SpawnObject(spawnedActor);
-        NetworkReplicator.SetObjectOwnership(spawnedActor, FlaxEngine.Networking.NetworkManager.LocalClientId, NetworkObjectRole.OwnedAuthoritative);
-        NetworkReplicator.AddObject(spawnedActor);
+        NetworkReplicator.SpawnObject(_spawnedRigidBodyActor);
+        NetworkReplicator.SetObjectOwnership(_spawnedRigidBodyActor, FlaxEngine.Networking.NetworkManager.LocalClientId, NetworkObjectRole.OwnedAuthoritative);
+        NetworkReplicator.AddObject(_spawnedRigidBodyActor);
 
-        var rb = spawnedActor as RigidBody ?? spawnedActor.FindActor<RigidBody>();
-        if (rb != null)
+        var activeRigidBody = _spawnedRigidBodyActor as RigidBody ?? _spawnedRigidBodyActor.FindActor<RigidBody>();
+        if (activeRigidBody != null)
         {
-            rb.AddForce(impulse, ForceMode.Impulse);
+            activeRigidBody.AddForce(impulse, ForceMode.Impulse);
+            _ = RegainControl();
         }
         else
         {
             Debug.Logger.LogError("Player", "Spawned RigidPlayer prefab does not contain a RigidBody actor.");
         }
+    }
+
+    private async Task RegainControl()
+    {
+        await Task.Delay(TimeAfterRegainControl);
+        Debug.Log("RegainControl called");
+        EnableActor(Actor);
+        NetworkReplicator.DespawnObject(_spawnedRigidBodyActor);
+        NetworkReplicator.RemoveObject(_spawnedRigidBodyActor);
+        Destroy(_spawnedRigidBodyActor);
+    }
+
+    private void EnableActor(Actor actor)
+    {
+        actor.IsActive = true;
+        EnableActorOnClient(actor);
+    }
+
+    [NetworkRpc( client: true)]
+    private void EnableActorOnClient(Actor actor)
+    {
+        actor.IsActive = true;
     }
 
     private void DisableActor(Actor actor)
