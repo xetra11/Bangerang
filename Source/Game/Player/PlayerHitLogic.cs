@@ -11,7 +11,11 @@ public class PlayerHitLogic : Script
     public int TimeAfterRegainControl = 100;
 
     private Actor _spawnedRigidBodyActor;
-    private Transform _groundedPosition;
+
+    // Pending hit captured during a collision callback (in-physics-simulation) and
+    // processed later in OnUpdate. Spawning a RigidBody inside the simulation step crashes.
+    private bool _hitPending;
+    private Vector3 _pendingImpulse;
 
     public override void OnStart()
     {
@@ -21,11 +25,20 @@ public class PlayerHitLogic : Script
         Collider.CollisionEnter += OnCollision;
     }
 
+    public override void OnFixedUpdate()
+    {
+        if (!_hitPending) return;
+        _hitPending = false;
+        Hit(_pendingImpulse);
+    }
+
     private void OnCollision(Collision collision)
     {
         if (!collision.OtherActor.HasTag("Projectile")) return;
         Debug.Logger.Log("Hit detected");
-        Hit(collision.Impulse.Negative);
+        // Defer spawning out of the physics simulation step; handled in OnUpdate.
+        _pendingImpulse = collision.Impulse.Negative;
+        _hitPending = true;
     }
 
     private void Hit(Vector3 impulse)
@@ -48,7 +61,6 @@ public class PlayerHitLogic : Script
 
         NetworkReplicator.SpawnObject(_spawnedRigidBodyActor);
         NetworkReplicator.SetObjectOwnership(_spawnedRigidBodyActor, FlaxEngine.Networking.NetworkManager.LocalClientId, NetworkObjectRole.OwnedAuthoritative);
-        NetworkReplicator.AddObject(_spawnedRigidBodyActor);
 
         var activeRigidBody = _spawnedRigidBodyActor as RigidBody ?? _spawnedRigidBodyActor.FindActor<RigidBody>();
         if (activeRigidBody != null)
@@ -65,8 +77,9 @@ public class PlayerHitLogic : Script
     private async Task RegainControl()
     {
         await Task.Delay(TimeAfterRegainControl);
-        _groundedPosition = _spawnedRigidBodyActor.Transform;
         Debug.Log("RegainControl called");
+        Actor.Transform = _spawnedRigidBodyActor.Transform;
+        Actor.EulerAngles = Vector3.Zero;
         EnableActor(Actor);
         NetworkReplicator.DespawnObject(_spawnedRigidBodyActor);
         NetworkReplicator.RemoveObject(_spawnedRigidBodyActor);
@@ -75,26 +88,25 @@ public class PlayerHitLogic : Script
 
     private void EnableActor(Actor actor)
     {
-        actor.Transform = _groundedPosition;
         actor.IsActive = true;
-        EnableActorOnClient(actor);
+        EnableActorOnClient();
     }
 
     [NetworkRpc( client: true)]
-    private void EnableActorOnClient(Actor actor)
+    private void EnableActorOnClient()
     {
-        actor.IsActive = true;
+        Actor.IsActive = true;
     }
 
     private void DisableActor(Actor actor)
     {
         actor.IsActive = false;
-        DisableActorOnClient(actor);
+        DisableActorOnClient();
     }
 
     [NetworkRpc( client: true)]
-    private void DisableActorOnClient(Actor actor)
+    private void DisableActorOnClient()
     {
-        actor.IsActive = false;
+        Actor.IsActive = false;
     }
 }

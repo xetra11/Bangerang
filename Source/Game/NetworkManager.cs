@@ -9,14 +9,14 @@ public class NetworkManager : Script
     {
         Debug.Log("Starting NetworkManager...");
 #if FLAX_EDITOR || SERVER
-        if (!FlaxEngine.Networking.NetworkManager.StartHost())
+        if (FlaxEngine.Networking.NetworkManager.StartHost())
         {
             Debug.LogError("Failed to start NetworkManager as Host");
         }
         return;
 #endif
 #if !SERVER
-        if (!FlaxEngine.Networking.NetworkManager.StartClient())
+        if (FlaxEngine.Networking.NetworkManager.StartClient())
         {
             Debug.LogError("Failed to start NetworkManager as Client");
         }
