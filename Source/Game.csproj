@@ -308,6 +308,7 @@
     <Compile Include="Game\Greedy\GreedyUIManager.cs" />
     <Compile Include="Game\Greedy\NetworkedGreedy.cs" />
     <Compile Include="Game\NetworkManager.cs" />
+    <Compile Include="Game\Player\CameraAnchor.cs" />
     <Compile Include="Game\Player\NetworkedPlayer.cs" />
     <Compile Include="Game\Player\NetworkHelper.cs" />
     <Compile Include="Game\Player\PlayerAnimationManager.cs" />
@@ -316,6 +317,7 @@
     <Compile Include="Game\Player\PlayerInputManager.cs" />
     <Compile Include="Game\Player\PlayerShootLogic.cs" />
     <Compile Include="Game\Player\PlayerSpawnManager.cs" />
+    <Compile Include="Game\Player\RagdollFirstPersonLogic.cs" />
     <Compile Include="Game\Projectile.cs" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'Editor.Windows.Debug|x64' " >

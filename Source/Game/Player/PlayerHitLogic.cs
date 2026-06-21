@@ -53,6 +53,8 @@ public class PlayerHitLogic : Script
         }
 
         _spawnedRigidBodyActor = PrefabManager.SpawnPrefab(RigidPlayer, spawnTransform);
+        AddCameraToRagdoll();
+
         if (_spawnedRigidBodyActor == null)
         {
             Debug.Logger.LogError("Player","Failed to spawn RigidPlayer prefab.");
@@ -72,6 +74,33 @@ public class PlayerHitLogic : Script
         {
             Debug.Logger.LogError("Player", "Spawned RigidPlayer prefab does not contain a RigidBody actor.");
         }
+    }
+
+    private void AddCameraToRagdoll()
+    {
+        AddCameraToRagdollOnClient();
+
+        if (FlaxEngine.Networking.NetworkManager.LocalClientId == NetworkReplicator.GetObjectOwnerClientId(Actor))
+        {
+            var ragdollFirstPersonLogic = _spawnedRigidBodyActor.AddScript<RagdollFirstPersonLogic>();
+            ragdollFirstPersonLogic.CameraAnchor = _spawnedRigidBodyActor.FindActor<CameraAnchor>();
+            ragdollFirstPersonLogic.Camera = Actor.FindScript<PlayerFirstPersonLogic>().Camera;
+        }
+
+    }
+
+    [NetworkRpc( client: true)]
+    private void AddCameraToRagdollOnClient()
+    {
+        if (_spawnedRigidBodyActor == null)
+        {
+            Debug.LogError("AddCameraToRagdollOnClient: _spawnedRigidBodyActor is null.");
+            return;
+        }
+
+        var ragdollFirstPersonLogic = _spawnedRigidBodyActor.AddScript<RagdollFirstPersonLogic>();
+        ragdollFirstPersonLogic.CameraAnchor = _spawnedRigidBodyActor.FindActor<CameraAnchor>();
+        ragdollFirstPersonLogic.Camera = Actor.FindScript<PlayerFirstPersonLogic>().Camera;
     }
 
     private async Task RegainControl()

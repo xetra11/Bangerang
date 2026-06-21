@@ -21,6 +21,14 @@
 		"TypeName": "FlaxEngine.AnimatedModel",
 		"ParentID": "f72b17a74c6aff840bb9c489369a7b2b",
 		"Name": "Model",
+		"Transform": {
+			"Orientation": {
+				"X": 0.0,
+				"Y": 1.0,
+				"Z": -0.0,
+				"W": -4.371138828673793e-8
+			}
+		},
 		"SkinnedModel": "44508ba9427840a64fe5c18696c150b1",
 		"AnimationGraph": "1c0d6e944de7a7cba273dbbfc6512deb",
 		"Buffer": {
@@ -64,6 +72,21 @@
 			"Y": 176.0,
 			"Z": 46.0
 		}
+	},
+	{
+		"ID": "66b5d28245209f994e883ab14ef611ba",
+		"TypeName": "Game.Game.Player.CameraAnchor",
+		"ParentID": "f72b17a74c6aff840bb9c489369a7b2b",
+		"V": {},
+		"Name": "CameraAnchor",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": 161.81326293945313,
+				"Z": 0.0
+			}
+		},
+		"StaticFlags": 0
 	}
 ]
 }
