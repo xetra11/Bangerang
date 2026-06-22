@@ -5,6 +5,7 @@ namespace Game.Game.Player;
 
 public class NetworkedPlayer : Script
 {
+    public Actor PlayerController;
     private uint _configuredOwnerClientId = uint.MaxValue;
     private NetworkObjectRole _configuredRole = NetworkObjectRole.None;
 
@@ -15,13 +16,13 @@ public class NetworkedPlayer : Script
 
     public void TryConfigureOwnership()
     {
-        if (!NetworkReplicator.HasObject(Actor))
+        if (!NetworkReplicator.HasObject(PlayerController))
         {
             return;
         }
 
-        var ownerClientId = NetworkReplicator.GetObjectOwnerClientId(Actor);
-        var role = NetworkReplicator.GetObjectRole(Actor);
+        var ownerClientId = NetworkReplicator.GetObjectOwnerClientId(PlayerController);
+        var role = NetworkReplicator.GetObjectRole(PlayerController);
         if (ownerClientId == _configuredOwnerClientId && role == _configuredRole)
             return;
 
@@ -30,10 +31,10 @@ public class NetworkedPlayer : Script
 
         RegisterNetworkScript<PlayerShootLogic>();
 
-        var isLocalPlayer = NetworkReplicator.IsObjectOwned(Actor);
+        var isLocalPlayer = NetworkReplicator.IsObjectOwned(PlayerController);
 
-        SetLayerRecursively(Actor, isLocalPlayer ? 1 : 0);
-        var audioListener = Actor.GetChild<AudioListener>();
+        SetLayerRecursively(PlayerController, isLocalPlayer ? 1 : 0);
+        var audioListener = PlayerController.GetChild<AudioListener>();
         if (audioListener != null) Destroy(audioListener);
 
         SetScriptEnabled<PlayerFirstPersonLogic>(isLocalPlayer);
@@ -51,14 +52,14 @@ public class NetworkedPlayer : Script
 
     private void RegisterNetworkScript<T>() where T : Script
     {
-        var script = Actor.GetScript<T>();
+        var script = PlayerController.GetScript<T>();
         if (script != null && !NetworkReplicator.HasObject(script))
-            NetworkReplicator.AddObject(script, Actor);
+            NetworkReplicator.AddObject(script, PlayerController);
     }
 
     private void SetScriptEnabled<T>(bool enabled) where T : Script
     {
-        var script = Actor.GetScript<T>();
+        var script = PlayerController.GetScript<T>();
         if (script != null)
             script.Enabled = enabled;
     }

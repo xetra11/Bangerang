@@ -23,8 +23,6 @@ public class RagdollFirstPersonLogic : Script
             return;
         }
 
-        Debug.Log("RagdollFirstPersonLogic.OnUpdate");
-
         Screen.CursorVisible = false;
         Screen.CursorLock = CursorLockMode.Locked;
 
