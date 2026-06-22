@@ -311,6 +311,7 @@
     <Compile Include="Game\Player\CameraAnchor.cs" />
     <Compile Include="Game\Player\NetworkedPlayer.cs" />
     <Compile Include="Game\Player\NetworkHelper.cs" />
+    <Compile Include="Game\Player\PlayerActorTransformSyncer.cs" />
     <Compile Include="Game\Player\PlayerAnimationManager.cs" />
     <Compile Include="Game\Player\PlayerFirstPersonLogic.cs" />
     <Compile Include="Game\Player\PlayerHitLogic.cs" />

@@ -1,77 +1,91 @@
 {
-	"ID": "286d7d7b4b9cdfbd45734fb147525734",
+	"ID": "fc0c1fc345d58f7005feff812bd7c284",
 	"TypeName": "FlaxEngine.Prefab",
 	"EngineBuild": 6912,
 	"Data": [
 	{
-		"ID": "ff313ac3430b4e09320f909ff87c50c8",
+		"ID": "d30f2f76482cbdbd6a027cbcc4a2490b",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"Name": "Player"
+	},
+	{
+		"ID": "33d83f3e41efe27c10c92596092cc434",
+		"TypeName": "Game.Game.Player.PlayerActorTransformSyncer",
+		"ParentID": "d30f2f76482cbdbd6a027cbcc4a2490b",
+		"V": {
+	"MainTransform": "790cf971430008986c4fb8a62e60ffb2",
+	"RigidPlayer": "decc014d4cfecc34bd8036a0088ebaa2"
+}
+	},
+	{
+		"ID": "790cf971430008986c4fb8a62e60ffb2",
 		"TypeName": "FlaxEngine.CharacterController",
-		"Name": "Player",
+		"ParentID": "d30f2f76482cbdbd6a027cbcc4a2490b",
+		"Name": "PlayerController",
 		"Layer": 1,
 		"Tag": "Player",
 		"Height": 77.0,
 		"OriginMode": 1
 	},
 	{
-		"ID": "44a46a13433ece9b859556b1cd0df2e3",
+		"ID": "eccc7dce4274e4250401bc8e5b3f31d8",
 		"TypeName": "Game.Game.Player.PlayerShootLogic",
-		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"ParentID": "790cf971430008986c4fb8a62e60ffb2",
 		"V": {
 	"Projectile": "622758c54cf790f94a73ceb909d21074"
 }
 	},
 	{
-		"ID": "f46a030145cff14cfce7109b0f32f6da",
+		"ID": "42193ed24dc73a3427e48e8c2f00b8e2",
 		"TypeName": "Game.Game.Player.PlayerInputManager",
-		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"ParentID": "790cf971430008986c4fb8a62e60ffb2",
 		"V": {}
 	},
 	{
-		"ID": "fd98164b459a02a6b7b65e949a85242f",
+		"ID": "6d620fee4b898dff4f9e09a68d03c78b",
 		"TypeName": "Game.Game.Player.PlayerAnimationManager",
-		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"ParentID": "790cf971430008986c4fb8a62e60ffb2",
 		"V": {
-	"AnimatedModel": "e4d77efc433412a07e319dbcc3d4a8db"
+	"AnimatedModel": "82d772db4d9e2cd7e5288f8083611766"
 }
 	},
 	{
-		"ID": "386f9d834dd9668e96e57a8fa8b8c97f",
+		"ID": "04079bf84cecc9807cfbeabf47a07195",
 		"TypeName": "Game.Game.Player.PlayerFirstPersonLogic",
-		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"ParentID": "790cf971430008986c4fb8a62e60ffb2",
 		"V": {
-	"PlayerController": "ff313ac3430b4e09320f909ff87c50c8",
-	"CameraAnchor": "b14feef849d6e9890b2c7bb4f55a1974",
+	"PlayerController": "790cf971430008986c4fb8a62e60ffb2",
+	"CameraAnchor": "567ac0804fa810366f2db2b88fbada66",
 	"Camera": "b0d72c3746caebca055e1f921ca21c7c",
 	"MaxVelocityAir": 400.0
 }
 	},
 	{
-		"ID": "11e1a24e4e9e727f58ef3c9aa38f9015",
+		"ID": "187b2a69417f5da0cf90cdade96c596a",
 		"TypeName": "Game.Game.Player.NetworkedPlayer",
-		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"ParentID": "790cf971430008986c4fb8a62e60ffb2",
 		"V": {}
 	},
 	{
-		"ID": "4be5c3c6483add6d8264279e3f3b2e8a",
+		"ID": "29a569894f23884a422e86b0064f332b",
 		"TypeName": "FlaxEngine.Networking.NetworkTransform",
-		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"ParentID": "790cf971430008986c4fb8a62e60ffb2",
 		"Mode": 2
 	},
 	{
-		"ID": "7f481d0b421807a9fb0446af1ec66ef6",
+		"ID": "2c1fbc924de013906e58d488fcdaedd4",
 		"TypeName": "Game.Game.Player.PlayerHitLogic",
-		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"ParentID": "790cf971430008986c4fb8a62e60ffb2",
 		"V": {
-	"Collider": "ff313ac3430b4e09320f909ff87c50c8",
-	"RigidPlayer": "d08d246945052b839df1358ad0c522bf",
-	"TimeAfterRegainControl": 2000,
-	"FPSCamera": "b0d72c3746caebca055e1f921ca21c7c"
+	"Collider": "790cf971430008986c4fb8a62e60ffb2",
+	"RigidPlayer": "decc014d4cfecc34bd8036a0088ebaa2",
+	"TimeAfterRegainControl": 2000
 }
 	},
 	{
-		"ID": "e4d77efc433412a07e319dbcc3d4a8db",
+		"ID": "82d772db4d9e2cd7e5288f8083611766",
 		"TypeName": "FlaxEngine.AnimatedModel",
-		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"ParentID": "790cf971430008986c4fb8a62e60ffb2",
 		"Name": "Model",
 		"Transform": {
 			"Translation": {
@@ -102,9 +116,9 @@
 		}
 	},
 	{
-		"ID": "b14feef849d6e9890b2c7bb4f55a1974",
+		"ID": "567ac0804fa810366f2db2b88fbada66",
 		"TypeName": "FlaxEngine.EmptyActor",
-		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"ParentID": "790cf971430008986c4fb8a62e60ffb2",
 		"Name": "CameraAnchor",
 		"Transform": {
 			"Translation": {
@@ -116,11 +130,94 @@
 		"Layer": 1
 	},
 	{
-		"ID": "57101a094fcc6b28e24d8b8b259486ed",
+		"ID": "085f8ac548279c1d62fed6a923c0dc7c",
 		"TypeName": "FlaxEngine.AudioListener",
-		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"ParentID": "790cf971430008986c4fb8a62e60ffb2",
 		"Name": "AudioListener",
 		"Layer": 1
+	},
+	{
+		"ID": "decc014d4cfecc34bd8036a0088ebaa2",
+		"TypeName": "FlaxEngine.RigidBody",
+		"ParentID": "d30f2f76482cbdbd6a027cbcc4a2490b",
+		"IsActive": false,
+		"Name": "RigidPlayer",
+		"OverrideMass": true,
+		"Mass": 0.5
+	},
+	{
+		"ID": "65b29e07426392907463b3a6cb35cb6d",
+		"TypeName": "FlaxEngine.Networking.NetworkTransform",
+		"ParentID": "decc014d4cfecc34bd8036a0088ebaa2"
+	},
+	{
+		"ID": "14e225dd48bed04a57a757a0777330b8",
+		"TypeName": "FlaxEngine.AnimatedModel",
+		"ParentID": "decc014d4cfecc34bd8036a0088ebaa2",
+		"Name": "Model",
+		"Transform": {
+			"Orientation": {
+				"X": 0.0,
+				"Y": 1.0,
+				"Z": -0.0,
+				"W": -4.371138828673793e-8
+			}
+		},
+		"SkinnedModel": "44508ba9427840a64fe5c18696c150b1",
+		"AnimationGraph": "1c0d6e944de7a7cba273dbbfc6512deb",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "bc5184ab4057588af572cbb32d2b7744",
+		"TypeName": "Game.Game.Player.PlayerAnimationManager",
+		"ParentID": "14e225dd48bed04a57a757a0777330b8",
+		"V": {}
+	},
+	{
+		"ID": "688b22a7413a0a4083939296360e8048",
+		"TypeName": "FlaxEngine.BoxCollider",
+		"ParentID": "decc014d4cfecc34bd8036a0088ebaa2",
+		"Name": "BoxCollider",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": 74.54193115234375,
+				"Z": 0.0
+			}
+		},
+		"Center": {
+			"X": 0.0,
+			"Y": 14.0,
+			"Z": 0.0
+		},
+		"Size": {
+			"X": 37.0,
+			"Y": 176.0,
+			"Z": 46.0
+		}
+	},
+	{
+		"ID": "9553be744b2d9421ae4fffa58d46aa63",
+		"TypeName": "Game.Game.Player.CameraAnchor",
+		"ParentID": "decc014d4cfecc34bd8036a0088ebaa2",
+		"V": {},
+		"Name": "CameraAnchor",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": 161.81326293945313,
+				"Z": 0.0
+			}
+		}
 	}
 ]
 }

@@ -7,7 +7,7 @@ namespace Game.Game.Player;
 public class PlayerHitLogic : Script
 {
     public Collider Collider;
-    public Prefab RigidPlayer;
+    public Actor RigidPlayer;
     public int TimeAfterRegainControl = 100;
 
     private Actor _spawnedRigidBodyActor;
@@ -52,28 +52,27 @@ public class PlayerHitLogic : Script
             return;
         }
 
-        _spawnedRigidBodyActor = PrefabManager.SpawnPrefab(RigidPlayer, spawnTransform);
-        AddCameraToRagdoll();
+        // AddCameraToRagdoll();
 
-        if (_spawnedRigidBodyActor == null)
-        {
-            Debug.Logger.LogError("Player","Failed to spawn RigidPlayer prefab.");
-            return;
-        }
+        // if (_spawnedRigidBodyActor == null)
+        // {
+        //     Debug.Logger.LogError("Player","Failed to spawn RigidPlayer prefab.");
+        //     return;
+        // }
 
-        NetworkReplicator.SpawnObject(_spawnedRigidBodyActor);
-        NetworkReplicator.SetObjectOwnership(_spawnedRigidBodyActor, FlaxEngine.Networking.NetworkManager.LocalClientId, NetworkObjectRole.OwnedAuthoritative);
+        // NetworkReplicator.SpawnObject(_spawnedRigidBodyActor);
+        // NetworkReplicator.SetObjectOwnership(_spawnedRigidBodyActor, FlaxEngine.Networking.NetworkManager.LocalClientId, NetworkObjectRole.OwnedAuthoritative);
 
-        var activeRigidBody = _spawnedRigidBodyActor as RigidBody ?? _spawnedRigidBodyActor.FindActor<RigidBody>();
-        if (activeRigidBody != null)
-        {
-            activeRigidBody.AddForce(impulse, ForceMode.Impulse);
-            _ = RegainControl();
-        }
-        else
-        {
-            Debug.Logger.LogError("Player", "Spawned RigidPlayer prefab does not contain a RigidBody actor.");
-        }
+        // var activeRigidBody = _spawnedRigidBodyActor as RigidBody ?? _spawnedRigidBodyActor.FindActor<RigidBody>();
+        // if (activeRigidBody != null)
+        // {
+        //     activeRigidBody.AddForce(impulse, ForceMode.Impulse);
+        //     _ = RegainControl();
+        // }
+        // else
+        // {
+        //     Debug.Logger.LogError("Player", "Spawned RigidPlayer prefab does not contain a RigidBody actor.");
+        // }
     }
 
     private void AddCameraToRagdoll()

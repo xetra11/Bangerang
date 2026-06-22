@@ -104,6 +104,7 @@ public class PlayerFirstPersonLogic : Script
 
     private void UpdateCamera(float factor)
     {
+        Debug.Log("PlayerFirstPersonLogic.UpdateCamera");
         var targetOrientation = Quaternion.Euler(_pitch, 0, 0);
 
         CameraAnchor.LocalOrientation = Quaternion.Lerp(

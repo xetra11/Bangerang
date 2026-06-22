@@ -1,0 +1,125 @@
+{
+	"ID": "286d7d7b4b9cdfbd45734fb147525734",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6912,
+	"Data": [
+	{
+		"ID": "ff313ac3430b4e09320f909ff87c50c8",
+		"TypeName": "FlaxEngine.CharacterController",
+		"Name": "Player",
+		"Layer": 1,
+		"Tag": "Player",
+		"Height": 77.0,
+		"OriginMode": 1
+	},
+	{
+		"ID": "44a46a13433ece9b859556b1cd0df2e3",
+		"TypeName": "Game.Game.Player.PlayerShootLogic",
+		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"V": {
+	"Projectile": "622758c54cf790f94a73ceb909d21074"
+}
+	},
+	{
+		"ID": "f46a030145cff14cfce7109b0f32f6da",
+		"TypeName": "Game.Game.Player.PlayerInputManager",
+		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"V": {}
+	},
+	{
+		"ID": "fd98164b459a02a6b7b65e949a85242f",
+		"TypeName": "Game.Game.Player.PlayerAnimationManager",
+		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"V": {
+	"AnimatedModel": "e4d77efc433412a07e319dbcc3d4a8db"
+}
+	},
+	{
+		"ID": "386f9d834dd9668e96e57a8fa8b8c97f",
+		"TypeName": "Game.Game.Player.PlayerFirstPersonLogic",
+		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"V": {
+	"PlayerController": "ff313ac3430b4e09320f909ff87c50c8",
+	"CameraAnchor": "b14feef849d6e9890b2c7bb4f55a1974",
+	"Camera": "b0d72c3746caebca055e1f921ca21c7c",
+	"MaxVelocityAir": 400.0
+}
+	},
+	{
+		"ID": "11e1a24e4e9e727f58ef3c9aa38f9015",
+		"TypeName": "Game.Game.Player.NetworkedPlayer",
+		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"V": {}
+	},
+	{
+		"ID": "4be5c3c6483add6d8264279e3f3b2e8a",
+		"TypeName": "FlaxEngine.Networking.NetworkTransform",
+		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"Mode": 2
+	},
+	{
+		"ID": "7f481d0b421807a9fb0446af1ec66ef6",
+		"TypeName": "Game.Game.Player.PlayerHitLogic",
+		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"V": {
+	"Collider": "ff313ac3430b4e09320f909ff87c50c8",
+	"RigidPlayer": "d08d246945052b839df1358ad0c522bf",
+	"TimeAfterRegainControl": 150000
+}
+	},
+	{
+		"ID": "e4d77efc433412a07e319dbcc3d4a8db",
+		"TypeName": "FlaxEngine.AnimatedModel",
+		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"Name": "Model",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": 0.8893203735351563,
+				"Z": 0.0
+			},
+			"Orientation": {
+				"X": 0.0,
+				"Y": 1.0,
+				"Z": 0.0,
+				"W": -4.371138828673793e-8
+			}
+		},
+		"Layer": 1,
+		"Tag": "Player",
+		"SkinnedModel": "44508ba9427840a64fe5c18696c150b1",
+		"AnimationGraph": "1c0d6e944de7a7cba273dbbfc6512deb",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "b14feef849d6e9890b2c7bb4f55a1974",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"Name": "CameraAnchor",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": 161.81326293945313,
+				"Z": 0.0
+			}
+		},
+		"Layer": 1
+	},
+	{
+		"ID": "57101a094fcc6b28e24d8b8b259486ed",
+		"TypeName": "FlaxEngine.AudioListener",
+		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"Name": "AudioListener",
+		"Layer": 1
+	}
+]
+}
