@@ -16,13 +16,16 @@ public class NetworkedPlayer : Script
 
     public void TryConfigureOwnership()
     {
-        if (!NetworkReplicator.HasObject(PlayerController))
+        // The registered network object is the root actor this script is attached to,
+        // not the PlayerController child. Query ownership/role against the root; the
+        // PlayerController child is only used to locate the gameplay scripts/children.
+        if (!NetworkReplicator.HasObject(Actor))
         {
             return;
         }
 
-        var ownerClientId = NetworkReplicator.GetObjectOwnerClientId(PlayerController);
-        var role = NetworkReplicator.GetObjectRole(PlayerController);
+        var ownerClientId = NetworkReplicator.GetObjectOwnerClientId(Actor);
+        var role = NetworkReplicator.GetObjectRole(Actor);
         if (ownerClientId == _configuredOwnerClientId && role == _configuredRole)
             return;
 
@@ -31,9 +34,9 @@ public class NetworkedPlayer : Script
 
         RegisterNetworkScript<PlayerShootLogic>();
 
-        var isLocalPlayer = NetworkReplicator.IsObjectOwned(PlayerController);
+        var isLocalPlayer = NetworkReplicator.IsObjectOwned(Actor);
 
-        SetLayerRecursively(PlayerController, isLocalPlayer ? 1 : 0);
+        SetLayerRecursively(Actor, isLocalPlayer ? 1 : 0);
         var audioListener = PlayerController.GetChild<AudioListener>();
         if (audioListener != null) Destroy(audioListener);
 
@@ -54,7 +57,7 @@ public class NetworkedPlayer : Script
     {
         var script = PlayerController.GetScript<T>();
         if (script != null && !NetworkReplicator.HasObject(script))
-            NetworkReplicator.AddObject(script, PlayerController);
+            NetworkReplicator.AddObject(script, Actor);
     }
 
     private void SetScriptEnabled<T>(bool enabled) where T : Script
