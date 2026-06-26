@@ -84,19 +84,8 @@ public class PlayerSpawn : Script
     private void SpawnRemoteClientPlayer(uint ownerClientId)
     {
         var player = PrefabManager.SpawnPrefab(PlayerPrefab, Transform);
-
         player.Name = $"Player {ownerClientId}";
-
-        // Important:
-        // Do NOT set ownership before AddObject/registration.
-        // Do NOT AddObject here.
-        //
-        // The object must spawn as server-owned first so the spawn gate passes:
-        // OwnerClientId = server / Role = OwnedAuthoritative.
         NetworkReplicator.SpawnObject(player);
-
-        // Transfer ownership later, after the spawn was processed and the object
-        // is actually registered in NetworkReplicator.Objects.
         _pendingOwnershipTransfers.Enqueue(
             new PendingOwnershipTransfer(player, ownerClientId)
         );
@@ -121,9 +110,16 @@ public class PlayerSpawn : Script
                 continue;
             }
 
-            Debug.Log("Set Client " + pending.ClientId + " as Replicated");
             NetworkReplicator.SetObjectOwnership(
-                pending.Player,
+                playerActor,
+                pending.ClientId,
+                localRole: NetworkObjectRole.Replicated,
+                hierarchical: true
+            );
+
+            var playerController = playerActor.GetScript<Player>().PlayerController;
+            NetworkReplicator.SetObjectOwnership(
+                playerController,
                 pending.ClientId,
                 localRole: NetworkObjectRole.Replicated,
                 hierarchical: true
@@ -131,4 +127,5 @@ public class PlayerSpawn : Script
 
         }
     }
+
 }
