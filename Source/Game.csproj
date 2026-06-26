@@ -309,8 +309,8 @@
     <Compile Include="Game\Greedy\NetworkedGreedy.cs" />
     <Compile Include="Game\NetworkManager.cs" />
     <Compile Include="Game\Player\CameraAnchor.cs" />
-    <Compile Include="Game\Player\NetworkedPlayer.cs" />
     <Compile Include="Game\Player\NetworkHelper.cs" />
+    <Compile Include="Game\Player\Player.cs" />
     <Compile Include="Game\Player\PlayerActorTransformSyncer.cs" />
     <Compile Include="Game\Player\PlayerAnimationManager.cs" />
     <Compile Include="Game\Player\PlayerFirstPersonLogic.cs" />

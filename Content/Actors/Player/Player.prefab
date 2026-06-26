@@ -18,8 +18,8 @@
 }
 	},
 	{
-		"ID": "a6b9774d4e4ab230cd7039a2f2a98d1e",
-		"TypeName": "Game.Game.Player.NetworkedPlayer",
+		"ID": "4b623735487bac84db9651b4a704be28",
+		"TypeName": "Game.Game.Player.Player",
 		"ParentID": "d30f2f76482cbdbd6a027cbcc4a2490b",
 		"V": {
 	"PlayerController": "790cf971430008986c4fb8a62e60ffb2"
@@ -72,7 +72,6 @@
 		"ID": "29a569894f23884a422e86b0064f332b",
 		"TypeName": "FlaxEngine.Networking.NetworkTransform",
 		"ParentID": "790cf971430008986c4fb8a62e60ffb2",
-		"LocalSpace": true,
 		"Mode": 2
 	},
 	{
@@ -152,7 +151,8 @@
 		"ID": "65b29e07426392907463b3a6cb35cb6d",
 		"TypeName": "FlaxEngine.Networking.NetworkTransform",
 		"ParentID": "decc014d4cfecc34bd8036a0088ebaa2",
-		"LocalSpace": true
+		"LocalSpace": true,
+		"Mode": 2
 	},
 	{
 		"ID": "14e225dd48bed04a57a757a0777330b8",
