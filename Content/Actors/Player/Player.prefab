@@ -15,7 +15,8 @@
 		"V": {
 	"MainTransform": "790cf971430008986c4fb8a62e60ffb2",
 	"RigidPlayer": "decc014d4cfecc34bd8036a0088ebaa2"
-}
+},
+		"Enabled": false
 	},
 	{
 		"ID": "4b623735487bac84db9651b4a704be28",
@@ -151,7 +152,6 @@
 		"ID": "65b29e07426392907463b3a6cb35cb6d",
 		"TypeName": "FlaxEngine.Networking.NetworkTransform",
 		"ParentID": "decc014d4cfecc34bd8036a0088ebaa2",
-		"LocalSpace": true,
 		"Mode": 2
 	},
 	{
@@ -184,7 +184,9 @@
 		"ID": "bc5184ab4057588af572cbb32d2b7744",
 		"TypeName": "Game.Game.Player.PlayerAnimationManager",
 		"ParentID": "14e225dd48bed04a57a757a0777330b8",
-		"V": {}
+		"V": {
+	"AnimatedModel": "14e225dd48bed04a57a757a0777330b8"
+}
 	},
 	{
 		"ID": "688b22a7413a0a4083939296360e8048",

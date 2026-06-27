@@ -10,8 +10,6 @@ public class PlayerHitLogic : Script
     public Actor RigidPlayer;
     public int TimeAfterRegainControl = 100;
 
-    private Actor _spawnedRigidBodyActor;
-
     // Pending hit captured during a collision callback (in-physics-simulation) and
     // processed later in OnUpdate. Spawning a RigidBody inside the simulation step crashes.
     private bool _hitPending;
@@ -43,98 +41,59 @@ public class PlayerHitLogic : Script
 
     private void Hit(Vector3 impulse)
     {
-        var spawnTransform = Actor.Transform;
-        DisableActor(Actor);
-
         if (RigidPlayer == null)
         {
             Debug.Logger.LogError("Player","RigidPlayer prefab is not assigned to PlayerHitLogic.");
             return;
         }
 
-        // AddCameraToRagdoll();
-
-        // if (_spawnedRigidBodyActor == null)
-        // {
-        //     Debug.Logger.LogError("Player","Failed to spawn RigidPlayer prefab.");
-        //     return;
-        // }
-
-        // NetworkReplicator.SpawnObject(_spawnedRigidBodyActor);
-        // NetworkReplicator.SetObjectOwnership(_spawnedRigidBodyActor, FlaxEngine.Networking.NetworkManager.LocalClientId, NetworkObjectRole.OwnedAuthoritative);
-
-        // var activeRigidBody = _spawnedRigidBodyActor as RigidBody ?? _spawnedRigidBodyActor.FindActor<RigidBody>();
-        // if (activeRigidBody != null)
-        // {
-        //     activeRigidBody.AddForce(impulse, ForceMode.Impulse);
-        //     _ = RegainControl();
-        // }
-        // else
-        // {
-        //     Debug.Logger.LogError("Player", "Spawned RigidPlayer prefab does not contain a RigidBody actor.");
-        // }
-    }
-
-    private void AddCameraToRagdoll()
-    {
-        AddCameraToRagdollOnClient();
-
-        if (FlaxEngine.Networking.NetworkManager.LocalClientId == NetworkReplicator.GetObjectOwnerClientId(Actor))
+        DisableActor();
+        var rigidBody = RigidPlayer.GetScript<RigidBody>();
+        if (rigidBody != null)
         {
-            var ragdollFirstPersonLogic = _spawnedRigidBodyActor.AddScript<RagdollFirstPersonLogic>();
-            ragdollFirstPersonLogic.CameraAnchor = _spawnedRigidBodyActor.FindActor<CameraAnchor>();
-            ragdollFirstPersonLogic.Camera = Actor.FindScript<PlayerFirstPersonLogic>().Camera;
+            rigidBody.AddForce(impulse, ForceMode.Impulse);
         }
-
+        _ = RegainControl();
     }
 
-    [NetworkRpc( client: true)]
-    private void AddCameraToRagdollOnClient()
-    {
-        if (_spawnedRigidBodyActor == null)
-        {
-            Debug.LogError("AddCameraToRagdollOnClient: _spawnedRigidBodyActor is null.");
-            return;
-        }
-
-        var ragdollFirstPersonLogic = _spawnedRigidBodyActor.AddScript<RagdollFirstPersonLogic>();
-        ragdollFirstPersonLogic.CameraAnchor = _spawnedRigidBodyActor.FindActor<CameraAnchor>();
-        ragdollFirstPersonLogic.Camera = Actor.FindScript<PlayerFirstPersonLogic>().Camera;
-    }
 
     private async Task RegainControl()
     {
         await Task.Delay(TimeAfterRegainControl);
-        Debug.Log("RegainControl called");
-        Actor.Transform = _spawnedRigidBodyActor.Transform;
-        Actor.EulerAngles = Vector3.Zero;
-        EnableActor(Actor);
-        NetworkReplicator.DespawnObject(_spawnedRigidBodyActor);
-        NetworkReplicator.RemoveObject(_spawnedRigidBodyActor);
-        Destroy(_spawnedRigidBodyActor);
+        EnableActor();
     }
 
-    private void EnableActor(Actor actor)
+    private void EnableActor()
     {
-        actor.IsActive = true;
+        Actor.Transform = RigidPlayer.Transform;
+        Actor.IsActive = true;
+        RigidPlayer.IsActive = false;
         EnableActorOnClient();
     }
 
-    [NetworkRpc( client: true)]
+    [NetworkRpc(client: true)]
     private void EnableActorOnClient()
     {
+        if (FlaxEngine.Networking.NetworkManager.IsHost) return;
+        Debug.Log("Actor enabled");
         Actor.IsActive = true;
+        RigidPlayer.IsActive = false;
     }
 
-    private void DisableActor(Actor actor)
+    private void DisableActor()
     {
-        actor.IsActive = false;
+        RigidPlayer.Transform = Actor.Transform;
+        Actor.IsActive = false;
+        RigidPlayer.IsActive = true;
         DisableActorOnClient();
     }
 
-    [NetworkRpc( client: true)]
+    [NetworkRpc(client: true)]
     private void DisableActorOnClient()
     {
+        if (FlaxEngine.Networking.NetworkManager.IsHost) return;
+        Debug.Log("Actor disabled");
         Actor.IsActive = false;
+        RigidPlayer.IsActive = true;
     }
 }
