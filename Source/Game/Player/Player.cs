@@ -19,7 +19,8 @@ public class Player : Script
 
     private void DetermineOwnership()
     {
-        RegisterNetworkScript<PlayerShootLogic>();
+        RegisterNetworkScriptOnController<PlayerShootLogic>();
+        RegisterNetworkScript<PlayerControlRegainLogic>();
 
         var isLocalOwner = NetworkReplicator.IsObjectOwned(Actor);
         SetScriptEnabled<PlayerFirstPersonLogic>(isLocalOwner);
@@ -43,9 +44,16 @@ public class Player : Script
             SetLayerRecursively(child, layer);
     }
 
-    private void RegisterNetworkScript<T>() where T : Script
+    private void RegisterNetworkScriptOnController<T>() where T : Script
     {
         var script = PlayerController.GetScript<T>();
+        if (script != null && !NetworkReplicator.HasObject(script))
+            NetworkReplicator.AddObject(script, Actor);
+    }
+
+    private void RegisterNetworkScript<T>() where T : Script
+    {
+        var script = Actor.GetScript<T>();
         if (script != null && !NetworkReplicator.HasObject(script))
             NetworkReplicator.AddObject(script, Actor);
     }

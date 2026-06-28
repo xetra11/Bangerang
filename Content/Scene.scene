@@ -668,8 +668,8 @@
 			"Name": "GameEndPanel",
 			"Transform": {
 				"Translation": {
-					"X": 322.0,
-					"Y": 280.0,
+					"X": 809.0,
+					"Y": 391.0,
 					"Z": 0.0
 				}
 			},
@@ -947,7 +947,7 @@
 			"ID": "681fcc2b48649413f78b529396e3a9be",
 			"TypeName": "FlaxEngine.UIControl",
 			"ParentID": "e9ec30f24c4c5ddfd67a4bb80923d4a9",
-			"Name": "WinenrValue",
+			"Name": "WinnerValue",
 			"Transform": {
 				"Translation": {
 					"X": 200.0,

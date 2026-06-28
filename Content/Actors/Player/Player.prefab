@@ -27,6 +27,16 @@
 }
 	},
 	{
+		"ID": "8c04e8a04819af9bcde957aafe4de771",
+		"TypeName": "Game.Game.Player.PlayerControlRegainLogic",
+		"ParentID": "d30f2f76482cbdbd6a027cbcc4a2490b",
+		"V": {
+	"ControllerActor": "790cf971430008986c4fb8a62e60ffb2",
+	"RigidBodyActor": "decc014d4cfecc34bd8036a0088ebaa2",
+	"TimeAfterRegainControl": 2
+}
+	},
+	{
 		"ID": "790cf971430008986c4fb8a62e60ffb2",
 		"TypeName": "FlaxEngine.CharacterController",
 		"ParentID": "d30f2f76482cbdbd6a027cbcc4a2490b",
@@ -82,7 +92,7 @@
 		"V": {
 	"Collider": "790cf971430008986c4fb8a62e60ffb2",
 	"RigidPlayer": "decc014d4cfecc34bd8036a0088ebaa2",
-	"TimeAfterRegainControl": 2000
+	"PlayerControlRegainLogic": "8c04e8a04819af9bcde957aafe4de771"
 }
 	},
 	{
