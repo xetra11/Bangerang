@@ -9,7 +9,7 @@ public class PlayerHitLogic : Script
     public Collider Collider;
     public Actor RigidPlayer;
     public PlayerControlRegainLogic PlayerControlRegainLogic;
-    private bool _hasCollided;
+    private bool _hasCollided = false;
 
     // Pending hit captured during a collision callback (in-physics-simulation) and
     // processed later in OnUpdate. Spawning a RigidBody inside the simulation step crashes.
@@ -33,10 +33,10 @@ public class PlayerHitLogic : Script
 
     private void OnCollision(Collision collision)
     {
-        if (_hasCollided) return;
-        _hasCollided = true;
         if (!collision.OtherActor.HasTag("Projectile")) return;
+        if (_hasCollided) return;
         Debug.Logger.Log("Collision detected");
+        _hasCollided = true;
         // Defer spawning out of the physics simulation step; handled in OnUpdate.
         _pendingImpulse = collision.Impulse.Negative;
         _hitPending = true;

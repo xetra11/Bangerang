@@ -171,9 +171,9 @@
 			"Name": "PlayerSpawn",
 			"Transform": {
 				"Translation": {
-					"X": 1911.0390625,
+					"X": 1557.579345703125,
 					"Y": 192.01815795898438,
-					"Z": -1392.72607421875
+					"Z": -1936.048095703125
 				}
 			}
 		},
@@ -350,7 +350,9 @@
 			"ID": "10c24e8349b832a0c6c74ebae853b9f1",
 			"TypeName": "Game.Game.NetworkManager",
 			"ParentID": "d9290bf74828ceeb66b74eb60305b052",
-			"V": {}
+			"V": {
+	"StartAsHost": false
+}
 		},
 		{
 			"ID": "4d75c7c741e40386323d5987d6f7f329",
