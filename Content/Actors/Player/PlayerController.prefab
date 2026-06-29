@@ -46,12 +46,6 @@
 }
 	},
 	{
-		"ID": "11e1a24e4e9e727f58ef3c9aa38f9015",
-		"TypeName": "Game.Game.Player.NetworkedPlayer",
-		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
-		"V": {}
-	},
-	{
 		"ID": "4be5c3c6483add6d8264279e3f3b2e8a",
 		"TypeName": "FlaxEngine.Networking.NetworkTransform",
 		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
@@ -62,9 +56,22 @@
 		"TypeName": "Game.Game.Player.PlayerHitLogic",
 		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
 		"V": {
-	"Collider": "ff313ac3430b4e09320f909ff87c50c8",
-	"RigidPlayer": "d08d246945052b839df1358ad0c522bf",
-	"TimeAfterRegainControl": 150000
+	"Collider": "ff313ac3430b4e09320f909ff87c50c8"
+}
+	},
+	{
+		"ID": "06a373554fef40416d57118f4854f092",
+		"TypeName": "Game.Game.Player.Player",
+		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"V": {}
+	},
+	{
+		"ID": "0dbf62364f46aa359b3aeab4e13ee068",
+		"TypeName": "Game.Game.Player.PlayerControlRegainLogic",
+		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
+		"V": {
+	"ControllerActor": "ff313ac3430b4e09320f909ff87c50c8",
+	"TimeAfterRegainControl": 2
 }
 	},
 	{

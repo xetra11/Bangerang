@@ -7,8 +7,6 @@ namespace Game.Game.Player;
 public class PlayerHitLogic : Script
 {
     public Collider Collider;
-    public Actor RigidPlayer;
-    public PlayerControlRegainLogic PlayerControlRegainLogic;
     private bool _hasCollided = false;
 
     // Pending hit captured during a collision callback (in-physics-simulation) and
@@ -45,18 +43,19 @@ public class PlayerHitLogic : Script
     private void Hit(Vector3 impulse)
     {
         Debug.Logger.Log("Resolving Hit");
-        if (RigidPlayer == null)
-        {
-            Debug.Logger.LogError("Player","RigidPlayer prefab is not assigned to PlayerHitLogic.");
-            return;
-        }
 
-        PlayerControlRegainLogic.DisableActor();
-        var rigidBody = RigidPlayer.GetScript<RigidBody>();
-        if (rigidBody != null)
-        {
-            rigidBody.AddForce(impulse, ForceMode.Impulse);
-        }
+        // if (RigidPlayer == null)
+        // {
+        //     Debug.Logger.LogError("Player","RigidPlayer prefab is not assigned to PlayerHitLogic.");
+        //     return;
+        // }
+        //
+        // Actor.GetScript< PlayerControlRegainLogic>().DisableActor();
+        // var rigidBody = RigidPlayer.GetScript<RigidBody>();
+        // if (rigidBody != null)
+        // {
+        //     rigidBody.AddForce(impulse, ForceMode.Impulse);
+        // }
 
         _hasCollided = false;
     }

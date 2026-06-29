@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using FlaxEngine;
 using FlaxEngine.Networking;
 
@@ -7,7 +5,6 @@ namespace Game.Game.Player;
 
 public class Player : Script
 {
-    public Actor PlayerController;
 
     public override void OnUpdate()
     {
@@ -19,7 +16,7 @@ public class Player : Script
 
     private void DetermineOwnership()
     {
-        RegisterNetworkScriptOnController<PlayerShootLogic>();
+        RegisterNetworkScript<PlayerShootLogic>();
         RegisterNetworkScript<PlayerControlRegainLogic>();
 
         var isLocalOwner = NetworkReplicator.IsObjectOwned(Actor);
@@ -30,7 +27,7 @@ public class Player : Script
 
         if (!isLocalOwner)
         {
-            var audioListener = PlayerController.GetChild<AudioListener>();
+            var audioListener = Actor.GetChild<AudioListener>();
             if (audioListener != null) Destroy(audioListener);
         }
 
@@ -44,13 +41,6 @@ public class Player : Script
             SetLayerRecursively(child, layer);
     }
 
-    private void RegisterNetworkScriptOnController<T>() where T : Script
-    {
-        var script = PlayerController.GetScript<T>();
-        if (script != null && !NetworkReplicator.HasObject(script))
-            NetworkReplicator.AddObject(script, Actor);
-    }
-
     private void RegisterNetworkScript<T>() where T : Script
     {
         var script = Actor.GetScript<T>();
@@ -60,7 +50,7 @@ public class Player : Script
 
     private void SetScriptEnabled<T>(bool enabled) where T : Script
     {
-        var script = PlayerController.GetScript<T>();
+        var script = Actor.GetScript<T>();
         if (script != null)
             script.Enabled = enabled;
     }

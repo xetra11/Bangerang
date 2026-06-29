@@ -15,8 +15,7 @@
 		"V": {
 	"MainTransform": "790cf971430008986c4fb8a62e60ffb2",
 	"RigidPlayer": "decc014d4cfecc34bd8036a0088ebaa2"
-},
-		"Enabled": false
+}
 	},
 	{
 		"ID": "4b623735487bac84db9651b4a704be28",
@@ -33,7 +32,7 @@
 		"V": {
 	"ControllerActor": "790cf971430008986c4fb8a62e60ffb2",
 	"RigidBodyActor": "decc014d4cfecc34bd8036a0088ebaa2",
-	"TimeAfterRegainControl": 2
+	"TimeAfterRegainControl": 15
 }
 	},
 	{

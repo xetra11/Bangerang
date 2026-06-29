@@ -116,16 +116,6 @@ public class PlayerSpawn : Script
                 localRole: NetworkObjectRole.Replicated,
                 hierarchical: true
             );
-
-            var playerController = playerActor.GetScript<Player>().PlayerController;
-            NetworkReplicator.SetObjectOwnership(
-                playerController,
-                pending.ClientId,
-                localRole: NetworkObjectRole.Replicated,
-                hierarchical: true
-            );
-
         }
     }
-
 }

@@ -6,7 +6,6 @@ namespace Game.Game.Player;
 public class PlayerControlRegainLogic : Script
 {
     public Actor ControllerActor;
-    public Actor RigidBodyActor;
     public int TimeAfterRegainControl = 100;
 
     private bool _regainingControl;
@@ -17,7 +16,6 @@ public class PlayerControlRegainLogic : Script
     {
         if (_regainingControl)
         {
-            Debug.Log("Regain Loop");
             _regainControlTime -= Time.DeltaTime;
             RegainControl();
         }
@@ -33,9 +31,7 @@ public class PlayerControlRegainLogic : Script
 
     public void EnableActor()
     {
-        ControllerActor.Transform = RigidBodyActor.Transform;
         ControllerActor.IsActive = true;
-        RigidBodyActor.IsActive = false;
         EnableActorOnClient();
     }
 
@@ -45,14 +41,11 @@ public class PlayerControlRegainLogic : Script
         if (FlaxEngine.Networking.NetworkManager.IsHost) return;
         Debug.Log("ControllerActor enabled");
         ControllerActor.IsActive = true;
-        RigidBodyActor.IsActive = false;
     }
 
     public void DisableActor()
     {
-        RigidBodyActor.Transform = ControllerActor.Transform;
         ControllerActor.IsActive = false;
-        RigidBodyActor.IsActive = true;
         _regainControlTime = TimeAfterRegainControl;
         _regainingControl = true;
         DisableActorOnClient();
@@ -64,7 +57,6 @@ public class PlayerControlRegainLogic : Script
         if (FlaxEngine.Networking.NetworkManager.IsHost) return;
         Debug.Log("Actor disabled");
         ControllerActor.IsActive = false;
-        RigidBodyActor.IsActive = true;
     }
 
     public override void OnDebugDrawSelected()
