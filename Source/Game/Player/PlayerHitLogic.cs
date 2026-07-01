@@ -44,19 +44,15 @@ public class PlayerHitLogic : Script
     {
         Debug.Logger.Log("Resolving Hit");
 
-        // if (RigidPlayer == null)
-        // {
-        //     Debug.Logger.LogError("Player","RigidPlayer prefab is not assigned to PlayerHitLogic.");
-        //     return;
-        // }
-        //
-        // Actor.GetScript< PlayerControlRegainLogic>().DisableActor();
-        // var rigidBody = RigidPlayer.GetScript<RigidBody>();
-        // if (rigidBody != null)
-        // {
-        //     rigidBody.AddForce(impulse, ForceMode.Impulse);
-        // }
+        var controlRegainLogic = Actor.GetScript<PlayerControlRegainLogic>();
+        if (controlRegainLogic == null)
+        {
+            Debug.Logger.LogError("Player", "PlayerControlRegainLogic is not assigned to PlayerHitLogic actor.");
+            _hasCollided = false;
+            return;
+        }
 
+        controlRegainLogic.SpawnRigidPlayer(impulse);
         _hasCollided = false;
     }
 

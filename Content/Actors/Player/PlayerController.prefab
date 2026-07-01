@@ -71,6 +71,7 @@
 		"ParentID": "ff313ac3430b4e09320f909ff87c50c8",
 		"V": {
 	"ControllerActor": "ff313ac3430b4e09320f909ff87c50c8",
+	"RigidPlayer": "d08d246945052b839df1358ad0c522bf",
 	"TimeAfterRegainControl": 2
 }
 	},

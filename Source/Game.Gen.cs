@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 
 [assembly: AssemblyTitle("Game")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("Development")]
+[assembly: AssemblyConfiguration("Debug")]
 [assembly: AssemblyCompany("My Company")]
 [assembly: AssemblyProduct("FlaxEngine")]
 [assembly: AssemblyCopyright("")]
@@ -16,5 +16,5 @@ using System.Runtime.CompilerServices;
 [assembly: Guid("7c85a97f-1a91-a036-c294-453405150000")]
 [assembly: AssemblyVersion("1.0")]
 [assembly: AssemblyFileVersion("1.0")]
-[assembly: AssemblyInformationalVersion("1.0+master+673abad66c792bc258a99e65c3d0870219e9f809")]
+[assembly: AssemblyInformationalVersion("1.0+master+322c150fd928f084795345797b8b5929b104abfe")]
 [assembly: DisableRuntimeMarshalling]
